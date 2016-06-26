@@ -264,8 +264,6 @@ pre {
       console.log("yeah");
 
 
-      // https://api.github.com/repos/octocat/Hello-World?access_token=5643c54f20eb6e96cded2f429bdd907ed2b83611
-
 
 
 
@@ -274,7 +272,7 @@ pre {
 
         $http({
           method: 'get',
-          url: 'https://api.github.com/orgs/rsquarelabs/members'+ '?access_token=3cec8f557e91dbfb5f5785242c6e09a4c9fedbc0',
+          url: 'https://api.github.com/orgs/rsquarelabs/members'+ '?access_token=f763b113dab36dddf5d86cacf0ca869805c6c762',
         }).then(function successCallback(response) {
 
           console.log(response);
@@ -291,7 +289,7 @@ pre {
        $scope.getRepoInfo = function(repoName){
         var request = $http({
           method : 'get',
-          'url' : 'https://api.github.com/repos/rsquarelabs/'+ repoName + '?access_token=3cec8f557e91dbfb5f5785242c6e09a4c9fedbc0'
+          'url' : 'https://api.github.com/repos/rsquarelabs/'+ repoName + '?access_token=f763b113dab36dddf5d86cacf0ca869805c6c762'
         });
         request.success(function(data){
           console.log(data);
