@@ -157,7 +157,7 @@ to validate the claims of the documentation and identify potential problems in c
  
 - Please **include the appropriate test cases** for your patch.
 
-- Make sure all tests pass before submitting your changes. See the [Makefile operations](/README.md#makefile-operations).
+- Make sure all tests pass before submitting your changes.
 
 - Make sure the linter does not throw any error: `make lint`.
 
