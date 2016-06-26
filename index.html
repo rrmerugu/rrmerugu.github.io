@@ -272,7 +272,7 @@ pre {
 
         $http({
           method: 'get',
-          url: 'https://api.github.com/orgs/rsquarelabs/members'+ ,
+          url: 'https://api.github.com/orgs/rsquarelabs/members'
         }).then(function successCallback(response) {
 
           console.log(response);
@@ -289,7 +289,7 @@ pre {
        $scope.getRepoInfo = function(repoName){
         var request = $http({
           method : 'get',
-          'url' : 'https://api.github.com/repos/rsquarelabs/'+ repoName +
+          'url' : 'https://api.github.com/repos/rsquarelabs/'+ repoName 
         });
         request.success(function(data){
           console.log(data);
