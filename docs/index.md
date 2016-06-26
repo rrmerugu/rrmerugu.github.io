@@ -1,5 +1,5 @@
 
-Developer docs for the tools and frameworks being developed at RL.
+Developer docs for the tools and frameworks being developed at Rsquare Labs
 
 ## <a name="1"></a>rsquarelabs-core
 
