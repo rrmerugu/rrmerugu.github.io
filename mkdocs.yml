@@ -1,0 +1,27 @@
+site_name: Developers RsquareLabs
+site_url: http://developer.rsquarelabs.com
+repo_url: https://github.com/rsquarelabs/rsquarelabs.github.io
+
+
+theme_dir : docs_theme
+docs_dir: docs
+use_directory_urls: true
+
+markdown_extensions:
+ - toc:
+    anchorlink: True
+
+pages:
+- Home: index.md
+
+
+- About:
+    - Contributing : contributing.md
+    - Project Management : project-management.md
+    - Release Cycle : release-cycle.md
+copyright: Copyright &copy; 2016 <a href="https://twitter.com/rrmerugu">rsquarelabs.com</a>
+google_analytics: ['UA-71847416-1', 'docs.rsquarelabs.com']
+
+
+extra:
+    blog_url : http://rsquarelabs.com/blog
