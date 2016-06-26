@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>http://developer.rsquarelabs.com/</loc>
+     <lastmod>2016-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>http://developer.rsquarelabs.com/contributing/</loc>
+     <lastmod>2016-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://developer.rsquarelabs.com/project-management/</loc>
+     <lastmod>2016-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://developer.rsquarelabs.com/release-cycle/</loc>
+     <lastmod>2016-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>

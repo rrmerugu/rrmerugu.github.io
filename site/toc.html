@@ -1,0 +1,31 @@
+<div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    {% for toc_item in toc %}
+        <li class="main {% if toc_item.active %}active{% endif %}"><a href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+        {% for toc_item in toc_item.children %}
+            <li><a  style="margin-left:10px"  href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+
+                    {% for toc_item in toc_item.children %}
+                        <li><a  style="margin-left:20px"  href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+                    {% endfor %}
+
+
+        {% endfor %}
+    {% endfor %}
+    </ul>
+    <!--<hr>-->
+    <!--<div class="text-center">-->
+
+
+    <!--<a class="btn btn-default btn-sm {% if not previous_page %}disabled{% endif %}" rel="next" {% if previous_page %}href="{{ previous_page.url }}"{% endif %}>-->
+        <!--<i class="fa fa-arrow-left"></i> Previous-->
+    <!--</a>-->
+
+    <!--<a class="btn btn-default btn-sm {% if not next_page %}disabled{% endif %}" rel="next" {% if next_page %}href="{{ next_page.url }}"{% endif %}>-->
+        <!--<i class="fa fa-arrow-right"></i> Next-->
+    <!--</a>-->
+
+
+
+    <!--</div>-->
+</div>
