@@ -272,7 +272,7 @@ pre {
 
         $http({
           method: 'get',
-          url: 'https://api.github.com/orgs/rsquarelabs/members'+ '?access_token=d7df0700cde7df4e19801d52b5084a61ef560c3d',
+          url: 'https://api.github.com/orgs/rsquarelabs/members'+ ,
         }).then(function successCallback(response) {
 
           console.log(response);
@@ -289,7 +289,7 @@ pre {
        $scope.getRepoInfo = function(repoName){
         var request = $http({
           method : 'get',
-          'url' : 'https://api.github.com/repos/rsquarelabs/'+ repoName + '?access_token=d7df0700cde7df4e19801d52b5084a61ef560c3d'
+          'url' : 'https://api.github.com/repos/rsquarelabs/'+ repoName +
         });
         request.success(function(data){
           console.log(data);
