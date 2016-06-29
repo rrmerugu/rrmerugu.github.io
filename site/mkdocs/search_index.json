@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Developer docs for the tools and frameworks being developed at Rsquare Labs\n\n\nrsquarelabs-core\n\n\nrsquarelabs-core is a collection of scientific research tools, used in \nComputation Drug Discovery. The core package helps you create customised \nautomation protocols/pipelines for the tasks that need huge repetition \ntasks with less/no expertise in the tools.\n\n\n Code on GitHub\n \n\n\n Documentation\n \n\n\n Fork Project\n\n\nLucy\n\n\nPersonal Research Assitant for Scientists and Researchers.\n\n\n Code on GitHub\n \n\n\n Documentation\n \n\n\n Fork Project", 
+            "text": "Developer docs for the tools and frameworks being developed at Rsquare Labs\n\n\nrsquarelabs-core\n\n\nOpensource framework for building automation pipelines, tracking your research. \n\n\n Code on GitHub\n \n\n\n Documentation\n \n\n\n Fork Project\n\n\n\n\nchatbot AI\n\n\nChat Engine - Personal Research Assistant for Scientists and Developers.\n\n\n Code on GitHub\n \n\n\n Documentation\n \n\n\n Fork Project\n\n\n\n\n r2_console\n\n\nCommand line utility to monitor the research activity on a use machine.\n\n\n Code on GitHub\n \n\n\n Documentation\n \n\n\n Fork Project\n\n\n\n\n scraperbot\n\n\nScraper Bot, web scraping framework.\n\n\n Code on GitHub\n \n\n\n Documentation\n \n\n\n Fork Project", 
             "title": "Home"
         }, 
         {
