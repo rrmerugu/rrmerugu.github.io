@@ -1,7 +1,7 @@
 
 Developer docs for the tools and frameworks being developed at Rsquare Labs
 
-## <a name="1"></a>Core-client
+## <a name="1"></a>core-client
 
 Opensource framework for building automation pipelines, tracking your research. 
 
