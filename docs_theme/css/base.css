@@ -249,3 +249,35 @@ ul li p, ol li p {
 pre{
     font-size: 13px;
 }
+
+a, .blue {
+    color:  #3A59A7;
+}
+.mainpage h2{
+  color:  #4e6cb9;
+  font-weight:bold;
+}
+a:hover, a:focus{
+    color: #4e6cb9;
+}
+.navbar-default {
+    background-color: #3A59A7;
+    border-color: #3A59A7;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default
+.navbar-nav>.active>a:hover, .navbar-default
+.navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus,
+.navbar-default .dropdown-menu>li>a:hover, .navbar-default .dropdown-menu>.active>a, .navbar-default .dropdown-menu>.active>a:hover{
+    background:#4e6cb9;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+    background-color: #3A59A7;
+}
+
+.navbar-default .dropdown-menu{
+    background-color: #3A59A7;
+}
+

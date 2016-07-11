@@ -20,7 +20,7 @@ Chat Engine - Personal Research Assistant for Scientists and Developers.
 [<i class="fa fa-code-fork" aria-hidden="true"></i> Fork Project](https://github.com/rsquarelabs/chatbot-ai/fork)
 ---
 
-## <a name="3"></a> r2_console 
+## <a name="3" ></a> r2_console 
 
 Command line utility to monitor the research activity on a use machine.
 
