@@ -1,30 +1,20 @@
 ---
 layout: page
-title: About
+title: About me
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+> I'm a biologist who fell in love with Computers and the crazy things that can
+be done with programming.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I worked as a technical associate in the field of Computer Aided Drug Discovery,
+as a consultant s/w developer for a Bay area startup, as Product Engineer & Head
+of Development in a Food Tech startup. Also developed few automation tools with
+web interface for few tools in Computational Drug Discovery.
 
-There are currently two themes built on Poole:
+I'm a full stack web Engineer, who loves exploring and assembling the web components
+into the way, that excites me ;)  
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+I'm passionate about coding web tech. I spend most of my time with/in
+`Python`, `Django`, `Automation`, `Cognitive Computing`, `Cognitive Intelligence`.
 
 Thanks for reading!
