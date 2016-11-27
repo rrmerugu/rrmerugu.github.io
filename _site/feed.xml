@@ -1,78 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2016-11-28T02:42:10+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name></author><entry><title type="html">Introducing Hyde</title><link href="http://localhost:4000//blog/introducing-hyde/" rel="alternate" type="text/html" title="Introducing Hyde" /><published>2013-12-28T00:00:00+05:30</published><updated>2013-12-28T00:00:00+05:30</updated><id>http://localhost:4000//blog/introducing-hyde</id><content type="html" xml:base="http://localhost:4000//blog/introducing-hyde/">&lt;p&gt;Hyde is a brazen two-column &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that pairs a prominent sidebar with uncomplicated content. It’s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2016-11-28T02:58:04+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name></author><entry><title type="html">Introducing hyde</title><link href="http://localhost:4000//blog/introducing-hyde/" rel="alternate" type="text/html" title="Introducing hyde" /><published>2013-12-28T00:00:00+05:30</published><updated>2013-12-28T00:00:00+05:30</updated><id>http://localhost:4000//blog/introducing-hyde</id><content type="html" xml:base="http://localhost:4000//blog/introducing-hyde/">&lt;p&gt;Today I learned how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;git add -p&lt;/code&gt; (short for &lt;code class=&quot;highlighter-rouge&quot;&gt;git add --patch&lt;/code&gt;) to make smaller, cleaner, more isolated git commits. My life is changed.&lt;/p&gt;
 
-&lt;h3 id=&quot;built-on-poole&quot;&gt;Built on Poole&lt;/h3&gt;
+&lt;!--/excerpt--&gt;
 
-&lt;p&gt;Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by &lt;a href=&quot;https://twitter.com/mdo&quot;&gt;@mdo&lt;/a&gt;. Poole, and every theme built on it (like Hyde here) includes the following:&lt;/p&gt;
+&lt;h2 id=&quot;when-to-use-it&quot;&gt;When to use it&lt;/h2&gt;
+
+&lt;p&gt;Let me paint you a picture…&lt;/p&gt;
+
+&lt;p&gt;I’m working on a really fun project (the &lt;a href=&quot;https://github.com/vakila/kimi&quot;&gt;Kimi&lt;/a&gt; interpreter), and am so in the zone that I forget to commit for a couple of hours.
+During that time I make a bunch of different changes to a certain file, &lt;code class=&quot;highlighter-rouge&quot;&gt;kimi.py&lt;/code&gt;, and some of those changes don’t have anything to do with one another conceptually, i.e. relate to different features/bugfixes.&lt;/p&gt;
+
+&lt;p&gt;At this point, if I stage all my changes with &lt;code class=&quot;highlighter-rouge&quot;&gt;git add kimi.py&lt;/code&gt;, I’ll have a commit which globs together all the different things I did.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/git_commit.png&quot; alt=&quot;'Git Commit' on XKCD&quot; /&gt;
+&lt;em&gt;&lt;a href=&quot;https://imgs.xkcd.com/comics/git_commit.png&quot;&gt;XKCD&lt;/a&gt; knows my pain&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So what?&lt;/p&gt;
+
+&lt;p&gt;Well, if later on, after committing, I decide that most of the changes in that commit were useful, but one was a real fuck-up and I want to revert the commit, I’d have to manually go back and redo all of my other changes.
+That sounds like a pain in the ass, no?&lt;/p&gt;
+
+&lt;p&gt;But wait! The &lt;code class=&quot;highlighter-rouge&quot;&gt;--patch&lt;/code&gt; flag to the rescue!&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;If I run &lt;code class=&quot;highlighter-rouge&quot;&gt;git add --patch kimi.py&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;git add -p kimi.py&lt;/code&gt; instead of the regular &lt;code class=&quot;highlighter-rouge&quot;&gt;git add kimi.py&lt;/code&gt;, git divides the edits I’ve made into separate “hunks”, and launches a nice little interactive interface which lets me pick and choose which hunks to stage for the next commit. It presents the hunks one-by-one in the order they appear in the file, and gives me the following options for each hunk:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk or any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk or any of the later hunks in the file
+g - select a hunk to go to
+/ - search for a hunk matching the given regex
+j - leave this hunk undecided, see next undecided hunk
+J - leave this hunk undecided, see next hunk
+k - leave this hunk undecided, see previous undecided hunk
+K - leave this hunk undecided, see previous hunk
+s - split the current hunk into smaller hunks
+e - manually edit the current hunk
+? - print help
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This allows me to make separate commits for the different parts of the file I edited, so that each commit is conceptually independent of the others. Now, if I later decide that one of those hunks was a mistake, I can simply revert that commit, and all of my other changes remain in place.&lt;/p&gt;
+
+&lt;p&gt;If I want to make sure I’ve staged the right hunks, I can run &lt;code class=&quot;highlighter-rouge&quot;&gt;git diff --staged&lt;/code&gt; to see exactly which changes are staged before making the commit.&lt;/p&gt;
+
+&lt;p&gt;It’s not perfect; for example, it’s only aware of position in the code, so it can’t distinguish two conceptually different changes that are right next to each other, as in:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- this is an old line I deleted
++ (topic 1) this is a new line I added
++ (topic 1) this is another line related to the one above
++ (topic 2) this is a new line related to a different topic
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;…but that would be expecting too much.&lt;/p&gt;
+
+&lt;p&gt;In any case, you shouldn’t be using &lt;code class=&quot;highlighter-rouge&quot;&gt;--patch&lt;/code&gt; as an excuse to be more lazy about your committing habits. &lt;strong&gt;Commit early, commit often, and work on one thing at a time.&lt;/strong&gt; But in those &lt;em&gt;rare&lt;/em&gt; (ahem) cases  where for whatever reason you got behind on your git organization, &lt;code class=&quot;highlighter-rouge&quot;&gt;--patch&lt;/code&gt; is your friend!&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Sources:&lt;/em&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Complete Jekyll setup included (layouts, config, &lt;a href=&quot;/404&quot;&gt;404&lt;/a&gt;, &lt;a href=&quot;/atom.xml&quot;&gt;RSS feed&lt;/a&gt;, posts, and &lt;a href=&quot;/about&quot;&gt;example page&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Mobile friendly design and development&lt;/li&gt;
-  &lt;li&gt;Easily scalable text and component sizing with &lt;code class=&quot;highlighter-rouge&quot;&gt;rem&lt;/code&gt; units in the CSS&lt;/li&gt;
-  &lt;li&gt;Support for a wide gamut of HTML elements&lt;/li&gt;
-  &lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
-  &lt;li&gt;Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;hyde-features&quot;&gt;Hyde features&lt;/h3&gt;
-
-&lt;p&gt;In addition to the features of Poole, Hyde adds the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sidebar includes support for textual modules and a dynamically generated navigation with active link support&lt;/li&gt;
-  &lt;li&gt;Two orientations for content and sidebar, default (left sidebar) and &lt;a href=&quot;https://github.com/poole/lanyon#reverse-layout&quot;&gt;reverse&lt;/a&gt; (right sidebar), available via &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/poole/hyde#themes&quot;&gt;Eight optional color schemes&lt;/a&gt;, available via &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/poole/hyde#readme&quot;&gt;Head to the readme&lt;/a&gt; to learn more.&lt;/p&gt;
-
-&lt;p&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.&lt;/p&gt;
-
-&lt;h3 id=&quot;browser-support&quot;&gt;Browser support&lt;/h3&gt;
-
-&lt;p&gt;Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.&lt;/p&gt;
-
-&lt;h3 id=&quot;download&quot;&gt;Download&lt;/h3&gt;
-
-&lt;p&gt;Hyde is developed on and hosted with GitHub. Head to the &lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;GitHub repository&lt;/a&gt; for downloads, bug reports, and features requests.&lt;/p&gt;
-
-&lt;p&gt;Thanks!&lt;/p&gt;</content><author><name>Ravi Raja Merugu</name></author><summary type="html">Hyde is a brazen two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content. It’s based on Poole, the Jekyll butler.
-
-Built on Poole
-
-Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by @mdo. Poole, and every theme built on it (like Hyde here) includes the following:
-
-
-  Complete Jekyll setup included (layouts, config, 404, RSS feed, posts, and example page)
-  Mobile friendly design and development
-  Easily scalable text and component sizing with rem units in the CSS
-  Support for a wide gamut of HTML elements
-  Related posts (time-based, because Jekyll) below each post
-  Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
-
-
-Hyde features
-
-In addition to the features of Poole, Hyde adds the following:
-
-
-  Sidebar includes support for textual modules and a dynamically generated navigation with active link support
-  Two orientations for content and sidebar, default (left sidebar) and reverse (right sidebar), available via &amp;lt;body&amp;gt; classes
-  Eight optional color schemes, available via &amp;lt;body&amp;gt; classes
-
-
-Head to the readme to learn more.
-
-Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vestibulum id ligula porta felis euismod semper.
-
-Browser support
-
-Hyde is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.
-
-Download
-
-Hyde is developed on and hosted with GitHub. Head to the GitHub repository for downloads, bug reports, and features requests.
-
-Thanks!</summary></entry><entry><title type="html">Example content</title><link href="http://localhost:4000//blog/example-content/" rel="alternate" type="text/html" title="Example content" /><published>2012-02-07T00:00:00+05:30</published><updated>2012-02-07T00:00:00+05:30</updated><id>http://localhost:4000//blog/example-content</id><content type="html" xml:base="http://localhost:4000//blog/example-content/">&lt;div class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1085162/commit-only-part-of-a-file-in-git&quot;&gt;Commit only part of a file in Git&lt;/a&gt; on StackOverflow&lt;/li&gt;
+  &lt;li&gt;Info from typing &lt;code class=&quot;highlighter-rouge&quot;&gt;help&lt;/code&gt; while in the &lt;code class=&quot;highlighter-rouge&quot;&gt;git add -p file.ext&lt;/code&gt; dialog&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Ravi Raja Merugu</name></author><summary type="html">Today I learned how to use git add -p (short for git add --patch) to make smaller, cleaner, more isolated git commits. My life is changed.</summary></entry><entry><title type="html">Example content</title><link href="http://localhost:4000//blog/example-content/" rel="alternate" type="text/html" title="Example content" /><published>2012-02-07T00:00:00+05:30</published><updated>2012-02-07T00:00:00+05:30</updated><id>http://localhost:4000//blog/example-content</id><content type="html" xml:base="http://localhost:4000//blog/example-content/">&lt;div class=&quot;message&quot;&gt;
   Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
 &lt;/div&gt;
 

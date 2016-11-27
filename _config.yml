@@ -8,7 +8,6 @@ gems:
 
 
 # Permalinks
-# permalink:        pretty
 permalink:              /blog/:categories/:title/
 # relative_permalinks: true
 
@@ -30,3 +29,5 @@ version:          2.1.0
 
 github:
   repo:           https://github.com/rsquarelabs/rsquarelabs
+
+excerpt_separator: "<!--/excerpt-->"
