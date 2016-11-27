@@ -28,6 +28,10 @@ author:
 
 
 
+collections:
+  - projects
+
+
 paginate:         5
 
 # Custom vars
