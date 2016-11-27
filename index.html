@@ -1,36 +1,36 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+	<title>Ravi RT Merugu </title>
 
-    <div class="">
-    {{ post.excerpt }}
-    </div>
 
-  </div>
-  {% endfor %}
-</div>
+</head>
+<body>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+<section class="banner">
+	<div class="container">
+		<div class="row">
+
+			<i class="fa fa-circle-o faa-burst animated magic-icon"></i>
+			<h1>Ravi Raja Merugu</h1>
+			<p class="tagline">
+				A computational biologist who fell in love with computers and their capabilities
+			</p>
+			<p>
+				<a href="https://github.com/rsquarelabs"><i class="fa fa-github" aria-hidden="true"></i>
+ github.com/rsquarelabs</a>
+			</p>
+		</div>
+	</div>
+</section>
+
+
+</body>
+</html>
