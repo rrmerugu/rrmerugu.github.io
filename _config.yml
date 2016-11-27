@@ -1,0 +1,32 @@
+# Dependencies
+highlighter:      rouge
+
+
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+
+
+# Permalinks
+# permalink:        pretty
+permalink:              /blog/:categories/:title/
+# relative_permalinks: true
+
+# Setup
+title:            Ravi Raja Merugu
+tagline:          'Computational Biologist and Web Technologist'
+description:      'A Biologist who fell in love with Codes and crazy things a code can do!'
+url:              http://rsquarelabs.com
+baseurl:          /
+
+author:
+  name:           'Ravi Raja Merugu'
+  url:            https://twitter.com/rrmerugu
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/rsquarelabs/rsquarelabs
