@@ -17,4 +17,6 @@ into the way, that excites me ;)
 I'm passionate about coding web tech. I spend most of my time with/in
 `Python`, `Django`, `Automation`, `Cognitive Computing`, `Cognitive Intelligence`.
 
-Thanks for reading!
+If you think, we have something in common. Let me know!
+
+-- \m/ Cheers

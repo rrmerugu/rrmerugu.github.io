@@ -33,6 +33,32 @@
       <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
     </nav>
 
+
+        <ul class="list-inline" id="sidebar-buttons">
+            <li>
+                <a href="mailto:{{ site.author.email }}" class="btn-social btn-outline" title="E-Mail me">
+                    <i class="fa fa-fw fa-at"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{{ site.author.github }}" target="_blank" class="btn-social btn-outline" title="vakila on GitHub">
+                    <i class="fa fa-fw fa-github"></i>
+                </a>
+            </li>
+
+            <li>
+               <a href="{{ site.author.twitter }}" target="_blank" class="btn-social btn-outline" title="@AnjanaVakil on Twitter">
+                   <i class="fa fa-fw fa-twitter"></i>
+               </a>
+           </li>
+            <li>
+                <a href="{{ site.author.linkedin}}" target="_blank" class="btn-social btn-outline" title="Anjana Vakil on LinkedIn">
+                    <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+            </li>
+
+
+        </ul>
     <p class="small">&copy; {{ site.time | date: '%Y' }}. Built
        with <i class="fa fa-heart"></i> for Science and Code.  </p>
   </div>

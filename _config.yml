@@ -21,6 +21,12 @@ baseurl:          /
 author:
   name:           'Ravi Raja Merugu'
   url:            https://twitter.com/rrmerugu
+  email:          'rrmerugu@gmail.com'
+  github:         'https://github.com/rrmerugu'
+  twitter:        'https://twitter.com/rrmerugu'
+  linkedin:       'https://www.linkedin.com/in/rrmerugu'
+
+
 
 paginate:         5
 
