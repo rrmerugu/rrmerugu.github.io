@@ -30,6 +30,7 @@ author:
 
 collections:
   - projects
+  - blog
 
 
 paginate:         5
