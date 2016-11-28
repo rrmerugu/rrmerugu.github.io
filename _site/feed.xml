@@ -1,8 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2016-11-28T16:28:30+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><entry><title type="html">I took my first startup challenge</title><link href="http://localhost:4000//blog/i-took-my-first-startup-challenge/" rel="alternate" type="text/html" title="I took my first startup challenge" /><published>2016-05-15T00:00:00+05:30</published><updated>2016-05-15T00:00:00+05:30</updated><id>http://localhost:4000//blog/i-took-my-first-startup-challenge</id><content type="html" xml:base="http://localhost:4000//blog/i-took-my-first-startup-challenge/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2016-11-28T16:55:18+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><entry><title type="html">Being a Business Analyst for one day #startuponedayrole</title><link href="http://localhost:4000//blog/a-day-as-business-analyst/" rel="alternate" type="text/html" title="Being a Business Analyst for one day #startuponedayrole" /><published>2016-11-05T00:00:00+05:30</published><updated>2016-11-05T00:00:00+05:30</updated><id>http://localhost:4000//blog/a-day-as-business-analyst</id><content type="html" xml:base="http://localhost:4000//blog/a-day-as-business-analyst/">&lt;blockquote&gt;
+  &lt;p&gt;Product Feature Documentation keeps everyone in the team on the same page, so I decided to write product documentation the way a BA would do it !&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--/excerpt--&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/ba-0.png&quot; alt=&quot;Business Analyst&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is part of my personal startup-challenge to wear the hats of individual roles of a company in a day &lt;code class=&quot;highlighter-rouge&quot;&gt;#onedaystartuprole&lt;/code&gt; . I founded my first company and launching a product Invaana with the all passion and dreams like any other entrepreneur. Then I was thinking about what if I hire people, and when they join the company, how would I make sure the new bees know what exactly I mean by product and what all it should do. So I decided the document the product, which I’ve never done before. So decided to behave like a Business Analyst(BA) for a day and write the product documentation ie., I should not Code(which I love so much) or do other marketing related stuff apart from being business analyst.&lt;/p&gt;
+
+&lt;p&gt;So, like any other internet enthusiast, I’ve started googling and reading few blogs. The best thing about being BA he should know everything to the minute fundamentals levels. The image below shows the precision level a BA tries to understand the scenarios. &lt;strong&gt;The more the questions BA ask himself or the Founders/team, the more he can create a good product use cases and stories&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;so-what-is-user-story-and-a-use-case-&quot;&gt;So what is user story and a use case ?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;User story&lt;/strong&gt; is a small description of something a user/actor wants to do to accomplish something. For Example: I want to login to change my password . User Stories are written from a single actor perspective with an action and a purpose. Let’s see the above example: I(Actor) want to login(action) to change my password(purpose).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use case&lt;/strong&gt; is a description of a set of interactions between a system and one or more actors. They are usually created as documents, and generally include this kind of information like use case title, rationale/description/ goal, actor/user, preconditions, standard paths or extensions, post conditions. Use case focusses more on the path of the interaction.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;To conclude, according to me, user stories focus on the action and result, but use cases focus more on the path of achieving an action and how system responds to the actor(ie., interaction between actor and system).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Honestly, I’m not sure If I’m on write track in writing this documentation, but this is much better than having nothing in my hand to show to future employees&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Being a Django developer, I strongly advocate KISS principle — Keep It Simple Stupid&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/ba-1.png&quot; alt=&quot;Business-Analyst&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, I tried to make the documentation as light as possible so that future developers need not spends hours of time on reading to understand the product. The documentation simply shoes the basic info — actor, the action and the final result.&lt;/p&gt;</content><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><summary type="html">Product Feature Documentation keeps everyone in the team on the same page, so I decided to write product documentation the way a BA would do it !</summary></entry><entry><title type="html">#startuponedayrole challenge</title><link href="http://localhost:4000//blog/startup-one-day-a-role-challenge/" rel="alternate" type="text/html" title="#startuponedayrole challenge" /><published>2016-11-03T00:00:00+05:30</published><updated>2016-11-03T00:00:00+05:30</updated><id>http://localhost:4000//blog/startup-one-day-a-role-challenge</id><content type="html" xml:base="http://localhost:4000//blog/startup-one-day-a-role-challenge/">&lt;p&gt;Being the founder. I started to work on everything by self, while my hunt for cofounder and employees is still going on. It’s tough to do Multi-tasking, you will end up doing
+lot things with &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;sometimes poor&lt;/code&gt; quality.
+&lt;!--/excerpt--&gt;&lt;/p&gt;
+
+&lt;p&gt;Like any other early stage startup, I started to work on everything that range from thinking the product future, coding the product, taking feedbacks and many more, that range from talking to people as marketing strategy etc. Then I realized I’m not sure If I really can work on everything on a single. Multi-tasking is not really my thing. So then I made a decision to work on different things in different days, But being a startup i don’t have that luxury :( .&lt;/p&gt;
+
+&lt;p&gt;So, planned to take some challenges &lt;code class=&quot;highlighter-rouge&quot;&gt;#startuponedayrole&lt;/code&gt;, According to this challenge, in a day, my primary role is be something ie., Developer, Business Analyst, Testing Automation Developer, Tester. Primary role as in most of my day involves this role and I cannot make any excuses in finishing this role task.&lt;/p&gt;
+
+&lt;p&gt;As a part of the challenge, I need take the following challenges :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Business Analyst day&lt;/li&gt;
+  &lt;li&gt;Developer day&lt;/li&gt;
+  &lt;li&gt;Tester &amp;amp; QA Day&lt;/li&gt;
+  &lt;li&gt;Business Development &amp;amp; Marketing Day&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I’m not quite suite if I take all roles in a week, but I certainly most of them in a week.&lt;/p&gt;</content><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><summary type="html">Being the founder. I started to work on everything by self, while my hunt for cofounder and employees is still going on. It’s tough to do Multi-tasking, you will end up doing
+lot things with less or sometimes poor quality.</summary></entry><entry><title type="html">I took my first startup challenge</title><link href="http://localhost:4000//blog/i-took-my-first-startup-challenge/" rel="alternate" type="text/html" title="I took my first startup challenge" /><published>2016-05-15T00:00:00+05:30</published><updated>2016-05-15T00:00:00+05:30</updated><id>http://localhost:4000//blog/i-took-my-first-startup-challenge</id><content type="html" xml:base="http://localhost:4000//blog/i-took-my-first-startup-challenge/">&lt;blockquote&gt;
   &lt;p&gt;Taking and winning challenges always inspire you and refills yours confidence.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Since college, I’ve always wanted to create something awesome, build something big. I know that sounds like any other crazy adolescent dreams, but yeah it’s kind of!. To be honest, I’ve always wanted to become a worlds renowned Scientist ;)&lt;/p&gt;
+&lt;p&gt;Since college, I’ve always wanted to create something awesome, build something big. I know that sounds like any other crazy adolescent dreams, but yeah it’s kind of!. To be honest, I’ve always wanted to become a worlds renowned Scientist. But finally I founded my first startup.&lt;/p&gt;
 
 &lt;!--/excerpt--&gt;
 
@@ -11,7 +59,7 @@
 &lt;p&gt;After I left the last company(March 31st 2016), and started working on building the product. The challenge is &lt;code class=&quot;highlighter-rouge&quot;&gt;I should not trim my beard till I achieve my first milestone&lt;/code&gt; which is getting at least 10,000 scientists and developers on to the platform. I know 10K users sounds less, but I believe getting 10K uses on board is just a beginning, not the end.&lt;/p&gt;</content><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><summary type="html">Taking and winning challenges always inspire you and refills yours confidence.
 
 
-Since college, I’ve always wanted to create something awesome, build something big. I know that sounds like any other crazy adolescent dreams, but yeah it’s kind of!. To be honest, I’ve always wanted to become a worlds renowned Scientist ;)</summary></entry><entry><title type="html">Hello World! Welcome to my First Jekyll Blog!</title><link href="http://localhost:4000//blog/welcome-to-my-first-jekyll-blog/" rel="alternate" type="text/html" title="Hello World! Welcome to my First Jekyll Blog!" /><published>2015-11-27T00:00:00+05:30</published><updated>2015-11-27T00:00:00+05:30</updated><id>http://localhost:4000//blog/welcome-to-my-first-jekyll-blog</id><content type="html" xml:base="http://localhost:4000//blog/welcome-to-my-first-jekyll-blog/">&lt;p&gt;Blogging isn’t my thing, and I never imagined setting up a blog using Jekyll. Recently starting the new blog with Jekyll and loving it .&lt;/p&gt;
+Since college, I’ve always wanted to create something awesome, build something big. I know that sounds like any other crazy adolescent dreams, but yeah it’s kind of!. To be honest, I’ve always wanted to become a worlds renowned Scientist. But finally I founded my first startup.</summary></entry><entry><title type="html">Hello World! Welcome to my First Jekyll Blog!</title><link href="http://localhost:4000//blog/welcome-to-my-first-jekyll-blog/" rel="alternate" type="text/html" title="Hello World! Welcome to my First Jekyll Blog!" /><published>2015-11-27T00:00:00+05:30</published><updated>2015-11-27T00:00:00+05:30</updated><id>http://localhost:4000//blog/welcome-to-my-first-jekyll-blog</id><content type="html" xml:base="http://localhost:4000//blog/welcome-to-my-first-jekyll-blog/">&lt;p&gt;Blogging isn’t my thing, and I never imagined setting up a blog using Jekyll. Recently starting the new blog with Jekyll and loving it .&lt;/p&gt;
 
 &lt;!--/excerpt--&gt;
 

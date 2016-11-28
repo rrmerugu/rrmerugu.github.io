@@ -5,5 +5,6 @@ website: "https://github.com/rrmerugu/whatsapp-chatter"
 skills: ["Django", 'MongoDB', 'Whatsapp']
 ---
 
-The project reads the exported whatsapp chat from a text file, and chats to you
-based on your conversation. This is still an amateur version, way more to be done.
+The project reads the exported `whatsapp chat` from a text file, and the bot
+will `chat` to you based on your `conversation`. This is still an amateur
+version, way more to be done.

@@ -5,7 +5,7 @@ title:  "I took my first startup challenge"
 
 > Taking and winning challenges always inspire you and refills yours confidence.
 
-Since college, I’ve always wanted to create something awesome, build something big. I know that sounds like any other crazy adolescent dreams, but yeah it’s kind of!. To be honest, I’ve always wanted to become a worlds renowned Scientist ;)
+Since college, I’ve always wanted to create something awesome, build something big. I know that sounds like any other crazy adolescent dreams, but yeah it’s kind of!. To be honest, I’ve always wanted to become a worlds renowned Scientist. But finally I founded my first startup.
 
 <!--/excerpt-->
 
