@@ -7,7 +7,7 @@ title: Projects
   {% for project in site.projects %}
   <div class="project post">
     <h2 class="project-title post-title">
-      <a href="{{ project.website }}">
+      <a href="{{ project.website }}" target="_blank">
         {{ project.title }}
       </a>
     </h2>

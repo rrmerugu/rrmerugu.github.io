@@ -22,9 +22,9 @@ title: My Research
 ### ACADEMIC RESEARCH PROJECTS
 
 #### Homology modeling of human CCR5, 2D QSAR, and docking studies of HIV-1 inhibitors targeting CCR5 protein.
-<small>Homology Modeling, CCR5, 2D QSAR, Molecular Docking, HIV</small>
-<small>[View thesis]({{ site.baseurl }}public/pdfs/CCR5-BSc-Thesis.pdf){:target="_blank"}</small>
+<small>Homology Modeling, CCR5, 2D QSAR, Molecular Docking, HIV. </small>
+<small>[View pdf]({{ site.baseurl }}public/pdfs/CCR5-BSc-Thesis.pdf){:target="_blank"}</small>
 
 #### Homology Modeling of CCR5 – Verification by Molecular Dynamics and Docking Studies with Agonists and Antagonists
-<small>Homology Modeling, CCR5, Molecular Docking, Molecular Dynamics</small>
-<small>[View thesis]({{ site.baseurl }}public/pdfs/CCR5-Msc-Thesis.pdf){:target="_blank"}</small>
+<small>Homology Modeling, CCR5, Molecular Docking, Molecular Dynamics. </small>
+<small>[View pdf]({{ site.baseurl }}public/pdfs/CCR5-Msc-Thesis.pdf){:target="_blank"}</small>
