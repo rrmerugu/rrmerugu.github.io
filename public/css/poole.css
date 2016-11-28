@@ -437,7 +437,8 @@ a.pagination-item:hover {
   padding-left: 0;
 list-style: none;
 margin-left: -5px;
-display: flex;
+display: -webkit-inline-box;
+display: -moz-inline-box;
 }
 .list-inline li{
       margin-right: 1rem;
