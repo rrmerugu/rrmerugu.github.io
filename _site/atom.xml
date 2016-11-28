@@ -4,7 +4,7 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-11-28T05:46:45+05:30</updated>
+ <updated>2016-11-28T05:58:56+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Welcome to my First Jekyll Blog!</title>
-   <link href="http://localhost:4000/blog/welcome-to-my-first-jekyll-blog/"/>
-   <updated>2015-12-27T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/welcome-to-my-first-jekyll-blog</id>
+   <link href="http://localhost:4000/blog/welcome-to-my-first-jekyll-blog0/"/>
+   <updated>2015-11-27T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/welcome-to-my-first-jekyll-blog0</id>
    <content type="html">&lt;p&gt;Blogging isn’t my thing, and I never imagined setting up a blog using Jekyll. Recently starting the new blog with Jekyll and loving it .&lt;/p&gt;
 
 &lt;!--/excerpt--&gt;
