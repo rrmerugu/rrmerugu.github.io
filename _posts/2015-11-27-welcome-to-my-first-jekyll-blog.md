@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to my First Jekyll Blog :D"
+title:  "Hello World! Welcome to my First Jekyll Blog!"
 ---
 
 Blogging isn't my thing, and I never imagined setting up a blog using Jekyll. Recently starting the new blog with Jekyll and loving it .

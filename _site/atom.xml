@@ -4,7 +4,7 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-11-28T06:05:47+05:30</updated>
+ <updated>2016-11-28T13:16:12+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
@@ -13,7 +13,26 @@
 
  
  <entry>
-   <title>Welcome to my First Jekyll Blog :D</title>
+   <title>I took my first startup challenge</title>
+   <link href="http://localhost:4000/blog/i-took-my-first-startup-challenge/"/>
+   <updated>2016-05-15T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/i-took-my-first-startup-challenge</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;Taking and winning challenges always inspire you and refills yours confidence.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Since college, I’ve always wanted to create something awesome, build something big. I know that sounds like any other crazy adolescent dreams, but yeah it’s kind of!. To be honest, I’ve always wanted to become a worlds renowned Scientist ;)&lt;/p&gt;
+
+&lt;!--/excerpt--&gt;
+
+&lt;p&gt;So, after few years of academic research, working as technical associate in a computational drug discovery company, IT consultant for a Bay area startup, Software developer in IIT Delhi and Head of Technology and Development for a Food tech startup. I finally choose to start my own company. I gave a lot of thought, went through many names, and finalized a name &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Invana&lt;/code&gt;&lt;/strong&gt; which is derivative of the words, &lt;code class=&quot;highlighter-rouge&quot;&gt;Invention&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Nirvana&lt;/code&gt;. I’m so glad that sounds more Sanskritish than I always wanted :D.&lt;/p&gt;
+
+&lt;p&gt;After I left the last company(March 31st 2016), and started working on building the product. The challenge is &lt;code class=&quot;highlighter-rouge&quot;&gt;I should not trim my beard till I achieve my first milestone&lt;/code&gt; which is getting at least 10,000 scientists and developers on to the platform. I know 10K users sounds less, but I believe getting 10K uses on board is just a beginning, not the end.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hello World! Welcome to my First Jekyll Blog!</title>
    <link href="http://localhost:4000/blog/welcome-to-my-first-jekyll-blog/"/>
    <updated>2015-11-27T00:00:00+05:30</updated>
    <id>http://localhost:4000/blog/welcome-to-my-first-jekyll-blog</id>
