@@ -4,7 +4,7 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2016-11-29T03:05:34+05:30</updated>
+ <updated>2016-11-29T12:43:44+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
@@ -74,6 +74,61 @@ lot things with &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt
 &lt;/ol&gt;
 
 &lt;p&gt;I’m not quite suite if I take all roles in a week, but I certainly most of them in a week.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My Story </title>
+   <link href="http://localhost:4000/blog/my-story/"/>
+   <updated>2016-08-01T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/my-story</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;If you are a theist, you think its the beauty of God, But If you are a Scientist, you think, let’s explore why its beautiful. I prefer to be the second type.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’m a stupidly curious guy with crazy imaginations. But I’m not into everything!, I don’t care about most of the things. Honestly as bad as it sounds, I don’t even know the current President of my country. The last one I knew was Dr. APJ Abdul Kalam. The only reason I knew of him was because he is a Scientist and my academics back then had a subject General Knowledge in curriculum.&lt;/p&gt;
+
+&lt;!--/excerpt--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I’m not crazy my reality is just different from yours. — Lewis Carroll, Alice in Wonderland&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Let’s start with what kind of Guy I am (from my perspective)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Mostly, I live in my own world of Coding, Exploring the stuff that interests me. I’m too emotional about what I love, but I don’t essentially show that every time. I love Nature — Forests, Mountains and Water bodies. I love meeting new people, but unfortunately once they are out of sight, they are out of my mind.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lets start from the beginning, the very beginning — My Dreams as a Child&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/my-story/baby.jpeg&quot; alt=&quot;MegaMing baby picture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I always wanted to become a Scientist. I love the look of the Scientists in long white Aprons, with gloves, test tubes, glasses on they nose. I always wanted to become a Scientist with a thought that I can create whatever I want to If I become a scientist. Example: I was always curious about how we live, whats wrong with Oxygen, Carbondioxide, Why humans live on O2 but Trees live on CO2. What makes humans move and why trees can’t move.&lt;/p&gt;
+
+&lt;h3 id=&quot;school-and-college-confused-me-a-lot&quot;&gt;School and College Confused me a lot&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/my-story/schoolboy.png&quot; alt=&quot;School kid picture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;School in fact, confused me a lot with the little things I was taught&lt;/em&gt;. I thought If I could become a Scientist I could solve the mysteries in my head. In college, I studied Genetics just for this, then I did a course on Chemoinformatics, which completely changed my way from genetics. &lt;em&gt;I took Masters in Bioinformatics, because of the love for both computers and biology&lt;/em&gt;. I almost spent 2 years in doing academic research on Computational Drug Designing.&lt;/p&gt;
+
+&lt;h3 id=&quot;computational-drug-discovery-was-fascinating&quot;&gt;Computational Drug Discovery was fascinating&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/my-story/cadd.png&quot; alt=&quot;CADD Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All the years of my research career in Computational Drug Discovery, I’m so attached to the computers, because all the simulations need to be done on Linux machines sometimes HPCs :) .&lt;/p&gt;
+
+&lt;p&gt;Then worked as technical associate, later moved into programming and finally settled as a Developer as profession. But I still feel the thirst for scientific knowledge, reasoning and discovery. I wish I could restart my scientific research career soon or later. I’m actually planning something on this.&lt;/p&gt;
+
+&lt;h3 id=&quot;being-developer-is-awesome&quot;&gt;Being Developer is awesome&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/my-story/editor.png&quot; alt=&quot;Code Editor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Being developer and being scientists are almost same, but if you are a scientist, you create something for the world, and if you are a developer, you create something for the fun ;) But, honestly both improve the life of Human Race in their own perspectives ways.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The best part being a Coder is you can create anything you want to. PS: Atleast that’s what you feel ;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Currently I’m working on my first startup &lt;a href=&quot;https://invaana.com&quot;&gt;Invaana&lt;/a&gt;. Let’s see what life has planned for me or what I’ll make out of my life ;)&lt;/p&gt;
 </content>
  </entry>
  
