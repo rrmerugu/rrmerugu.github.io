@@ -4,7 +4,7 @@ title:  "#startuponedayrole challenge"
 ---
 
 Being the founder. I started to work on everything by self, while my hunt for cofounder and employees is still going on. It's tough to do Multi-tasking, you will end up doing
-lot things with `less` or `sometimes poor` quality.
+lot things with `less` or `sometimes poor` quality. So I decided to take one role a day.
 <!--/excerpt-->
 
 Like any other early stage startup, I started to work on everything that range from thinking the product future, coding the product, taking feedbacks and many more, that range from talking to people as marketing strategy etc. Then I realized I’m not sure If I really can work on everything on a single. Multi-tasking is not really my thing. So then I made a decision to work on different things in different days, But being a startup i don’t have that luxury :( .
