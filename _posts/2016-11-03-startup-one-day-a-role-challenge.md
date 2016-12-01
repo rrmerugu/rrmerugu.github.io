@@ -19,4 +19,4 @@ As a part of the challenge, I need take the following challenges :
   3. Tester & QA Day
   4. Business Development & Marketing Day
 
-I’m not quite suite if I take all roles in a week, but I certainly most of them in a week.  
+I’m not quite suite if I take all roles in a week, but I certainly take most of them in a week.  
