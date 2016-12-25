@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Ravi Raja Merugu</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2016-12-01T09:05:43+05:30</updated>
- <id>http://localhost:4000</id>
+ <link href="http://rsquarelabs.com/atom.xml" rel="self"/>
+ <link href="http://rsquarelabs.com/"/>
+ <updated>2016-12-25T18:04:18+05:30</updated>
+ <id>http://rsquarelabs.com</id>
  <author>
    <name>Ravi Raja Merugu</name>
    <email>rrmerugu@gmail.com</email>
@@ -13,10 +13,87 @@
 
  
  <entry>
+   <title>Hello Docker - my docker notes</title>
+   <link href="http://rsquarelabs.com/blog/hello-docker/"/>
+   <updated>2016-12-25T00:00:00+05:30</updated>
+   <id>http://rsquarelabs.com/blog/hello-docker</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.docker.com&quot;&gt;Docker&lt;/a&gt; as the website homepage says 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;is the world’s leading software containerization platform&lt;/code&gt;. 
+Dockers and container tech has become a common practise in the software development. 
+I tried it and fell in love with this for many reasons.  The prime reason 
+is it is an open-source project. Long hail opensource developers.&lt;/p&gt;
+
+&lt;!--/excerpt--&gt;
+
+&lt;p&gt;So I’ve experimenting on the scenrios in which i might need to use docker containers. 
+I mostly work with Django, but the technical stack varies from simple 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Django + sqlite&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;Django + postgres + redis + celery&lt;/code&gt; and more.&lt;/p&gt;
+
+&lt;p&gt;Let me share my reasons of falling in love with Docker.&lt;/p&gt;
+
+&lt;h3 id=&quot;maintaining-the-consistency-in-the-version-of-the-tools-used-by-every-developer&quot;&gt;1.Maintaining the consistency in the version of the tools used by every developer&lt;/h3&gt;
+&lt;p&gt;Although installation is a one time affair. Maintaining the consistency in the version of the tools used by every developer
+of the project is a challenge. Dockers solve that easily.&lt;/p&gt;
+
+&lt;h3 id=&quot;no-re-installation-and-reconfigure-headaches&quot;&gt;2.No re-installation and reconfigure headaches&lt;/h3&gt;
+&lt;p&gt;Docker comes with &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file which will do all your dirty configuration headaches.&lt;/p&gt;
+
+&lt;h3 id=&quot;integrating-multiple-tools-is-not-hard&quot;&gt;3.Integrating multiple tools is not hard&lt;/h3&gt;
+&lt;p&gt;Docker’s &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; makes it easy to install the required tech stack images.&lt;/p&gt;
+
+&lt;p&gt;Example: If you want to build a &lt;code class=&quot;highlighter-rouge&quot;&gt;Django + Postgres&lt;/code&gt;  container. All you do is&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# docker-compose.yml
+
+version: &quot;2&quot;
+
+services:
+  db:
+     image: postgres
+  web:
+    build: .
+    container_name: django_postgres
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./hello_django:/hello_django
+    ports:
+      - &quot;8000:8000&quot;
+    depends_on:
+      - db
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Dockerfile 
+
+FROM python:2.7
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /hello_django
+WORKDIR /hello_django
+ADD ./hello_django/ /hello_django/
+RUN pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Execute &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose build&lt;/code&gt; to build the container or &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose up -d&lt;/code&gt; to 
+run the application. You should be able to access the django server running and available 
+on the url &lt;code class=&quot;highlighter-rouge&quot;&gt;http://{your-docker-ip}:8000&lt;/code&gt; in my case it’s &lt;code class=&quot;highlighter-rouge&quot;&gt;http://192.168.99.100:8000&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;above-all-its-open-source&quot;&gt;4.Above all, it’s open-source&lt;/h2&gt;
+&lt;p&gt;It’s an opensource project and that makes it more awesome - the developers, 
+tutorials and active community makes it more powerfull than other container 
+technology.&lt;/p&gt;
+
+&lt;p&gt;All the docker scenarios i’ve experimented were published in &lt;code class=&quot;highlighter-rouge&quot;&gt;https://github.com/rrmerugu/hello-docker&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Try it out. All the very best :)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Being a Business Analyst for one day #startuponedayrole</title>
-   <link href="http://localhost:4000/blog/a-day-as-business-analyst/"/>
+   <link href="http://rsquarelabs.com/blog/a-day-as-business-analyst/"/>
    <updated>2016-11-05T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/a-day-as-business-analyst</id>
+   <id>http://rsquarelabs.com/blog/a-day-as-business-analyst</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;Product Feature Documentation keeps everyone in the team on the same page, so I decided to write product documentation the way a BA would do it !&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -53,9 +130,9 @@
  
  <entry>
    <title>#startuponedayrole challenge</title>
-   <link href="http://localhost:4000/blog/startup-one-day-a-role-challenge/"/>
+   <link href="http://rsquarelabs.com/blog/startup-one-day-a-role-challenge/"/>
    <updated>2016-11-03T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/startup-one-day-a-role-challenge</id>
+   <id>http://rsquarelabs.com/blog/startup-one-day-a-role-challenge</id>
    <content type="html">&lt;p&gt;Being the founder. I started to work on everything by self, while my hunt for cofounder and employees is still going on. It’s tough to do Multi-tasking, you will end up doing
 lot things with &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;sometimes poor&lt;/code&gt; quality. So I decided to take one role a day.
 &lt;!--/excerpt--&gt;&lt;/p&gt;
@@ -79,9 +156,9 @@ lot things with &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt
  
  <entry>
    <title>My Story </title>
-   <link href="http://localhost:4000/blog/my-story/"/>
+   <link href="http://rsquarelabs.com/blog/my-story/"/>
    <updated>2016-08-01T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/my-story</id>
+   <id>http://rsquarelabs.com/blog/my-story</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;If you are a theist, you think its the beauty of God, But If you are a Scientist, you think, let’s explore why its beautiful. I prefer to be the second type.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -134,9 +211,9 @@ lot things with &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt
  
  <entry>
    <title>I took my first startup challenge</title>
-   <link href="http://localhost:4000/blog/i-took-my-first-startup-challenge/"/>
-   <updated>2016-05-15T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/i-took-my-first-startup-challenge</id>
+   <link href="http://rsquarelabs.com/blog/i-took-my-first-startup-challenge/"/>
+   <updated>2016-05-25T00:00:00+05:30</updated>
+   <id>http://rsquarelabs.com/blog/i-took-my-first-startup-challenge</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;Taking and winning challenges always inspire you and refills yours confidence.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -153,9 +230,9 @@ lot things with &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt
  
  <entry>
    <title>Hello World! Welcome to my First Jekyll Blog!</title>
-   <link href="http://localhost:4000/blog/welcome-to-my-first-jekyll-blog/"/>
+   <link href="http://rsquarelabs.com/blog/welcome-to-my-first-jekyll-blog/"/>
    <updated>2015-11-27T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/welcome-to-my-first-jekyll-blog</id>
+   <id>http://rsquarelabs.com/blog/welcome-to-my-first-jekyll-blog</id>
    <content type="html">&lt;p&gt;Blogging isn’t my thing, and I never imagined setting up a blog using Jekyll. Recently starting the new blog with Jekyll and loving it .&lt;/p&gt;
 
 &lt;!--/excerpt--&gt;
