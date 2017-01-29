@@ -11,7 +11,7 @@
 
   <title>
     
-      Hello Docker - my docker notes &middot; Ravi Raja Merugu
+      Integrating elasticemail.com into django project for transactional emails. &middot; Ravi Raja Merugu
     
   </title>
 
@@ -90,7 +90,7 @@
 
 
         </ul>
-    <p class="small">&copy; 2016. Built
+    <p class="small">&copy; 2017. Built
        with <i class="fa fa-heart"></i> for Science and Code.  </p>
   </div>
 </div>
@@ -98,75 +98,44 @@
 
     <div class="content container">
       <div class="post">
-  <h1 class="post-title">Hello Docker - my docker notes</h1>
-  <span class="post-date">25 Dec 2016</span>
-  <p><a href="https://www.docker.com">Docker</a> as the website homepage says 
-<code class="highlighter-rouge">is the world’s leading software containerization platform</code>. 
-Dockers and container tech has become a common practise in the software development. 
-I tried it and fell in love with this for many reasons.  The prime reason 
-is it is an open-source project. Long hail opensource developers.</p>
+  <h1 class="post-title">Integrating elasticemail.com into django project for transactional emails.</h1>
+  <span class="post-date">23 Jan 2017</span>
+  <p><a href="https://www.elasticemail.com">Elastiemail</a> as the website says is a email delivery tools provider, 
+ you can send transactional as well as promotional emails.</p>
+
+<p>I’ve written a <code class="highlighter-rouge">EMAILBACKEND</code> class that allows you to send emails in django project using elasticemail.com</p>
 
 <!--/excerpt-->
 
-<p>So I’ve experimenting on the scenrios in which i might need to use docker containers. 
-I mostly work with Django, but the technical stack varies from simple 
-<code class="highlighter-rouge">Django + sqlite</code> to <code class="highlighter-rouge">Django + postgres + redis + celery</code> and more.</p>
+<p>Here is how to use it.</p>
 
-<p>Let me share my reasons of falling in love with Docker.</p>
+<ol>
+  <li>
+    <p>Install the package via git <code class="highlighter-rouge">git install -e git+https://github.com/rrmerugu/django_elasticemail</code></p>
+  </li>
+  <li>
+    <p>Add <code class="highlighter-rouge">django_elasticemail</code> to <code class="highlighter-rouge">INSTALLED_APPS</code></p>
+  </li>
+  <li>
+    <p>In <code class="highlighter-rouge">settings.py</code> add <code class="highlighter-rouge">EMAIL_BACKEND = "django_elasticemail.mail.ElasticEmailBackend"</code></p>
+  </li>
+</ol>
 
-<h3 id="maintaining-the-consistency-in-the-version-of-the-tools-used-by-every-developer">1.Maintaining the consistency in the version of the tools used by every developer</h3>
-<p>Although installation is a one time affair. Maintaining the consistency in the version of the tools used by every developer
-of the project is a challenge. Dockers solve that easily.</p>
+<h2 id="usage">Usage</h2>
 
-<h3 id="no-re-installation-and-reconfigure-headaches">2.No re-installation and reconfigure headaches</h3>
-<p>Docker comes with <code class="highlighter-rouge">docker-compose.yml</code> file which will do all your dirty configuration headaches.</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">django.core.mail</span> <span class="kn">import</span> <span class="n">EmailMultiAlternatives</span>
 
-<h3 id="integrating-multiple-tools-is-not-hard">3.Integrating multiple tools is not hard</h3>
-<p>Docker’s <code class="highlighter-rouge">docker-compose.yml</code> makes it easy to install the required tech stack images.</p>
 
-<p>Example: If you want to build a <code class="highlighter-rouge">Django + Postgres</code>  container. All you do is</p>
+<span class="n">email_message</span> <span class="o">=</span> <span class="n">EmailMultiAlternatives</span><span class="p">(</span><span class="n">subject</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                            <span class="n">from_email</span><span class="o">=</span><span class="s">'xxx@gmail.com'</span><span class="p">,</span>  <span class="n">to</span><span class="o">=</span><span class="p">[</span><span class="s">'yy@gmail.com'</span><span class="p">,</span> <span class="s">'zz@outlook.com'</span><span class="p">])</span>
+<span class="n">email_message</span><span class="o">.</span><span class="n">template</span> <span class="o">=</span> <span class="s">'template-name'</span> <span class="c"># template with this name should be created in your elasticemail.com account</span>
+<span class="n">email_message</span><span class="o">.</span><span class="n">merge_vars</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'text'</span><span class="p">:</span> <span class="s">'Hello World'</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">email_message</span><span class="o">.</span><span class="n">send</span><span class="p">()</span>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># docker-compose.yml
-
-version: "2"
-
-services:
-  db:
-     image: postgres
-  web:
-    build: .
-    container_name: django_postgres
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - ./hello_django:/hello_django
-    ports:
-      - "8000:8000"
-    depends_on:
-      - db
 </code></pre>
 </div>
-
-<div class="highlighter-rouge"><pre class="highlight"><code># Dockerfile 
-
-FROM python:2.7
-ENV PYTHONUNBUFFERED 1
-RUN mkdir /hello_django
-WORKDIR /hello_django
-ADD ./hello_django/ /hello_django/
-RUN pip install -r requirements.txt
-</code></pre>
-</div>
-
-<p>Execute <code class="highlighter-rouge">docker-compose build</code> to build the container or <code class="highlighter-rouge">docker-compose up -d</code> to 
-run the application. You should be able to access the django server running and available 
-on the url <code class="highlighter-rouge">http://{your-docker-ip}:8000</code> in my case it’s <code class="highlighter-rouge">http://192.168.99.100:8000</code></p>
-
-<h2 id="above-all-its-open-source">4.Above all, it’s open-source</h2>
-<p>It’s an opensource project and that makes it more awesome - the developers, 
-tutorials and active community makes it more powerfull than other container 
-technology.</p>
-
-<p>All the docker scenarios i’ve experimented were published in <code class="highlighter-rouge">https://github.com/rrmerugu/hello-docker</code></p>
 
 <p>Try it out. All the very best :)</p>
 
@@ -175,6 +144,15 @@ technology.</p>
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/blog/hello-docker/">
+            Hello Docker - my docker notes
+            <small>25 Dec 2016</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -190,15 +168,6 @@ technology.</p>
           <a href="/blog/startup-one-day-a-role-challenge/">
             #startuponedayrole challenge
             <small>03 Nov 2016</small>
-          </a>
-        </h3>
-      </li>
-    
-      <li>
-        <h3>
-          <a href="/blog/my-story/">
-            My Story 
-            <small>01 Aug 2016</small>
           </a>
         </h3>
       </li>
