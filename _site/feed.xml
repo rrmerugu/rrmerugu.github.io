@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2017-01-29T20:49:04+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><entry><title type="html">Integrating elasticemail.com into django project for transactional emails.</title><link href="http://localhost:4000//blog/hello-docker/" rel="alternate" type="text/html" title="Integrating elasticemail.com into django project for transactional emails." /><published>2017-01-23T00:00:00+05:30</published><updated>2017-01-23T00:00:00+05:30</updated><id>http://localhost:4000//blog/hello-docker</id><content type="html" xml:base="http://localhost:4000//blog/hello-docker/">&lt;p&gt;&lt;a href=&quot;https://www.elasticemail.com&quot;&gt;Elastiemail&lt;/a&gt; as the website says is a email delivery tools provider, 
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2017-02-05T21:55:45+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><entry><title type="html">Hello Ionic framework - a sample hydrib mobile application.</title><link href="http://localhost:4000//blog/hello-ionic-cordova/" rel="alternate" type="text/html" title="Hello Ionic framework - a sample hydrib mobile application." /><published>2017-02-03T00:00:00+05:30</published><updated>2017-02-03T00:00:00+05:30</updated><id>http://localhost:4000//blog/hello-ionic-cordova</id><content type="html" xml:base="http://localhost:4000//blog/hello-ionic-cordova/">&lt;p&gt;&lt;a href=&quot;https://ionicframework.com/&quot;&gt;Ionic Framework&lt;/a&gt; as the website says is 
+the top open source framework for building amazing mobile apps..&lt;/p&gt;
+
+&lt;p&gt;I’ve written a sample 3 page mobile app that can be deployed into &lt;code class=&quot;highlighter-rouge&quot;&gt;iOS&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;android&lt;/code&gt;.&lt;/p&gt;
+
+&lt;!--/excerpt--&gt;
+
+&lt;p&gt;Here is how to use it and code is hosted at &lt;a href=&quot;https://github.com/rrmerugu/hello-ionic&quot;&gt;https://github.com/rrmerugu/hello-ionic&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step1: Create ionic app &lt;code class=&quot;highlighter-rouge&quot;&gt;ionic start hello_app --v2 sidemenu&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step2: Create new page &lt;code class=&quot;highlighter-rouge&quot;&gt;ionic g page home&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Step3: Configuring the pages in the app
+    &lt;ul&gt;
+      &lt;li&gt;Add new page &lt;code class=&quot;highlighter-rouge&quot;&gt;home&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;src/app/app.module.ts&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Import and add &lt;code class=&quot;highlighter-rouge&quot;&gt;home&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;src/app/app.components.ts&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Pages of the app is located in &lt;code class=&quot;highlighter-rouge&quot;&gt;src/app/app.components.ts&lt;/code&gt; with variable 
+ in &lt;code class=&quot;highlighter-rouge&quot;&gt;this.pages&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Change the index/root page of the app in &lt;code class=&quot;highlighter-rouge&quot;&gt;src/app/app.components.ts&lt;/code&gt; with the variable 
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;rootPage&lt;/code&gt;. Change the &lt;code class=&quot;highlighter-rouge&quot;&gt;rootPage&lt;/code&gt; variable accordingly.&lt;/li&gt;
+      &lt;li&gt;SideMenu template can be found at &lt;code class=&quot;highlighter-rouge&quot;&gt;src/app/app.html&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Generating a build for &lt;code class=&quot;highlighter-rouge&quot;&gt;iOS&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;ionic build ios&lt;/code&gt;. App is generated in 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;hello-ionic/hello_app/platforms/ios/build/emulator/hello_app.app&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Simulating the generating build using &lt;code class=&quot;highlighter-rouge&quot;&gt;ionic emulate ios&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;other-commands&quot;&gt;Other commands&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ionic platforms&lt;/code&gt; to check the available platforms&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ionic platform add android&lt;/code&gt; to add android platform&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;publishing&quot;&gt;Publishing&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remove any &lt;code class=&quot;highlighter-rouge&quot;&gt;plugins&lt;/code&gt; that you used for development but not needed for production. 
+Example: &lt;code class=&quot;highlighter-rouge&quot;&gt;cordova plugin rm cordova-plugin-console&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Creating a production build - &lt;code class=&quot;highlighter-rouge&quot;&gt;ionic build ios --release&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Anatomy of Code : https://ionicframework.com/docs/v2/setup/tutorial/project-structure/&lt;/li&gt;
+  &lt;li&gt;Generate page : https://ionicframework.com/docs/v2/cli/generate/&lt;/li&gt;
+  &lt;li&gt;Create to Deployment Guide : https://ionicframework.com/docs/guide/&lt;/li&gt;
+  &lt;li&gt;Publishing in android and iOS: https://ionicframework.com/docs/guide/publishing.html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Try it out. All the very best :)&lt;/p&gt;</content><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><summary type="html">Ionic Framework as the website says is 
+the top open source framework for building amazing mobile apps..
+
+I’ve written a sample 3 page mobile app that can be deployed into iOS and android.</summary></entry><entry><title type="html">Integrating elasticemail.com into django project for transactional emails.</title><link href="http://localhost:4000//blog/intergrating-elasticemail-into-django-for-transactional-emails/" rel="alternate" type="text/html" title="Integrating elasticemail.com into django project for transactional emails." /><published>2017-01-23T00:00:00+05:30</published><updated>2017-01-23T00:00:00+05:30</updated><id>http://localhost:4000//blog/intergrating-elasticemail-into-django-for-transactional-emails</id><content type="html" xml:base="http://localhost:4000//blog/intergrating-elasticemail-into-django-for-transactional-emails/">&lt;p&gt;&lt;a href=&quot;https://www.elasticemail.com&quot;&gt;Elastiemail&lt;/a&gt; as the website says is a email delivery tools provider, 
  you can send transactional as well as promotional emails.&lt;/p&gt;
 
 &lt;p&gt;I’ve written a &lt;code class=&quot;highlighter-rouge&quot;&gt;EMAILBACKEND&lt;/code&gt; class that allows you to send emails in django project using elasticemail.com&lt;/p&gt;
