@@ -13,7 +13,7 @@ permalink:              /blog/:categories/:title/
 
 # Setup
 title:            Ravi Raja Merugu
-tagline:          'A Computational Biologist who fell in love with Web Technologies'
+tagline:          'Teaching cognitive abilities to the web applications.'
 description:      'A Biologist who fell in love with Codes and crazy things a code can do!'
 url:              http://rsquarelabs.com
 baseurl:          /
