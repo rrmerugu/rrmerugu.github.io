@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Django - why ajax ? we have Pjax
+title: Django - why ajax for pages ? we have Pjax
 ---
 
 
 Pjax(https://github.com/defunkt/jquery-pjax) is a jQuery plugin a standalone JavaScript module 
 that uses ajax (XmlHttpRequest) and pushState() to deliver a fast browsing experience.
 
-Typically django serves each page with a entire page reload, costing performance. Using Pjax, its gone :) , Lets know
-how ..
+Typically django serves each page with a entire page reload, costing performance. Using Pjax, its we convert our 
+ django application into a light weight server rendered SPA :) , Lets know how awesome is that..
 
 
 <!--/excerpt-->
