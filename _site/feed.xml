@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2017-02-05T22:01:09+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><entry><title type="html">Hello Ionic framework - a sample hydrib mobile application.</title><link href="http://localhost:4000//blog/hello-ionic-cordova/" rel="alternate" type="text/html" title="Hello Ionic framework - a sample hydrib mobile application." /><published>2017-02-03T00:00:00+05:30</published><updated>2017-02-03T00:00:00+05:30</updated><id>http://localhost:4000//blog/hello-ionic-cordova</id><content type="html" xml:base="http://localhost:4000//blog/hello-ionic-cordova/">&lt;p&gt;&lt;a href=&quot;https://ionicframework.com/&quot;&gt;Ionic Framework&lt;/a&gt; as the website says is 
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2017-02-25T21:08:31+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><entry><title type="html">Django - why ajax ? we have Pjax</title><link href="http://localhost:4000//blog/django-why-ajax-we-have-pjax/" rel="alternate" type="text/html" title="Django - why ajax ? we have Pjax" /><published>2017-02-25T00:00:00+05:30</published><updated>2017-02-25T00:00:00+05:30</updated><id>http://localhost:4000//blog/django-why-ajax-we-have-pjax</id><content type="html" xml:base="http://localhost:4000//blog/django-why-ajax-we-have-pjax/">&lt;p&gt;Pjax(https://github.com/defunkt/jquery-pjax) is a jQuery plugin a standalone JavaScript module 
+that uses ajax (XmlHttpRequest) and pushState() to deliver a fast browsing experience.&lt;/p&gt;
+
+&lt;p&gt;Typically django serves each page with a entire page reload, costing performance. Using Pjax, its gone :) , Lets know
+how ..&lt;/p&gt;
+
+&lt;!--/excerpt--&gt;
+
+&lt;p&gt;Here is how to use it and code is hosted at &lt;a href=&quot;https://github.com/rrmerugu/django-pjaxified&quot;&gt;https://github.com/rrmerugu/django-pjaxified&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step1: Fork and Clone  the repo &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone https://github.com/rrmerugu/django-pjaxified&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step2: Create virtualenv &lt;code class=&quot;highlighter-rouge&quot;&gt;virtualenv venv&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step3: Activate the &lt;code class=&quot;highlighter-rouge&quot;&gt;venv&lt;/code&gt; and install the necessary packages
+ using &lt;code class=&quot;highlighter-rouge&quot;&gt;source venv/bin/activate &amp;amp;&amp;amp; pip install -r requirements.txt&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Step4: start the server :D, all the configs are already added into the &lt;code class=&quot;highlighter-rouge&quot;&gt;settings&lt;/code&gt;. Just start the server  with 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;python manage.py runserver&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Check the &lt;code class=&quot;highlighter-rouge&quot;&gt;djangoajax/settings.py&lt;/code&gt; for the &lt;code class=&quot;highlighter-rouge&quot;&gt;pjax&lt;/code&gt; settings. there are only 3 settings needed . Check 
+&lt;a href=&quot;https://github.com/nigma/django-easy-pjax&quot;&gt;https://github.com/nigma/django-easy-pjax&lt;/a&gt; for settings and implementation 
+doc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;website/templates/base.html&lt;/code&gt; contains the &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; libraries and code needed to activate the pjax on page :) .&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;In the &lt;code class=&quot;highlighter-rouge&quot;&gt;url/route of django view&lt;/code&gt; while extending the &lt;code class=&quot;highlighter-rouge&quot;&gt;base.html&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;base.html&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt; use
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;base.html&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|pjax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt; and place the &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt; of &lt;code class=&quot;highlighter-rouge&quot;&gt;base.html&lt;/code&gt; in a div container with 
+id specified in &lt;code class=&quot;highlighter-rouge&quot;&gt;base.html&lt;/code&gt; which is &lt;code class=&quot;highlighter-rouge&quot;&gt;pjax-container&lt;/code&gt; in our case.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Try it out, and let me know :)&lt;/p&gt;</content><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><summary type="html">Pjax(https://github.com/defunkt/jquery-pjax) is a jQuery plugin a standalone JavaScript module 
+that uses ajax (XmlHttpRequest) and pushState() to deliver a fast browsing experience.
+
+Typically django serves each page with a entire page reload, costing performance. Using Pjax, its gone :) , Lets know
+how ..</summary></entry><entry><title type="html">Hello Ionic framework - a sample hydrib mobile application.</title><link href="http://localhost:4000//blog/hello-ionic-cordova/" rel="alternate" type="text/html" title="Hello Ionic framework - a sample hydrib mobile application." /><published>2017-02-03T00:00:00+05:30</published><updated>2017-02-03T00:00:00+05:30</updated><id>http://localhost:4000//blog/hello-ionic-cordova</id><content type="html" xml:base="http://localhost:4000//blog/hello-ionic-cordova/">&lt;p&gt;&lt;a href=&quot;https://ionicframework.com/&quot;&gt;Ionic Framework&lt;/a&gt; as the website says is 
 the top open source framework for building amazing mobile apps..&lt;/p&gt;
 
 &lt;p&gt;I’ve written a sample 3 page mobile app that can be deployed into &lt;code class=&quot;highlighter-rouge&quot;&gt;iOS&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;android&lt;/code&gt;.&lt;/p&gt;
