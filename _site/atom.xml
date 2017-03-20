@@ -4,7 +4,7 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-02-25T21:08:31+05:30</updated>
+ <updated>2017-03-20T13:21:14+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
@@ -13,15 +13,30 @@
 
  
  <entry>
-   <title>Django - why ajax ? we have Pjax</title>
+   <title>Django Fake data</title>
+   <link href="http://localhost:4000/blog/django-fake-data/"/>
+   <updated>2017-03-20T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/django-fake-data</id>
+   <content type="html">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;django-autofixture&lt;/code&gt;(https://github.com/gregmuellegger/django-autofixture) inserts the fake data into the 
+models with no scripting . It gets the data up and running in single command &lt;code class=&quot;highlighter-rouge&quot;&gt;python manage.py loadtestdata blog.BlogPost:100&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wish the fake data is in good english, but it’s a good start.&lt;/p&gt;
+
+&lt;!--/excerpt--&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Django - why ajax for pages ? we have Pjax</title>
    <link href="http://localhost:4000/blog/django-why-ajax-we-have-pjax/"/>
    <updated>2017-02-25T00:00:00+05:30</updated>
    <id>http://localhost:4000/blog/django-why-ajax-we-have-pjax</id>
    <content type="html">&lt;p&gt;Pjax(https://github.com/defunkt/jquery-pjax) is a jQuery plugin a standalone JavaScript module 
 that uses ajax (XmlHttpRequest) and pushState() to deliver a fast browsing experience.&lt;/p&gt;
 
-&lt;p&gt;Typically django serves each page with a entire page reload, costing performance. Using Pjax, its gone :) , Lets know
-how ..&lt;/p&gt;
+&lt;p&gt;Typically django serves each page with a entire page reload, costing performance. Using Pjax, its we convert our 
+ django application into a light weight server rendered SPA :) , Lets know how awesome is that..&lt;/p&gt;
 
 &lt;!--/excerpt--&gt;
 
