@@ -1,4 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2017-03-20T13:22:19+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><entry><title type="html">Django Fake data</title><link href="http://localhost:4000//blog/django-fake-data/" rel="alternate" type="text/html" title="Django Fake data" /><published>2017-03-20T00:00:00+05:30</published><updated>2017-03-20T00:00:00+05:30</updated><id>http://localhost:4000//blog/django-fake-data</id><content type="html" xml:base="http://localhost:4000//blog/django-fake-data/">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;django-autofixture&lt;/code&gt;(https://github.com/gregmuellegger/django-autofixture) inserts the fake data into the 
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000//feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000//" rel="alternate" type="text/html" /><updated>2017-04-12T03:13:00+05:30</updated><id>http://localhost:4000///</id><title type="html">Ravi Raja Merugu</title><subtitle>A Biologist who fell in love with Codes and crazy things a code can do!</subtitle><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><entry><title type="html">Setting up Continuous testing and Continuous Integration(CI) with Jenkins in localhost</title><link href="http://localhost:4000//blog/setting-up-jenkins-localhost/" rel="alternate" type="text/html" title="Setting up Continuous testing and Continuous Integration(CI) with Jenkins in localhost" /><published>2017-03-24T00:00:00+05:30</published><updated>2017-03-24T00:00:00+05:30</updated><id>http://localhost:4000//blog/setting-up-jenkins-localhost</id><content type="html" xml:base="http://localhost:4000//blog/setting-up-jenkins-localhost/">&lt;p&gt;Jenkins is one of the coolest open-source tool. As a developer I write many codes
+in a day and performs many commits, pulling the code a day. I like
+&lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis CI&lt;/a&gt; for opensource projects, but when it comes to
+private projects they charge me. So I was exploring Jenkins and realised that’s what
+I want for my localhost.&lt;/p&gt;
+
+&lt;!--/excerpt--&gt;
+
+&lt;p&gt;&lt;strong&gt;Continuous testing&lt;/strong&gt; is the process of executing automated tests as part of the software delivery pipeline to obtain immediate feedback on the business risks associated with a software release candidate. (Source: Wiki)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;continuous integration (CI)&lt;/strong&gt; is the practice of merging all developer working copies to a shared mainline several times a day. (Source: Wiki)&lt;/p&gt;
+
+&lt;h3 id=&quot;step1-create-a-free-style-project&quot;&gt;Step1: Create a free style project&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/1.png&quot; alt=&quot;Create a free style project&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step2-configure-settings&quot;&gt;Step2: Configure settings&lt;/h3&gt;
+
+&lt;p&gt;In this step, we will tell Jenkins, which &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; repository it should worry about.
+In our case, .git project is in our machine. So &lt;code class=&quot;highlighter-rouge&quot;&gt;select&lt;/code&gt; git as &lt;code class=&quot;highlighter-rouge&quot;&gt;Source Code Management&lt;/code&gt; and
+give the  absolute path of the git repository.&lt;/p&gt;
+
+&lt;p&gt;Specify the branch it should monitor, by default it will be &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;, but in continuous testing,
+you might be worried about &lt;code class=&quot;highlighter-rouge&quot;&gt;develop&lt;/code&gt; branch also, in that case give &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; in Branch Specifier.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/2.png&quot; alt=&quot;Configure settings&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step3-setup-build-triggers&quot;&gt;Step3: Setup Build Triggers&lt;/h3&gt;
+
+&lt;p&gt;You can trigger a build by sending &lt;code class=&quot;highlighter-rouge&quot;&gt;Authentication Token&lt;/code&gt; in a GET request of the url
+&lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:8080/job/challengeX/build?token=1234567890&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/3.png&quot; alt=&quot;Setup Build Triggers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Doing simple &lt;code class=&quot;highlighter-rouge&quot;&gt;curl http://localhost:8080/job/challengeX/build?token=1234567890&lt;/code&gt; in the terminal
+should trigger a build :D. But it’s not over yet, so still need to tell jenkins how
+to create a build.&lt;/p&gt;
+
+&lt;h3 id=&quot;step4-configuring-build-process&quot;&gt;Step4: Configuring Build Process&lt;/h3&gt;
+
+&lt;p&gt;In this step we will tell Jenkins, how to create a build and post build scripts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/4.png&quot; alt=&quot;Configuring Build Process&quot; /&gt;
+&lt;img src=&quot;/public/img/jenkins/5.png&quot; alt=&quot;Configuring Build Process 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to run a script &lt;code class=&quot;highlighter-rouge&quot;&gt;npm run tests&lt;/code&gt; in the shell, update the settings as mentioned above.&lt;/p&gt;
+
+&lt;h3 id=&quot;step5-configure-post-commit-hook-for-git-project&quot;&gt;Step5: Configure post-commit hook for git project&lt;/h3&gt;
+
+&lt;p&gt;Now we need to tell when this test should trigger. Lets say, we want to trigger the
+ build creation process on &lt;code class=&quot;highlighter-rouge&quot;&gt;post-commit&lt;/code&gt;. You should add a &lt;code class=&quot;highlighter-rouge&quot;&gt;hook&lt;/code&gt; to git project,
+ something &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;project_path&amp;gt;/.git/hooks/post-commit&lt;/code&gt;. Copy the following lined into
+ post-commit hook.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;trigerring the post commit &quot;&lt;/span&gt;
+ curl http://localhost:8080/job/challengeX/build?token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1234567890
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/6.png&quot; alt=&quot;Configure post-commit hook for git project&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;challengeX&lt;/code&gt; is your project name.&lt;/p&gt;
+
+&lt;h3 id=&quot;step6-tweak-you-security-settings&quot;&gt;Step6: Tweak you Security Settings&lt;/h3&gt;
+
+&lt;p&gt;This is need for making the http://localhost:8080/job/challengeX/build?token=1234567890 as
+anonymous user. Go to http://localhost:8080/configureSecurity/  and check the &lt;code class=&quot;highlighter-rouge&quot;&gt;Allow anonymous read access&lt;/code&gt; option.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/7.png&quot; alt=&quot;Tweak you Security Settings&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All set for continuous testing, When you perform a new commit, a new build will be triggered
+and all the reports of the build generation, both success and failures can be found
+from &lt;a href=&quot;http://localhost:8080/job/challengeX/&quot;&gt;http://localhost:8080/job/challengeX/&lt;/a&gt;, where
+&lt;code class=&quot;highlighter-rouge&quot;&gt;challengeX&lt;/code&gt; is your project name.&lt;/p&gt;
+
+&lt;h2 id=&quot;jenkins-ui&quot;&gt;Jenkins UI&lt;/h2&gt;
+&lt;p&gt;I’m not a fan of Jenkins UI, but there are plugins out there
+that will change the skin of Jenkins :). http://arji.me/jenkins-neo-theme/ is
+one the themes I found cool, but Im sure you can find much better themes.&lt;/p&gt;</content><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><summary type="html">Jenkins is one of the coolest open-source tool. As a developer I write many codes
+in a day and performs many commits, pulling the code a day. I like
+Travis CI for opensource projects, but when it comes to
+private projects they charge me. So I was exploring Jenkins and realised that’s what
+I want for my localhost.</summary></entry><entry><title type="html">Django Fake data</title><link href="http://localhost:4000//blog/django-fake-data/" rel="alternate" type="text/html" title="Django Fake data" /><published>2017-03-20T00:00:00+05:30</published><updated>2017-03-20T00:00:00+05:30</updated><id>http://localhost:4000//blog/django-fake-data</id><content type="html" xml:base="http://localhost:4000//blog/django-fake-data/">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;django-autofixture&lt;/code&gt;(https://github.com/gregmuellegger/django-autofixture) inserts the fake data into the 
 models with no scripting . It gets the data up and running in single command &lt;code class=&quot;highlighter-rouge&quot;&gt;python manage.py loadtestdata blog.BlogPost:100&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;I wish the fake data is in good english, but it’s a good start.&lt;/p&gt;
@@ -330,17 +413,4 @@ I’m a stupidly curious guy with crazy imaginations. But I’m not into everyth
 &lt;p&gt;After I left the last company(March 31st 2016), and started working on building the product. The challenge is &lt;code class=&quot;highlighter-rouge&quot;&gt;I should not trim my beard till I achieve my first milestone&lt;/code&gt; which is getting at least 10,000 scientists and developers on to the platform. I know 10K users sounds less, but I believe getting 10K uses on board is just a beginning, not the end.&lt;/p&gt;</content><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><summary type="html">Taking and winning challenges always inspire you and refills yours confidence.
 
 
-Since college, I’ve always wanted to create something awesome, build something big. I know that sounds like any other crazy adolescent dreams, but yeah it’s kind of!. To be honest, I’ve always wanted to become a worlds renowned Scientist. But finally I founded my first startup.</summary></entry><entry><title type="html">Hello World! Welcome to my First Jekyll Blog!</title><link href="http://localhost:4000//blog/welcome-to-my-first-jekyll-blog/" rel="alternate" type="text/html" title="Hello World! Welcome to my First Jekyll Blog!" /><published>2015-11-27T00:00:00+05:30</published><updated>2015-11-27T00:00:00+05:30</updated><id>http://localhost:4000//blog/welcome-to-my-first-jekyll-blog</id><content type="html" xml:base="http://localhost:4000//blog/welcome-to-my-first-jekyll-blog/">&lt;p&gt;Blogging isn’t my thing, and I never imagined setting up a blog using Jekyll. Recently starting the new blog with Jekyll and loving it .&lt;/p&gt;
-
-&lt;!--/excerpt--&gt;
-
-&lt;p&gt;I could be able to setup this blog in 4 hours :D Just amazing. I wasted an hour  in these 4 hrs just because I didn’t realize that changes in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; will be not reload automatically like the way it happens for &lt;code class=&quot;highlighter-rouge&quot;&gt;scss, css, html, md&lt;/code&gt; files. My bad I’m expecting the changed to reflect without restarting the Jekyll server. But anyways here we go, finally I’m able create a Jekyll blog starting from creating &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new myblog&lt;/code&gt; to customising(the current state of my blog ) in just 4 hours. How cool is that :D.&lt;/p&gt;
-
-&lt;p&gt;The best things about Jekyll:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Loads really fast&lt;/strong&gt; - no server side rendering anyways&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;secure&lt;/strong&gt; - no server side calculations or executions&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;no database&lt;/strong&gt; - no mysql, username, password, administrations etc&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;markdown&lt;/strong&gt; - much better way of writing&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Ravi Raja Merugu</name><email>rrmerugu@gmail.com</email></author><summary type="html">Blogging isn’t my thing, and I never imagined setting up a blog using Jekyll. Recently starting the new blog with Jekyll and loving it .</summary></entry></feed>
+Since college, I’ve always wanted to create something awesome, build something big. I know that sounds like any other crazy adolescent dreams, but yeah it’s kind of!. To be honest, I’ve always wanted to become a worlds renowned Scientist. But finally I founded my first startup.</summary></entry></feed>

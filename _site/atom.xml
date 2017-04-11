@@ -4,13 +4,101 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-03-20T13:22:19+05:30</updated>
+ <updated>2017-04-12T03:13:00+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
    <email>rrmerugu@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Setting up Continuous testing and Continuous Integration(CI) with Jenkins in localhost</title>
+   <link href="http://localhost:4000/blog/setting-up-jenkins-localhost/"/>
+   <updated>2017-03-24T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/setting-up-jenkins-localhost</id>
+   <content type="html">&lt;p&gt;Jenkins is one of the coolest open-source tool. As a developer I write many codes
+in a day and performs many commits, pulling the code a day. I like
+&lt;a href=&quot;https://travis-ci.org/&quot;&gt;Travis CI&lt;/a&gt; for opensource projects, but when it comes to
+private projects they charge me. So I was exploring Jenkins and realised that’s what
+I want for my localhost.&lt;/p&gt;
+
+&lt;!--/excerpt--&gt;
+
+&lt;p&gt;&lt;strong&gt;Continuous testing&lt;/strong&gt; is the process of executing automated tests as part of the software delivery pipeline to obtain immediate feedback on the business risks associated with a software release candidate. (Source: Wiki)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;continuous integration (CI)&lt;/strong&gt; is the practice of merging all developer working copies to a shared mainline several times a day. (Source: Wiki)&lt;/p&gt;
+
+&lt;h3 id=&quot;step1-create-a-free-style-project&quot;&gt;Step1: Create a free style project&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/1.png&quot; alt=&quot;Create a free style project&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step2-configure-settings&quot;&gt;Step2: Configure settings&lt;/h3&gt;
+
+&lt;p&gt;In this step, we will tell Jenkins, which &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt; repository it should worry about.
+In our case, .git project is in our machine. So &lt;code class=&quot;highlighter-rouge&quot;&gt;select&lt;/code&gt; git as &lt;code class=&quot;highlighter-rouge&quot;&gt;Source Code Management&lt;/code&gt; and
+give the  absolute path of the git repository.&lt;/p&gt;
+
+&lt;p&gt;Specify the branch it should monitor, by default it will be &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;, but in continuous testing,
+you might be worried about &lt;code class=&quot;highlighter-rouge&quot;&gt;develop&lt;/code&gt; branch also, in that case give &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; in Branch Specifier.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/2.png&quot; alt=&quot;Configure settings&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step3-setup-build-triggers&quot;&gt;Step3: Setup Build Triggers&lt;/h3&gt;
+
+&lt;p&gt;You can trigger a build by sending &lt;code class=&quot;highlighter-rouge&quot;&gt;Authentication Token&lt;/code&gt; in a GET request of the url
+&lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:8080/job/challengeX/build?token=1234567890&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/3.png&quot; alt=&quot;Setup Build Triggers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Doing simple &lt;code class=&quot;highlighter-rouge&quot;&gt;curl http://localhost:8080/job/challengeX/build?token=1234567890&lt;/code&gt; in the terminal
+should trigger a build :D. But it’s not over yet, so still need to tell jenkins how
+to create a build.&lt;/p&gt;
+
+&lt;h3 id=&quot;step4-configuring-build-process&quot;&gt;Step4: Configuring Build Process&lt;/h3&gt;
+
+&lt;p&gt;In this step we will tell Jenkins, how to create a build and post build scripts.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/4.png&quot; alt=&quot;Configuring Build Process&quot; /&gt;
+&lt;img src=&quot;/public/img/jenkins/5.png&quot; alt=&quot;Configuring Build Process 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to run a script &lt;code class=&quot;highlighter-rouge&quot;&gt;npm run tests&lt;/code&gt; in the shell, update the settings as mentioned above.&lt;/p&gt;
+
+&lt;h3 id=&quot;step5-configure-post-commit-hook-for-git-project&quot;&gt;Step5: Configure post-commit hook for git project&lt;/h3&gt;
+
+&lt;p&gt;Now we need to tell when this test should trigger. Lets say, we want to trigger the
+ build creation process on &lt;code class=&quot;highlighter-rouge&quot;&gt;post-commit&lt;/code&gt;. You should add a &lt;code class=&quot;highlighter-rouge&quot;&gt;hook&lt;/code&gt; to git project,
+ something &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;project_path&amp;gt;/.git/hooks/post-commit&lt;/code&gt;. Copy the following lined into
+ post-commit hook.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;trigerring the post commit &quot;&lt;/span&gt;
+ curl http://localhost:8080/job/challengeX/build?token&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1234567890
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/6.png&quot; alt=&quot;Configure post-commit hook for git project&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;challengeX&lt;/code&gt; is your project name.&lt;/p&gt;
+
+&lt;h3 id=&quot;step6-tweak-you-security-settings&quot;&gt;Step6: Tweak you Security Settings&lt;/h3&gt;
+
+&lt;p&gt;This is need for making the http://localhost:8080/job/challengeX/build?token=1234567890 as
+anonymous user. Go to http://localhost:8080/configureSecurity/  and check the &lt;code class=&quot;highlighter-rouge&quot;&gt;Allow anonymous read access&lt;/code&gt; option.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/jenkins/7.png&quot; alt=&quot;Tweak you Security Settings&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;All set for continuous testing, When you perform a new commit, a new build will be triggered
+and all the reports of the build generation, both success and failures can be found
+from &lt;a href=&quot;http://localhost:8080/job/challengeX/&quot;&gt;http://localhost:8080/job/challengeX/&lt;/a&gt;, where
+&lt;code class=&quot;highlighter-rouge&quot;&gt;challengeX&lt;/code&gt; is your project name.&lt;/p&gt;
+
+&lt;h2 id=&quot;jenkins-ui&quot;&gt;Jenkins UI&lt;/h2&gt;
+&lt;p&gt;I’m not a fan of Jenkins UI, but there are plugins out there
+that will change the skin of Jenkins :). http://arji.me/jenkins-neo-theme/ is
+one the themes I found cool, but Im sure you can find much better themes.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Django Fake data</title>

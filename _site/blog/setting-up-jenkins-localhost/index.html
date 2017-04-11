@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Setting up Continuous testing and Continuous Integration(CI) with Jenkins in localhost &middot; Ravi Raja Merugu
+    
+  </title>
+
+  <!-- CSS 474588-->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/font-awesome-animations.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+<p style="margin-left:30px">
+      <i class="fa fa-circle-o faa-burst animated magic-icon"></i></p>
+      <h1>
+        <a href="/">
+          Ravi Raja Merugu
+        </a>
+      </h1>
+      <p class="lead">Teaching cognitive abilities to the web applications.</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
+
+      
+
+      <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
+      <a class="sidebar-nav-item" href="/projects/">Projects</a>
+      <a class="sidebar-nav-item" href="/research/">Research</a>
+
+      <a class="sidebar-nav-item" href="/about/">About</a>
+
+
+
+      <!-- <a class="sidebar-nav-item" href="https://github.com/rsquarelabs/rsquarelabs/archive/v2.1.0.zip">Download</a> -->
+      <!-- <a class="sidebar-nav-item" href="https://github.com/rsquarelabs/rsquarelabs">GitHub project</a> -->
+      <!-- <span class="sidebar-nav-item">Currently v2.1.0</span> -->
+    </nav>
+
+
+        <ul class="list-inline" id="sidebar-buttons">
+            <li>
+                <a href="mailto:rrmerugu@gmail.com" class="btn-social btn-outline" title="E-Mail me">
+                    <i class="fa fa-fw fa-at"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/rrmerugu" target="_blank" class="btn-social btn-outline" title="vakila on GitHub">
+                    <i class="fa fa-fw fa-github"></i>
+                </a>
+            </li>
+
+            <li>
+               <a href="https://twitter.com/rrmerugu" target="_blank" class="btn-social btn-outline" title="@AnjanaVakil on Twitter">
+                   <i class="fa fa-fw fa-twitter"></i>
+               </a>
+           </li>
+            <li>
+                <a href="https://www.linkedin.com/in/rrmerugu" target="_blank" class="btn-social btn-outline" title="Anjana Vakil on LinkedIn">
+                    <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+            </li>
+
+
+        </ul>
+    <p class="small">&copy; 2017. Built
+       with <i class="fa fa-heart"></i> for Science and Code.  </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Setting up Continuous testing and Continuous Integration(CI) with Jenkins in localhost</h1>
+  <span class="post-date">24 Mar 2017</span>
+  <p>Jenkins is one of the coolest open-source tool. As a developer I write many codes
+in a day and performs many commits, pulling the code a day. I like
+<a href="https://travis-ci.org/">Travis CI</a> for opensource projects, but when it comes to
+private projects they charge me. So I was exploring Jenkins and realised that’s what
+I want for my localhost.</p>
+
+<!--/excerpt-->
+
+<p><strong>Continuous testing</strong> is the process of executing automated tests as part of the software delivery pipeline to obtain immediate feedback on the business risks associated with a software release candidate. (Source: Wiki)</p>
+
+<p><strong>continuous integration (CI)</strong> is the practice of merging all developer working copies to a shared mainline several times a day. (Source: Wiki)</p>
+
+<h3 id="step1-create-a-free-style-project">Step1: Create a free style project</h3>
+
+<p><img src="/public/img/jenkins/1.png" alt="Create a free style project" /></p>
+
+<h3 id="step2-configure-settings">Step2: Configure settings</h3>
+
+<p>In this step, we will tell Jenkins, which <code class="highlighter-rouge">git</code> repository it should worry about.
+In our case, .git project is in our machine. So <code class="highlighter-rouge">select</code> git as <code class="highlighter-rouge">Source Code Management</code> and
+give the  absolute path of the git repository.</p>
+
+<p>Specify the branch it should monitor, by default it will be <code class="highlighter-rouge">master</code>, but in continuous testing,
+you might be worried about <code class="highlighter-rouge">develop</code> branch also, in that case give <code class="highlighter-rouge">*</code> in Branch Specifier.</p>
+
+<p><img src="/public/img/jenkins/2.png" alt="Configure settings" /></p>
+
+<h3 id="step3-setup-build-triggers">Step3: Setup Build Triggers</h3>
+
+<p>You can trigger a build by sending <code class="highlighter-rouge">Authentication Token</code> in a GET request of the url
+<code class="highlighter-rouge">http://localhost:8080/job/challengeX/build?token=1234567890</code>.</p>
+
+<p><img src="/public/img/jenkins/3.png" alt="Setup Build Triggers" /></p>
+
+<p>Doing simple <code class="highlighter-rouge">curl http://localhost:8080/job/challengeX/build?token=1234567890</code> in the terminal
+should trigger a build :D. But it’s not over yet, so still need to tell jenkins how
+to create a build.</p>
+
+<h3 id="step4-configuring-build-process">Step4: Configuring Build Process</h3>
+
+<p>In this step we will tell Jenkins, how to create a build and post build scripts.</p>
+
+<p><img src="/public/img/jenkins/4.png" alt="Configuring Build Process" />
+<img src="/public/img/jenkins/5.png" alt="Configuring Build Process 2" /></p>
+
+<p>If you want to run a script <code class="highlighter-rouge">npm run tests</code> in the shell, update the settings as mentioned above.</p>
+
+<h3 id="step5-configure-post-commit-hook-for-git-project">Step5: Configure post-commit hook for git project</h3>
+
+<p>Now we need to tell when this test should trigger. Lets say, we want to trigger the
+ build creation process on <code class="highlighter-rouge">post-commit</code>. You should add a <code class="highlighter-rouge">hook</code> to git project,
+ something <code class="highlighter-rouge">&lt;project_path&gt;/.git/hooks/post-commit</code>. Copy the following lined into
+ post-commit hook.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> <span class="c">#!/bin/sh</span>
+ <span class="nb">echo</span> <span class="s2">"trigerring the post commit "</span>
+ curl http://localhost:8080/job/challengeX/build?token<span class="o">=</span>1234567890
+</code></pre>
+</div>
+
+<p><img src="/public/img/jenkins/6.png" alt="Configure post-commit hook for git project" /></p>
+
+<p>Where <code class="highlighter-rouge">challengeX</code> is your project name.</p>
+
+<h3 id="step6-tweak-you-security-settings">Step6: Tweak you Security Settings</h3>
+
+<p>This is need for making the http://localhost:8080/job/challengeX/build?token=1234567890 as
+anonymous user. Go to http://localhost:8080/configureSecurity/  and check the <code class="highlighter-rouge">Allow anonymous read access</code> option.</p>
+
+<p><img src="/public/img/jenkins/7.png" alt="Tweak you Security Settings" /></p>
+
+<p>All set for continuous testing, When you perform a new commit, a new build will be triggered
+and all the reports of the build generation, both success and failures can be found
+from <a href="http://localhost:8080/job/challengeX/">http://localhost:8080/job/challengeX/</a>, where
+<code class="highlighter-rouge">challengeX</code> is your project name.</p>
+
+<h2 id="jenkins-ui">Jenkins UI</h2>
+<p>I’m not a fan of Jenkins UI, but there are plugins out there
+that will change the skin of Jenkins :). http://arji.me/jenkins-neo-theme/ is
+one the themes I found cool, but Im sure you can find much better themes.</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/blog/django-fake-data/">
+            Django Fake data
+            <small>20 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/blog/django-why-ajax-we-have-pjax/">
+            Django - why ajax for pages ? we have Pjax
+            <small>25 Feb 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/blog/hello-ionic-cordova/">
+            Hello Ionic framework - a sample hydrib mobile application.
+            <small>03 Feb 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>
