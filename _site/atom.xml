@@ -4,7 +4,7 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-04-12T03:13:00+05:30</updated>
+ <updated>2017-04-12T03:15:51+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
@@ -95,8 +95,11 @@ from &lt;a href=&quot;http://localhost:8080/job/challengeX/&quot;&gt;http://loca
 
 &lt;h2 id=&quot;jenkins-ui&quot;&gt;Jenkins UI&lt;/h2&gt;
 &lt;p&gt;I’m not a fan of Jenkins UI, but there are plugins out there
-that will change the skin of Jenkins :). http://arji.me/jenkins-neo-theme/ is
-one the themes I found cool, but Im sure you can find much better themes.&lt;/p&gt;
+that will change the skin of Jenkins :). &lt;a href=&quot;http://arji.me/jenkins-neo-theme/&quot;&gt;http://arji.me/jenkins-neo-theme/&lt;/a&gt; is
+one the themes I found cool, but Im sure you can find much better themes. &lt;code class=&quot;highlighter-rouge&quot;&gt;jenkins-neo-theme&lt;/code&gt; will give
+you UI like this, and how cool is that.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://arji.me/jenkins-neo-theme/images/screen1.png&quot; alt=&quot;Jenkins neo theme&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  

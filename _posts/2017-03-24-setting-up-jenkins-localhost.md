@@ -92,4 +92,7 @@ from [http://localhost:8080/job/challengeX/](http://localhost:8080/job/challenge
 ## Jenkins UI
 I'm not a fan of Jenkins UI, but there are plugins out there
 that will change the skin of Jenkins :). [http://arji.me/jenkins-neo-theme/](http://arji.me/jenkins-neo-theme/ ) is
-one the themes I found cool, but Im sure you can find much better themes.
+one the themes I found cool, but Im sure you can find much better themes. `jenkins-neo-theme` will give
+you UI like this, and how cool is that.
+
+![Jenkins neo theme](http://arji.me/jenkins-neo-theme/images/screen1.png)
