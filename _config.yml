@@ -39,6 +39,6 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/rsquarelabs/rsquarelabs
+  repo:           https://github.com/rrmerugu/rrmerugu.github.io
 
 excerpt_separator: "<!--/excerpt-->"
