@@ -1,0 +1,75 @@
+
+/* custom */
+img{
+  max-width: 100%;
+  margin: 10px 0;
+  border: 1px solid #efefef;
+}
+.related-posts h3 {
+    font-size: 14px;
+}
+.related-posts-heading{
+  font-size: 24px;
+  margin-top: 10%;
+}
+a{
+  color: #405fa9;
+}
+html, body, h1, h2, h3, h4, h5, h6, p, li {
+font-family: monospace;
+}
+.banner h1, .lead, #sidebar-buttons li{
+  font-family: 'Raleway', sans-serif;
+}
+.banner h1 a{
+  color: #333;
+}
+ a:hover, a:visited, a:active{
+  text-decoration: none;
+}
+
+.social-nav-links{
+  margin-top: 3%;
+}
+
+.post-title-multi{
+  font-size: 18px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 20px;
+}
+
+.lead{
+  margin-bottom: 0;
+    color: #666;
+
+}
+.banner {
+  margin-top: 15%;
+  margin-bottom: 2%;
+}
+/*
+@media (min-width: 768px){
+  .banner {
+    margin-top: 15%;
+    margin-bottom: 5%;
+  }
+}
+*/
+
+@media (min-width: 768px){
+  .lead {
+      font-size: 21px;
+      font-weight: 400;
+      color: #999;
+  }
+}
+
+.sidebar-about h1{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.post-date{
+  color: #999;
+  font-weight: 400;
+}
