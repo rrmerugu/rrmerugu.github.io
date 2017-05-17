@@ -10,13 +10,14 @@ title: Projects
       <a href="{{ project.website }}" target="_blank">
         {{ project.title }}
       </a>
+      <span class="pull-right color-999">    {{ project.date | date_to_string }}
+      </span>
     </p>
     <span class="project-tagline post-date">
         {{ project.tagline }}
     </span>
 
     {{ project.content }}
-    {{ project.date | date_to_string }}
 
 
   </div>

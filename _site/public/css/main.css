@@ -114,6 +114,6 @@ h1, h2, h3, h4, h5, h6 {
 .project {
   margin-bottom: 20px;
 }
-.color-999 p{
+.color-999 p, .color-999 {
   color: #999;
 }
