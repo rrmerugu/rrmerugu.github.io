@@ -4,7 +4,7 @@ title: Talks
 ---
 
 <div class="projects">
-  {% for project in site.talks %}
+  {% for project in site.talks | reversed %}
   <div class="project post">
     <p class="title">
       <a href="{{ project.slides }}" target="_blank">

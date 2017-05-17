@@ -4,7 +4,7 @@ title: Projects
 ---
 
 <div class="projects">
-  {% for project in site.projects %}
+  {% for project in site.projects reversed %}
   <div class="project post">
     <p class="title">
       <a href="{{ project.website }}" target="_blank">
@@ -16,6 +16,7 @@ title: Projects
     </span>
 
     {{ project.content }}
+    {{ project.date | date_to_string }}
 
 
   </div>
