@@ -4,7 +4,7 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-17T21:29:40+05:30</updated>
+ <updated>2017-05-18T00:32:49+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
@@ -13,21 +13,21 @@
 
  
  <entry>
+   <title>Getting started with Django</title>
+   <link href="http://localhost:4000/talk/django-101/"/>
+   <updated>2017-05-13T00:00:00+05:30</updated>
+   <id>http://localhost:4000/talk/django-101</id>
+   <content type="html">&lt;p&gt;A hands on session on Django covering the basic concepts of the framework.
+By the end of the session, you will be creating a todo application&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Compute Client</title>
    <link href="http://localhost:4000/code/compute-client/"/>
    <updated>2017-04-25T00:00:00+05:30</updated>
    <id>http://localhost:4000/code/compute-client</id>
    <content type="html">&lt;p&gt;This is the local installable web client to view and analyse the data created by R2 Client.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Getting started with Django</title>
-   <link href="http://localhost:4000/talk/django-101/"/>
-   <updated>2017-04-13T00:00:00+05:30</updated>
-   <id>http://localhost:4000/talk/django-101</id>
-   <content type="html">&lt;p&gt;A hands on session on Django covering the basic concepts of the framework.
-By the end of the session, you will be creating a todo application&lt;/p&gt;
 </content>
  </entry>
  
