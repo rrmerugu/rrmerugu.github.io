@@ -3,6 +3,14 @@ layout: page
 title: Talks
 ---
 
+<style>
+h1{
+  padding-bottom:20px;
+  border-bottom:1px solid #eee;
+  margin-bottom:15px;
+}
+</style>
+
 <div class="projects">
   {% for project in site.talks | reversed %}
   <div class="project post">

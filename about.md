@@ -3,6 +3,14 @@ layout: page
 title: About me
 ---
 
+<style>
+h1{
+  padding-bottom:20px;
+  border-bottom:1px solid #eee;
+  margin-bottom:15px;
+}
+</style>
+
 > I'm a biologist who fell in love with Computers and the crazy things that can
 be done with programming.
 
@@ -15,9 +23,9 @@ I'm a full stack web Engineer, who loves exploring and assembling the web compon
 into the way, that excites me ;)  
 
 I'm passionate about coding web tech. I spend most of my time with/in
-`Python`, `Django`, `Automation`, `Cognitive Computing`, `Cognitive Intelligence`.
+`Python`, `Django`, `Automation`, `Machine Learning`, `Cognitive Computing`, `Cognitive Intelligence`.
 
-Check out my [research Publications](/research/) and [coding projects](/projects/) to know more about me. If you think, we have
+Check out my [research Publications](/research/) and [codes](/projects/) to know more about me. If you think, we have
 something in common. Let's talk about it.
 
 

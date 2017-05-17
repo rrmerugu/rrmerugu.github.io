@@ -4,7 +4,7 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-17T16:19:53+05:30</updated>
+ <updated>2017-05-17T18:37:36+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
@@ -421,10 +421,10 @@ lot things with &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt
  </entry>
  
  <entry>
-   <title>My Story </title>
-   <link href="http://localhost:4000/blog/my-story/"/>
+   <title>The Story </title>
+   <link href="http://localhost:4000/blog/the-story/"/>
    <updated>2016-08-01T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/my-story</id>
+   <id>http://localhost:4000/blog/the-story</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;If you are a theist, you think its the beauty of God, But If you are a Scientist, you think, let’s explore why its beautiful. I prefer to be the second type.&lt;/p&gt;
 &lt;/blockquote&gt;

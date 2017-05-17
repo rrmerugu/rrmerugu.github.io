@@ -8,7 +8,7 @@ permalink:              /blog/:categories/:title/
 
 # Setup
 title:            Ravi Raja Merugu
-tagline:          'Python, Javascript and Data'
+tagline:          'Python, Web and Data'
 description:      'A Biologist who fell in love with Codes and crazy things a code can do!'
 url:              http://rsquarelabs.com
 baseurl:          /

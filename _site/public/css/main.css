@@ -37,9 +37,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, li {
   text-decoration: none;
 }
 
-.social-nav-links{
-  margin-top: 3%;
-}
+
 
 .post-title-multi{
   font-size: 14px;
@@ -65,11 +63,21 @@ font-size: 1.6rem;
   }
 }
 */
-
+@media (max-width: 768px){
+/*  .profile-pic{
+    display:none;
+  }
+*/
+}
 @media (min-width: 768px){
   .lead {
       font-weight: 400;
       color: #999;
+  }
+  .post-title-multi .post-date {
+    float: right;
+  }
+  .social-nav-links {
   }
 }
 
@@ -116,4 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .color-999 p, .color-999 {
   color: #999;
+}
+h1.post-title {
+    font-size: 2.8rem;
 }
