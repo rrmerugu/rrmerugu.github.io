@@ -62,7 +62,7 @@
             <a href="/">
             <img src="/public/img/me.png" alt="Ravi Raja Merugu" class="img-responsive profile-pic">
             </a>
-        <h1>
+        <h1 style="border:none;">
         <a href="/">
           Ravi Raja Merugu
         </a>
@@ -97,16 +97,16 @@
       <h1 class="post-title">Hello Docker - my docker notes</h1>
       <span class="post-date"><i class="fa fa-calendar"></i> 25 Dec 2016</span>
       <hr>
-      <p><a href="https://www.docker.com">Docker</a> as the website homepage says 
-<code class="highlighter-rouge">is the world’s leading software containerization platform</code>. 
-Dockers and container tech has become a common practise in the software development. 
-I tried it and fell in love with this for many reasons.  The prime reason 
+      <p><a href="https://www.docker.com">Docker</a> as the website homepage says
+<code class="highlighter-rouge">is the world’s leading software containerization platform</code>.
+Dockers and container tech has become a common practise in the software development.
+I tried it and fell in love with this for many reasons.  The prime reason
 is it is an open-source project. Long hail opensource developers.</p>
 
 <!--/excerpt-->
 
-<p>So I’ve experimenting on the scenrios in which i might need to use docker containers. 
-I mostly work with Django, but the technical stack varies from simple 
+<p>So I’ve experimenting on the scenrios in which i might need to use docker containers.
+I mostly work with Django, but the technical stack varies from simple
 <code class="highlighter-rouge">Django + sqlite</code> to <code class="highlighter-rouge">Django + postgres + redis + celery</code> and more.</p>
 
 <p>Let me share my reasons of falling in love with Docker.</p>
@@ -143,7 +143,7 @@ services:
 </code></pre>
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Dockerfile 
+<div class="highlighter-rouge"><pre class="highlight"><code># Dockerfile
 
 FROM python:2.7
 ENV PYTHONUNBUFFERED 1
@@ -154,13 +154,13 @@ RUN pip install -r requirements.txt
 </code></pre>
 </div>
 
-<p>Execute <code class="highlighter-rouge">docker-compose build</code> to build the container or <code class="highlighter-rouge">docker-compose up -d</code> to 
-run the application. You should be able to access the django server running and available 
+<p>Execute <code class="highlighter-rouge">docker-compose build</code> to build the container or <code class="highlighter-rouge">docker-compose up -d</code> to
+run the application. You should be able to access the django server running and available
 on the url <code class="highlighter-rouge">http://{your-docker-ip}:8000</code> in my case it’s <code class="highlighter-rouge">http://192.168.99.100:8000</code></p>
 
 <h2 id="4above-all-its-open-source">4.Above all, it’s open-source</h2>
-<p>It’s an opensource project and that makes it more awesome - the developers, 
-tutorials and active community makes it more powerfull than other container 
+<p>It’s an opensource project and that makes it more awesome - the developers,
+tutorials and active community makes it more powerfull than other container
 technology.</p>
 
 <p>All the docker scenarios i’ve experimented were published in <code class="highlighter-rouge">https://github.com/rrmerugu/hello-docker</code></p>
@@ -176,27 +176,27 @@ technology.</p>
         
           <li>
             <h3>
+              <a href="/code/compute-client/">
+                Compute Client
+                <small>25 Apr 2017</small>
+              </a>
+            </h3>
+          </li>
+        
+          <li>
+            <h3>
+              <a href="/talk/django-101/">
+                Getting started with Django
+                <small>13 Apr 2017</small>
+              </a>
+            </h3>
+          </li>
+        
+          <li>
+            <h3>
               <a href="/blog/setting-up-jenkins-localhost/">
                 Setting up Continuous testing and Continuous Integration(CI) with Jenkins in localhost
                 <small>24 Mar 2017</small>
-              </a>
-            </h3>
-          </li>
-        
-          <li>
-            <h3>
-              <a href="/blog/django-fake-data/">
-                Django Fake data
-                <small>20 Mar 2017</small>
-              </a>
-            </h3>
-          </li>
-        
-          <li>
-            <h3>
-              <a href="/blog/django-why-ajax-we-have-pjax/">
-                Django - why ajax for pages ? we have Pjax
-                <small>25 Feb 2017</small>
               </a>
             </h3>
           </li>

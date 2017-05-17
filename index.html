@@ -6,42 +6,45 @@ title: Home
 h1{
   padding-bottom:20px;
   border-bottom:1px solid #eee;
-  margin-bottom:15px;
 }
 </style>
 
-      <h1>Posts</h1>
-      <div class="posts">
-        {% for post in site.posts %}
-        <div class="post">
-          <h2 class="post-title post-title-multi">
-            <a href="{{ post.url }}">
-              {{ post.title }}
-            </a>
-            <span class="post-date ">{{ post.date | date_to_string }}</span>
+      <h1>My project, codes and research activities</h1>
 
-          </h2>
-          {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle | markdownify  }}</h3>
-          {% endif %}
 
-        </div>
-        {% endfor %}
-      </div>
-      <div class="pagination">
-        {% if paginator.previous_page %}
-          <a class="pagination-item newer"
-             href="/{% if paginator.page > 2 %}page{{paginator.previous_page}}{% endif %}">
-             <i class="fa fa-arrow-left"></i> Newer
-         </a>
+
+
+
+      {% for post in site.posts %}
+        {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+        {% if currentyear != year %}
+           <h4 class="year">{{ currentyear }}</h2>
+          {% capture year %}{{currentyear}}{% endcapture %}
         {% endif %}
+        <ul class="posts-in-year list-unstyled">
+          <li class="post-title post-title-multi"><p>
+            <span class="primary">{{post.category}}</span>
+            {% if post.category == 'Blog' %}
+              <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+              <a href="{{ post.url}}">{{ post.title }}</a> <span class="post-date">| {{ post.date | date: "%B %d" }}</span>
+            {% elsif post.category == 'Code' %}
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <a href="{{ post.website}}" target="_blank" class="text-underline">{{ post.title }}</a> &mdash;
+              <span class="color-999">{{post.tagline}}</span>
+              <span class="post-date">| {{ post.date | date: "%B %d" }}</span>
+              <span class="post-content-small">
+                {{post.content}}
+              </span>
 
-        {% if paginator.next_page %}
-          <a class="pagination-item older" href="/page{{paginator.next_page}}">
-              Older <i class="fa fa-arrow-right"></i>
-          </a>
-        {% endif %}
-      </div>
+            {% elsif post.category == 'Talk' %}
+                <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>
+                <a href="{{ post.website}}">{{ post.title }}</a> <span class="post-date">| {{ post.date | date: "%B %d" }}</span>
 
+            {% else %}
+            <a href="{{ post.url}}">{{ post.title }}    </a>
+            {% endif%}
 
- 
+          </p>
+          </li>
+        </ul>
+      {% endfor %}

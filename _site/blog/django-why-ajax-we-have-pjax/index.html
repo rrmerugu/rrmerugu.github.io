@@ -62,7 +62,7 @@
             <a href="/">
             <img src="/public/img/me.png" alt="Ravi Raja Merugu" class="img-responsive profile-pic">
             </a>
-        <h1>
+        <h1 style="border:none;">
         <a href="/">
           Ravi Raja Merugu
         </a>
@@ -97,10 +97,10 @@
       <h1 class="post-title">Django - why ajax for pages ? we have Pjax</h1>
       <span class="post-date"><i class="fa fa-calendar"></i> 25 Feb 2017</span>
       <hr>
-      <p>Pjax(https://github.com/defunkt/jquery-pjax) is a jQuery plugin a standalone JavaScript module 
+      <p>Pjax(https://github.com/defunkt/jquery-pjax) is a jQuery plugin a standalone JavaScript module
 that uses ajax (XmlHttpRequest) and pushState() to deliver a fast browsing experience.</p>
 
-<p>Typically django serves each page with a entire page reload, costing performance. Using Pjax, its we convert our 
+<p>Typically django serves each page with a entire page reload, costing performance. Using Pjax, its we convert our
  django application into a light weight server rendered SPA :) , Lets know how awesome is that..</p>
 
 <!--/excerpt-->
@@ -119,12 +119,12 @@ that uses ajax (XmlHttpRequest) and pushState() to deliver a fast browsing exper
  using <code class="highlighter-rouge">source venv/bin/activate &amp;&amp; pip install -r requirements.txt</code></p>
   </li>
   <li>
-    <p>Step4: start the server :D, all the configs are already added into the <code class="highlighter-rouge">settings</code>. Just start the server  with 
+    <p>Step4: start the server :D, all the configs are already added into the <code class="highlighter-rouge">settings</code>. Just start the server  with
 <code class="highlighter-rouge">python manage.py runserver</code></p>
   </li>
   <li>
-    <p>Check the <code class="highlighter-rouge">djangoajax/settings.py</code> for the <code class="highlighter-rouge">pjax</code> settings. there are only 3 settings needed . Check 
-<a href="https://github.com/nigma/django-easy-pjax">https://github.com/nigma/django-easy-pjax</a> for settings and implementation 
+    <p>Check the <code class="highlighter-rouge">djangoajax/settings.py</code> for the <code class="highlighter-rouge">pjax</code> settings. there are only 3 settings needed . Check
+<a href="https://github.com/nigma/django-easy-pjax">https://github.com/nigma/django-easy-pjax</a> for settings and implementation
 doc.</p>
   </li>
   <li>
@@ -132,13 +132,12 @@ doc.</p>
   </li>
   <li>
     <p>In the <code class="highlighter-rouge">url/route of django view</code> while extending the <code class="highlighter-rouge">base.html</code> instead of <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">extend</span><span class="w"> </span><span class="err">s</span><span class="w"> </span><span class="nt">"base.html"</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">}</span></code> use
-<code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">extend</span><span class="w"> </span><span class="err">s</span><span class="w"> </span><span class="nt">"base.html"</span><span class="err">|pjax</span><span class="p">:</span><span class="err">request</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="p">}</span></code> and place the <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">block</span><span class="w"> </span><span class="err">content</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="p">}</span></code> of <code class="highlighter-rouge">base.html</code> in a div container with 
+<code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">extend</span><span class="w"> </span><span class="err">s</span><span class="w"> </span><span class="nt">"base.html"</span><span class="err">|pjax</span><span class="p">:</span><span class="err">request</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="p">}</span></code> and place the <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">block</span><span class="w"> </span><span class="err">content</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="p">}</span></code> of <code class="highlighter-rouge">base.html</code> in a div container with
 id specified in <code class="highlighter-rouge">base.html</code> which is <code class="highlighter-rouge">pjax-container</code> in our case.</p>
   </li>
 </ol>
 
 <p>Try it out, and let me know :)</p>
-
 
     </div>
 
@@ -149,27 +148,27 @@ id specified in <code class="highlighter-rouge">base.html</code> which is <code 
         
           <li>
             <h3>
+              <a href="/code/compute-client/">
+                Compute Client
+                <small>25 Apr 2017</small>
+              </a>
+            </h3>
+          </li>
+        
+          <li>
+            <h3>
+              <a href="/talk/django-101/">
+                Getting started with Django
+                <small>13 Apr 2017</small>
+              </a>
+            </h3>
+          </li>
+        
+          <li>
+            <h3>
               <a href="/blog/setting-up-jenkins-localhost/">
                 Setting up Continuous testing and Continuous Integration(CI) with Jenkins in localhost
                 <small>24 Mar 2017</small>
-              </a>
-            </h3>
-          </li>
-        
-          <li>
-            <h3>
-              <a href="/blog/django-fake-data/">
-                Django Fake data
-                <small>20 Mar 2017</small>
-              </a>
-            </h3>
-          </li>
-        
-          <li>
-            <h3>
-              <a href="/blog/hello-ionic-cordova/">
-                Hello Ionic framework - a sample hydrib mobile application.
-                <small>03 Feb 2017</small>
               </a>
             </h3>
           </li>

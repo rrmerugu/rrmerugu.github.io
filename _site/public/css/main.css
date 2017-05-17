@@ -5,6 +5,9 @@ img{
   margin: 10px 0;
   border: 1px solid #efefef;
 }
+h1{
+      font-size: 2.8rem;
+}
 .profile-pic{
   margin: 0 auto !important;
     width: 100%;
@@ -17,7 +20,7 @@ img{
   margin-top: 10%;
 }
 a{
-  color: #405fa9;
+  color: #266eaf;
 }
 html, body, h1, h2, h3, h4, h5, h6, p, li {
   font-family: 'Source Sans Pro', sans-serif;
@@ -43,7 +46,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, li {
   font-size: 14px;
   margin-bottom: 0;
   padding-bottom: 0;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .lead{
@@ -75,7 +78,6 @@ font-size: 1.6rem;
       color: #999;
   }
   .post-title-multi .post-date {
-    float: right;
   }
   .social-nav-links {
   }
@@ -96,7 +98,7 @@ font-size: 1.6rem;
 }
 
 .post-title-multi a:hover {
-    color: #3F51B5;
+    color: #266eaf;
 }
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
@@ -127,4 +129,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1.post-title {
     font-size: 2.8rem;
+}
+.posts-in-year {
+
+
+}
+.post-title .fa{
+  color: #266eaf;
+  font-weight: bold;
+}
+h4.year{
+  margin-top: 40px;
+  color: #266eaf;
+}
+.text-underline{
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0px;
+}
+
+ul.posts-in-year.list-unstyled {
+    border-bottom: 1px solid #eee;
+}
+.post-content-small p{
+  margin-bottom: 0;
+}
+.post-title p{
+  color: #888;
+}
+.primary{
+  color: #266eaf;
 }
