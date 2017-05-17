@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Talks
+title: Posts
 ---
 <style>
 h1{
@@ -21,11 +21,11 @@ h1{
           {% capture year %}{{currentyear}}{% endcapture %}
         {% endif %}
 
-        {% if post.category == 'Talk' %}
+        {% if post.category == 'Blog' %}
         <ul class="posts-in-year list-unstyled">
           <li class="post-title post-title-multi"><p>
 
-              {% include single-talk.html %}
+              {% include single-blog.html %}
           </p>
           </li>
         </ul>
