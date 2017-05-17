@@ -25,7 +25,7 @@ into the way, that excites me ;)
 I'm passionate about coding web tech. I spend most of my time with/in
 `Python`, `Django`, `Automation`, `Machine Learning`, `Cognitive Computing`, `Cognitive Intelligence`.
 
-Check out my [research Publications](/research/) and [codes](/projects/) to know more about me. If you think, we have
+Check out my [research Publications](/research/) and [codes](/code/) to know more about me. If you think, we have
 something in common. Let's talk about it.
 
 

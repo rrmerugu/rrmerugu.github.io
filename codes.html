@@ -9,7 +9,7 @@ h1{
 }
 </style>
 
-      <h1>My codes, posts and research activities</h1>
+      <h1>Silly to serious projects by me</h1>
 
 
 
@@ -20,30 +20,14 @@ h1{
            <h4 class="year">{{ currentyear }}</h2>
           {% capture year %}{{currentyear}}{% endcapture %}
         {% endif %}
+
+        {% if post.category == 'Code' %}
         <ul class="posts-in-year list-unstyled">
           <li class="post-title post-title-multi"><p>
-
-
-
-
-
-
-
-            {% if post.category == 'Blog' %}
-                {% include single-blog.html %}
-
-            {% elsif post.category == 'Code' %}
-                {% include single-code.html %}
-
-
-            {% elsif post.category == 'Talk' %}
-                {% include single-talk.html %}
-
-            {% else %}
-            <a href="{{ post.url}}">{{ post.title }}    </a>
-            {% endif%}
-
+            
+              {% include single-code.html %}
           </p>
           </li>
         </ul>
+          {% endif%}
       {% endfor %}

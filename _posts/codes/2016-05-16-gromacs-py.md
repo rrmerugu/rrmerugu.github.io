@@ -3,7 +3,7 @@ layout: post
 title: "r2 gromacs.py"
 tagline: "Automation script for a molecular dynamics tool - Gromacs (www.gromacs.org)."
 website: "https://github.com/rrmerugu/r2_gromacs/"
-category: Code
+categories: Code
 skills: ["Python", 'Gromacs', 'Automation',]
 ---
 
