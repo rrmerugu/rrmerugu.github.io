@@ -15,7 +15,8 @@
 
     <!-- CSS 474588-->
     <!-- Latest compiled and minified CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/main.css">
     <link rel="stylesheet" href="/public/css/font-awesome-animations.css">
@@ -33,34 +34,14 @@
 <body>
   <div class="container">
       <div class="row">
-          <div class="col-md-12">
-              <ul class="list-inline pull-right social-nav-links" id="sidebar-buttons">
-  <li>
-      <a href="/" class="btn-social btn-outline" title="Home">
-          <i class="fa fa-home"></i> Home
-      </a>
-  </li>
-    <li>
-        <a href="mailto:rrmerugu@gmail.com" class="btn-social btn-outline" title="E-Mail me">
-            <i class="fa fa-fw fa-at"></i> Email
-        </a>
-    </li>
-    <li>
-        <a href="https://github.com/rrmerugu" target="_blank" class="btn-social btn-outline" title="Ravi Raja on GitHub">
-            <i class="fa fa-fw fa-github"></i> GitHub
-        </a>
-    </li>
-    <li>
-        <a href="https://www.linkedin.com/in/rrmerugu" target="_blank" class="btn-social btn-outline" title="Ravi Raja on LinkedIn">
-            <i class="fa fa-fw fa-linkedin"></i> LinkedIn
-        </a>
-    </li>
-</ul>
-<div class="clearfix"></div>
+          <div class="col-md-4">
+              
 <div class="banner">
     <div class="sidebar-about">
         <!-- <p style="margin-left:30px">
             <i class="fa fa-circle-o faa-burst animated magic-icon"></i></p> -->
+
+            <img src="/public/img/me.png" alt="Ravi Raja Merugu" class="img-responsive">
         <h1>
         <a href="/">
           Ravi Raja Merugu
@@ -69,28 +50,50 @@
         <p class="lead">Python, Javascript and Data</p>
     </div>
 
-    <!-- <nav class="">
+    <nav class="">
+            <a class="sidebar-nav-item" href="/">Posts</a>
 
-            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+            <a class="sidebar-nav-item" href="/projects/">Codes</a>
+            <a class="sidebar-nav-item" href="/talks/">Talks</a>
             <a class="sidebar-nav-item" href="/research/">Research</a>
-            <a class="sidebar-nav-item" href="/about/">About</a> -->
-    <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
-    <!-- <a class="sidebar-nav-item" href="https://github.com/rrmerugu/rrmerugu.github.io">GitHub project</a> -->
-    <!-- </nav> -->
+            <a class="sidebar-nav-item" href="/about/">About</a>
+
+     </nav>
 
 
-<hr>
+     <ul class="list-inline social-nav-links" id="sidebar-buttons">
+       <!-- <li>
+           <a href="/" class="btn-social btn-outline" title="Home">
+               <i class="fa fa-home"></i> Home
+           </a>
+       </li> -->
+         <li>
+             <a href="mailto:rrmerugu@gmail.com" class="btn-social btn-outline" title="E-Mail me">
+                 <i class="fa fa-fw fa-at"></i> Email
+             </a>
+         </li>
+         <li>
+             <a href="https://github.com/rrmerugu" target="_blank" class="btn-social btn-outline" title="Ravi Raja on GitHub">
+                 <i class="fa fa-fw fa-github"></i> GitHub
+             </a>
+         </li>
+         <li>
+             <a href="https://www.linkedin.com/in/rrmerugu" target="_blank" class="btn-social btn-outline" title="Ravi Raja on LinkedIn">
+                 <i class="fa fa-fw fa-linkedin"></i> LinkedIn
+             </a>
+         </li>
+     </ul>
+
 </div>
 
           </div>
-      </div>
-  </div>
-    <div class="content container">
-        <div class="row">
-  <div class="col-md-9">
+          <div class="col-md-8">
+            <div class="row">
+  <div class="col-md-12">
     <div class="post">
       <h1 class="post-title">Django - why ajax for pages ? we have Pjax</h1>
-      <span class="post-date">25 Feb 2017</span>
+      <span class="post-date"><i class="fa fa-calendar"></i> 25 Feb 2017</span>
+      <hr>
       <p>Pjax(https://github.com/defunkt/jquery-pjax) is a jQuery plugin a standalone JavaScript module 
 that uses ajax (XmlHttpRequest) and pushState() to deliver a fast browsing experience.</p>
 
@@ -175,11 +178,15 @@ id specified in <code class="highlighter-rouge">base.html</code> which is <code 
   </div>
 </div>
 
-    </div>
+          </div>
+      </div>
+  </div>
+
 
     <footer class="container">
   <div class="row">
     <div class="col-md-12">
+      <hr>
       <p class="small">&copy; 2017. Built with <i class="fa fa-heart"></i> for Science and Code. </p>
 
     </div>

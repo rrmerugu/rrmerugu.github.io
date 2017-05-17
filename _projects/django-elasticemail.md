@@ -1,8 +1,8 @@
 ---
 title: "Django Elasticemail"
-tagline: "This will enable sending emails in django project via elasticemail.com "
+tagline: "sending emails with Elasticemail as service "
 website: "https://github.com/rrmerugu/django_elasticemail"
 skills: ["Django", "Python", 'Elasticemail']
 ---
 
-This will enable sending emails in django project via elasticemail.com 
+This will enable sending emails in django project via elasticemail.com

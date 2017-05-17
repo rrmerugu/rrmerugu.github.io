@@ -16,10 +16,15 @@ a{
   color: #405fa9;
 }
 html, body, h1, h2, h3, h4, h5, h6, p, li {
-font-family: monospace;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
+  line-height: 1.8em;
 }
+
 .banner h1, .lead, #sidebar-buttons li{
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .banner h1 a{
   color: #333;
@@ -33,7 +38,7 @@ font-family: monospace;
 }
 
 .post-title-multi{
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 0;
   padding-bottom: 0;
   margin-top: 20px;
@@ -45,7 +50,7 @@ font-family: monospace;
 
 }
 .banner {
-  margin-top: 15%;
+  margin-top: 8%;
   margin-bottom: 2%;
 }
 /*
@@ -72,4 +77,39 @@ font-family: monospace;
 .post-date{
   color: #999;
   font-weight: 400;
+}
+
+.post-title-multi a {
+    color: #555;
+}
+
+.post-title-multi a:hover {
+    color: #3F51B5;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+
+}
+
+.sidebar-nav-item{
+  margin-right: 10px;
+}
+
+.list-publication li p{
+  margin-bottom: 0;
+}
+.list-publication li small{
+  color: #999;
+}
+.list-publication li {
+  margin-bottom: 15px;
+}
+.project .title{
+      margin-bottom: 0;
+}
+.project {
+  margin-bottom: 20px;
+}
+.color-999 p{
+  color: #999;
 }

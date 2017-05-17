@@ -1,22 +1,23 @@
 ---
 layout: page
-title: Projects
+title: Talks
 ---
 
 <div class="projects">
-  {% for project in site.projects %}
+  {% for project in site.talks %}
   <div class="project post">
     <p class="title">
-      <a href="{{ project.website }}" target="_blank">
+      <a href="{{ project.slides }}" target="_blank">
         {{ project.title }}
       </a>
+      <small class="text-muted pull-right">{{ project.date | date_to_string }}</small>
     </p>
     <span class="project-tagline post-date">
         {{ project.tagline }}
     </span>
-
+    <div class="color-999">
     {{ project.content }}
-
+    </div>
 
   </div>
   {% endfor %}

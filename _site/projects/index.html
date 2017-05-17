@@ -15,7 +15,8 @@
 
     <!-- CSS 474588-->
     <!-- Latest compiled and minified CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/css/main.css">
     <link rel="stylesheet" href="/public/css/font-awesome-animations.css">
@@ -33,34 +34,14 @@
 <body>
   <div class="container">
       <div class="row">
-          <div class="col-md-12">
-              <ul class="list-inline pull-right social-nav-links" id="sidebar-buttons">
-  <li>
-      <a href="/" class="btn-social btn-outline" title="Home">
-          <i class="fa fa-home"></i> Home
-      </a>
-  </li>
-    <li>
-        <a href="mailto:rrmerugu@gmail.com" class="btn-social btn-outline" title="E-Mail me">
-            <i class="fa fa-fw fa-at"></i> Email
-        </a>
-    </li>
-    <li>
-        <a href="https://github.com/rrmerugu" target="_blank" class="btn-social btn-outline" title="Ravi Raja on GitHub">
-            <i class="fa fa-fw fa-github"></i> GitHub
-        </a>
-    </li>
-    <li>
-        <a href="https://www.linkedin.com/in/rrmerugu" target="_blank" class="btn-social btn-outline" title="Ravi Raja on LinkedIn">
-            <i class="fa fa-fw fa-linkedin"></i> LinkedIn
-        </a>
-    </li>
-</ul>
-<div class="clearfix"></div>
+          <div class="col-md-4">
+              
 <div class="banner">
     <div class="sidebar-about">
         <!-- <p style="margin-left:30px">
             <i class="fa fa-circle-o faa-burst animated magic-icon"></i></p> -->
+
+            <img src="/public/img/me.png" alt="Ravi Raja Merugu" class="img-responsive">
         <h1>
         <a href="/">
           Ravi Raja Merugu
@@ -69,35 +50,56 @@
         <p class="lead">Python, Javascript and Data</p>
     </div>
 
-    <!-- <nav class="">
+    <nav class="">
+            <a class="sidebar-nav-item" href="/">Posts</a>
 
-            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+            <a class="sidebar-nav-item" href="/projects/">Codes</a>
+            <a class="sidebar-nav-item" href="/talks/">Talks</a>
             <a class="sidebar-nav-item" href="/research/">Research</a>
-            <a class="sidebar-nav-item" href="/about/">About</a> -->
-    <!-- <a class="sidebar-nav-item" href="/">Home</a> -->
-    <!-- <a class="sidebar-nav-item" href="https://github.com/rrmerugu/rrmerugu.github.io">GitHub project</a> -->
-    <!-- </nav> -->
+            <a class="sidebar-nav-item" href="/about/">About</a>
+
+     </nav>
 
 
-<hr>
+     <ul class="list-inline social-nav-links" id="sidebar-buttons">
+       <!-- <li>
+           <a href="/" class="btn-social btn-outline" title="Home">
+               <i class="fa fa-home"></i> Home
+           </a>
+       </li> -->
+         <li>
+             <a href="mailto:rrmerugu@gmail.com" class="btn-social btn-outline" title="E-Mail me">
+                 <i class="fa fa-fw fa-at"></i> Email
+             </a>
+         </li>
+         <li>
+             <a href="https://github.com/rrmerugu" target="_blank" class="btn-social btn-outline" title="Ravi Raja on GitHub">
+                 <i class="fa fa-fw fa-github"></i> GitHub
+             </a>
+         </li>
+         <li>
+             <a href="https://www.linkedin.com/in/rrmerugu" target="_blank" class="btn-social btn-outline" title="Ravi Raja on LinkedIn">
+                 <i class="fa fa-fw fa-linkedin"></i> LinkedIn
+             </a>
+         </li>
+     </ul>
+
 </div>
 
           </div>
-      </div>
-  </div>
-    <div class="content container">
-        <div class="page">
+          <div class="col-md-8">
+            <div class="page">
   <h1 class="page-title">Projects</h1>
   <div class="projects">
   
   <div class="project post">
-    <h2 class="project-title post-title">
+    <p class="title">
       <a href="https://github.com/rrmerugu/django_elasticemail" target="_blank">
         Django Elasticemail
       </a>
-    </h2>
+    </p>
     <span class="project-tagline post-date">
-        This will enable sending emails in django project via elasticemail.com 
+        sending emails with Elasticemail as service 
     </span>
 
     <p>This will enable sending emails in django project via elasticemail.com</p>
@@ -107,11 +109,11 @@
   </div>
   
   <div class="project post">
-    <h2 class="project-title post-title">
+    <p class="title">
       <a href="https://github.com/rrmerugu/django-seed" target="_blank">
         Django Seed
       </a>
-    </h2>
+    </p>
     <span class="project-tagline post-date">
         Seed project for Django + MongoDB + Redis + Celery
     </span>
@@ -123,11 +125,11 @@
   </div>
   
   <div class="project post">
-    <h2 class="project-title post-title">
+    <p class="title">
       <a href="https://github.com/rrmerugu/r2-gromacs-gui" target="_blank">
         r2 Gromacs GUI
       </a>
-    </h2>
+    </p>
     <span class="project-tagline post-date">
         GUI tool for a molecular dynamics tool - Gromacs (www.gromacs.org).
     </span>
@@ -140,11 +142,11 @@ prominently in the field of Computational Drug Discovery and Computational Chemi
   </div>
   
   <div class="project post">
-    <h2 class="project-title post-title">
+    <p class="title">
       <a href="https://github.com/rrmerugu/r2_gromacs/" target="_blank">
         r2 gromacs.py
       </a>
-    </h2>
+    </p>
     <span class="project-tagline post-date">
         Automation script for a molecular dynamics tool - Gromacs (www.gromacs.org).
     </span>
@@ -157,11 +159,11 @@ prominently in the field of Computational Drug Discovery and Computational Chemi
   </div>
   
   <div class="project post">
-    <h2 class="project-title post-title">
+    <p class="title">
       <a href="https://github.com/rrmerugu/lucy-chatbot" target="_blank">
         Lucy Chatbot
       </a>
-    </h2>
+    </p>
     <span class="project-tagline post-date">
         A chatbot that is designed to become a scientist's personal research assistant
     </span>
@@ -173,11 +175,11 @@ prominently in the field of Computational Drug Discovery and Computational Chemi
   </div>
   
   <div class="project post">
-    <h2 class="project-title post-title">
+    <p class="title">
       <a href="https://github.com/rrmerugu/r2-console" target="_blank">
         r2 console
       </a>
-    </h2>
+    </p>
     <span class="project-tagline post-date">
         Command line utility for monitoring the users' command-line activity.
     </span>
@@ -191,11 +193,11 @@ research assistant project.</p>
   </div>
   
   <div class="project post">
-    <h2 class="project-title post-title">
+    <p class="title">
       <a href="https://github.com/rrmerugu/rmv" target="_blank">
         Rsquare Molecular Viewer
       </a>
-    </h2>
+    </p>
     <span class="project-tagline post-date">
         A library to create bio-molecular viewer widgets for developers
     </span>
@@ -207,11 +209,11 @@ research assistant project.</p>
   </div>
   
   <div class="project post">
-    <h2 class="project-title post-title">
+    <p class="title">
       <a href="https://github.com/rrmerugu/whatsapp-chatter" target="_blank">
         Whatsapp chatmate
       </a>
-    </h2>
+    </p>
     <span class="project-tagline post-date">
         Chatmate project the reads what for Django + MongoDB 
     </span>
@@ -228,11 +230,15 @@ version, way more to be done.</p>
 
 </div>
 
-    </div>
+          </div>
+      </div>
+  </div>
+
 
     <footer class="container">
   <div class="row">
     <div class="col-md-12">
+      <hr>
       <p class="small">&copy; 2017. Built with <i class="fa fa-heart"></i> for Science and Code. </p>
 
     </div>
