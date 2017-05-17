@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setting up Continuous testing and Continuous Integration(CI) with Jenkins in localhost"
-categories: blog
+category: Blog
 ---
 
 
