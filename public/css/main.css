@@ -140,7 +140,10 @@ h1.post-title {
 }
 h4.year{
   margin-top: 40px;
-  color: #266eaf;
+  color: #555;
+  border-left: 5px solid #266eaf;
+  padding-left: 5px;
+  font-size: 2.5rem;
 }
 .text-underline{
   border-bottom: 1px solid #eee;
