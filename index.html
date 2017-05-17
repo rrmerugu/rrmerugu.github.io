@@ -2,10 +2,15 @@
 layout: default
 title: Home
 ---
-
+<style>
+h1{
+  padding-bottom:20px;
+  border-bottom:1px solid #eee;
+  margin-bottom:15px;
+}
+</style>
 
       <h1>Posts</h1>
-      <hr>
       <div class="posts">
         {% for post in site.posts %}
         <div class="post">
@@ -37,3 +42,6 @@ title: Home
           </a>
         {% endif %}
       </div>
+
+
+ 
