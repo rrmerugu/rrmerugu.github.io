@@ -38,7 +38,7 @@ h1{
 
             {% elsif post.category == 'Talk' %}
                 <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>
-                <a href="{{ post.website}}">{{ post.title }}</a> <span class="post-date">| {{ post.date | date: "%B %d" }}</span>
+                <a href="{{ post.website}}" target="_blank">{{ post.title }}</a> <span class="post-date">| {{ post.date | date: "%B %d" }}</span>
 
             {% else %}
             <a href="{{ post.url}}">{{ post.title }}    </a>

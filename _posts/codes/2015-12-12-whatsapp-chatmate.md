@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Whatsapp chatmate"
 tagline: "Chatmate project the reads what for Django + MongoDB "
 website: "https://github.com/rrmerugu/whatsapp-chatter"

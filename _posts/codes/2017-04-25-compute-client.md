@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Compute Client"
 tagline: "A web based compute client for tracking the scientific research activity"
 website: "https://github.com/rrmerugu/django_elasticemail"

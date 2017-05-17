@@ -23,11 +23,11 @@ author:
   linkedin:       'https://www.linkedin.com/in/rrmerugu'
 
 
-
 collections:
-  - projects
+  - code
   - blog
-  - talks
+  - talk
+
 
 
 

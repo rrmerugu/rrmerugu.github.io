@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Lucy Chatbot"
 tagline: "A chatbot that is designed to become a scientist's personal research assistant"
 website: "https://github.com/rrmerugu/lucy-chatbot"

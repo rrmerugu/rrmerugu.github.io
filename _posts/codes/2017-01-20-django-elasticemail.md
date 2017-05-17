@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Django Elasticemail"
 tagline: "sending emails with Elasticemail as service "
 website: "https://github.com/rrmerugu/django_elasticemail"

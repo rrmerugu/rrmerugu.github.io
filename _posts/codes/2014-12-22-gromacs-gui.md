@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "r2 Gromacs GUI"
 tagline: "GUI tool for a molecular dynamics tool - Gromacs (www.gromacs.org)."
 website: "https://github.com/rrmerugu/r2-gromacs-gui"

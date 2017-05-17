@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Django Seed"
 tagline: "Seed project for Django + MongoDB + Redis + Celery"
 website: "https://github.com/rrmerugu/django-seed"
