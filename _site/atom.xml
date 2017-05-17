@@ -4,13 +4,28 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-18T00:32:49+05:30</updated>
+ <updated>2017-05-18T00:59:28+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
    <email>rrmerugu@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>The new coder's attitude</title>
+   <link href="http://localhost:4000/blog/the-new-coder-attitude/"/>
+   <updated>2017-05-18T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/the-new-coder-attitude</id>
+   <content type="html">&lt;p&gt;Just a notes of the coder’s attitude i’ve been reading from new blogs.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dream it that morning&lt;/li&gt;
+  &lt;li&gt;Build it that Afternoon&lt;/li&gt;
+  &lt;li&gt;Deploy it to night&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Getting started with Django</title>
