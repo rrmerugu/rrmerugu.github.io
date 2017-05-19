@@ -4,7 +4,7 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-18T12:39:41+05:30</updated>
+ <updated>2017-05-19T17:08:29+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
@@ -13,17 +13,25 @@
 
  
  <entry>
-   <title>The new coder's attitude</title>
-   <link href="http://localhost:4000/blog/the-new-coder-attitude/"/>
-   <updated>2017-05-18T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/the-new-coder-attitude</id>
-   <content type="html">&lt;p&gt;Just a notes of the coder’s attitude i’ve been reading from new blogs.&lt;/p&gt;
+   <title>I'm gonna mentor Django as a part of Free Code Camp Hyderabad Month of Code Program  </title>
+   <link href="http://localhost:4000/blog/im-gonna-mentor-django-free-code-camp-hyderabad-month-of-code/"/>
+   <updated>2017-05-19T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/im-gonna-mentor-django-free-code-camp-hyderabad-month-of-code</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;Month of Code&lt;/strong&gt; is a program initiated by &lt;a href=&quot;https://github.com/duttakapil&quot;&gt;Kapil Datta&lt;/a&gt; of
+ Free Code Camp, Hyderabad. The program aims at mentoring a single/group of student on a
+ programming stack that is considered useful by the industry and lands them into
+ some job opportunity. The underlying sentiment is &lt;code class=&quot;highlighter-rouge&quot;&gt;to improve to the state of development
+ in Hyderabad&lt;/code&gt; as Kapil always says.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Dream it that morning&lt;/li&gt;
-  &lt;li&gt;Build it that Afternoon&lt;/li&gt;
-  &lt;li&gt;Deploy it to night&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The program is &lt;a href=&quot;https://fcc-hyd.github.io/month-of-code/&quot;&gt;Month of Code&lt;/a&gt; contains few programs
+that ranges from Data structures + Algorithms to HTML + CSS + Javascript.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I will be mentoring the Python + Django Program&lt;/strong&gt; in Month of Code. More details of the program and
+ requirements can be found on &lt;a href=&quot;https://github.com/rrmerugu/FCC-Month-of-Code-Program&quot;&gt;github/rrmerugu/FCC-Month-of-Code-Program&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To apply for the program, submit your application from here &lt;a href=&quot;https://fcc-hyd.github.io/month-of-code/#form&quot;&gt;https://fcc-hyd.github.io/month-of-code/#form&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--/excerpt--&gt;
 </content>
  </entry>
  
