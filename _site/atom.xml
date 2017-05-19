@@ -4,7 +4,7 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-19T17:08:29+05:30</updated>
+ <updated>2017-05-19T18:26:38+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
@@ -13,10 +13,10 @@
 
  
  <entry>
-   <title>I'm gonna mentor Django as a part of Free Code Camp Hyderabad Month of Code Program  </title>
-   <link href="http://localhost:4000/blog/im-gonna-mentor-django-free-code-camp-hyderabad-month-of-code/"/>
+   <title>Mentoring Django as a part of Free Code Camp Hyderabad Month of Code Program  </title>
+   <link href="http://localhost:4000/blog/Mentoring-django-free-code-camp-hyderabad-month-of-code/"/>
    <updated>2017-05-19T00:00:00+05:30</updated>
-   <id>http://localhost:4000/blog/im-gonna-mentor-django-free-code-camp-hyderabad-month-of-code</id>
+   <id>http://localhost:4000/blog/Mentoring-django-free-code-camp-hyderabad-month-of-code</id>
    <content type="html">&lt;p&gt;&lt;strong&gt;Month of Code&lt;/strong&gt; is a program initiated by &lt;a href=&quot;https://github.com/duttakapil&quot;&gt;Kapil Datta&lt;/a&gt; of
  Free Code Camp, Hyderabad. The program aims at mentoring a single/group of student on a
  programming stack that is considered useful by the industry and lands them into

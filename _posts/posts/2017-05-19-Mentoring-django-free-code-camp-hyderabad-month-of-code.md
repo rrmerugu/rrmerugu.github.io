@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "I'm gonna mentor Django as a part of Free Code Camp Hyderabad Month of Code Program  "
+title:  "Mentoring Django as a part of Free Code Camp Hyderabad Month of Code Program  "
 category: Blog
 ---
 
