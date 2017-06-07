@@ -4,13 +4,44 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-05-20T10:28:48+05:30</updated>
+ <updated>2017-06-07T15:47:14+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
    <email>rrmerugu@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Trawler</title>
+   <link href="http://localhost:4000/code/trawler-a-data-gathering-micro-framework/"/>
+   <updated>2017-06-01T00:00:00+05:30</updated>
+   <id>http://localhost:4000/code/trawler-a-data-gathering-micro-framework</id>
+   <content type="html">&lt;p&gt;Web based graphical Interface for a molecular dynamics tool &lt;a href=&quot;http://www.gromacs.org&quot; target=&quot;_blank&quot;&gt;gromacs&lt;/a&gt;, used
+prominently in the field of Computational Drug Discovery and Computational Chemistry.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Ask yourself: is what I'm about to do going to make people smile? If the answer is yes, then do it </title>
+   <link href="http://localhost:4000/blog/ask-your-self/"/>
+   <updated>2017-05-22T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/ask-your-self</id>
+   <content type="html">&lt;p&gt;On a good Monday start, I was browsing through the Linkedin posts and found a
+blog by Richard Brandson of Virgin Group. It says&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Don’t take yourself too seriously. Instead, ask yourself: is what I’m about to do going to make people smile? If the answer is yes, then do it! - Richard Brandson, Virgin Group.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;He talks more about the lovely attitude and passion you should have to start something.
+if it makes someone smile, then do it. As much as people want to build
+something for Money or Fame, it’s equally important for the the value you give
+for the people.&lt;/p&gt;
+
+&lt;p&gt;the blog by Richard: &lt;a href=&quot;Don't take yourself too seriously. Instead, ask yourself: is what I'm about to do going to make people smile? If the answer is yes, then do it!&quot;&gt;Don’t take yourself too seriously. Instead, ask yourself: is what I’m about to do going to make people smile? If the answer is yes, then do it!&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Mentoring Django as a part of Free Code Camp Hyderabad Month of Code Program  </title>
