@@ -4,13 +4,26 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-06-07T15:47:14+05:30</updated>
+ <updated>2017-06-25T16:54:58+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
    <email>rrmerugu@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Hashtag decomposition to extract more information about tweet during Twitter Topic Classification</title>
+   <link href="http://localhost:4000/blog/hashtag-decomposition-twitter-data/"/>
+   <updated>2017-06-23T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/hashtag-decomposition-twitter-data</id>
+   <content type="html">&lt;p&gt;The following script will decompose the hashtag into the words based on the CamelCase notation
+used in the Hashtaging style.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/rrmerugu/15207c7808e65bd5857bf71d22ff8ae0.js&quot;&gt;&lt;/script&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Trawler</title>
