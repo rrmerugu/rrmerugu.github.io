@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Posts
+title: Snippets
 ---
 <style>
 h1{
@@ -9,7 +9,7 @@ h1{
 }
 </style>
 
-      <h1>Some random thoughts</h1>
+      <h1>Snippets</h1>
 
       {% for post in site.posts %}
         {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
@@ -18,10 +18,11 @@ h1{
           {% capture year %}{{currentyear}}{% endcapture %}
         {% endif %}
 
-        {% if post.category == 'Blog' %}
+        {% if post.category == 'Snippet' %}
         <ul class="posts-in-year list-unstyled">
           <li class="post-title post-title-multi"><p>
-              {% include single-blog.html %}
+
+              {% include single-talk.html %}
           </p>
           </li>
         </ul>

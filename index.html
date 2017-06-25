@@ -23,6 +23,9 @@ h1{
             {% if post.category == 'Blog' %}
                 {% include single-blog.html %}
 
+            {% elsif post.category == 'Snippet' %}
+                {% include single-blog.html %}
+
             {% elsif post.category == 'Code' %}
                 {% include single-code.html %}
 
