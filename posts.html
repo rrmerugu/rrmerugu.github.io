@@ -11,9 +11,6 @@ h1{
 
       <h1>Talks given by me</h1>
 
-
-
-
       {% for post in site.posts %}
         {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
         {% if currentyear != year %}
@@ -24,7 +21,6 @@ h1{
         {% if post.category == 'Blog' %}
         <ul class="posts-in-year list-unstyled">
           <li class="post-title post-title-multi"><p>
-
               {% include single-blog.html %}
           </p>
           </li>
