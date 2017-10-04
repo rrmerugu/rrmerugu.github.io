@@ -4,13 +4,22 @@
  <title>Ravi Raja Merugu</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-06-25T21:07:41+05:30</updated>
+ <updated>2017-10-04T13:24:01+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Ravi Raja Merugu</name>
    <email>rrmerugu@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Async tasks with Django + RabbitMQ + Celery </title>
+   <link href="http://localhost:4000/blog/django-celery-rabbitmq/"/>
+   <updated>2017-09-04T00:00:00+05:30</updated>
+   <id>http://localhost:4000/blog/django-celery-rabbitmq</id>
+   <content type="html">
+</content>
+ </entry>
  
  <entry>
    <title>Hashtag decomposition to extract more information about tweet during Twitter Topic Classification</title>

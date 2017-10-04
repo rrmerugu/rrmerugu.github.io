@@ -12,6 +12,9 @@ h1{
   margin: 0 auto !important;
     width: 100%;
 }
+span.primary {
+    text-transform: uppercase;
+}
 .related-posts h3 {
     font-size: 14px;
 }
