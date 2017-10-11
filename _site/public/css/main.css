@@ -65,7 +65,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, li {
   font-family: 'Source Sans Pro', sans-serif;
   font-family: 'Montserrat', sans-serif;
   color: #555;
-  line-height: 2em;
+  line-height: 1.8em;
 }
 
 .banner h1, .lead, #sidebar-buttons li{
