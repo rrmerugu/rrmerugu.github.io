@@ -8,12 +8,26 @@ img{
 h1{
       font-size: 2.8rem;
 }
+nav.homepage-nav a {
+    text-transform: uppercase;
+}
+.heading-sub{
+  text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
 .homepage-name{
   font-size: 2rem;
       margin-top: 20px;
       border-bottom: transparent;
       margin-bottom: 0;
       padding-bottom: 0;
+}
+.homepage-hr{
+  margin-top: 5px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
 }
 .homepage-title{
   font-weight: bold;
@@ -25,7 +39,6 @@ h1{
 .homepage-description{
   font-size: 1.6rem;
     color: #777;
-    border-bottom: 1px solid #eee;
 padding-bottom: 10px;
 }
 .profile-pic{
@@ -43,7 +56,7 @@ span.primary {
 
 }
 .related-posts-heading{
-  font-size: 24px;
+  font-size: 20px;
 }
 a{
   color: #266eaf;

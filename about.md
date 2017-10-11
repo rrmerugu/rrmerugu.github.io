@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: About me
 ---
 
@@ -10,6 +10,8 @@ h1{
   margin-bottom:15px;
 }
 </style>
+{% include banner-top.html %}
+<h2 class="heading-sub">About</h2>
 
 > I'm a biologist who fell in love with Computers and the crazy things that can
 be done with programming.
