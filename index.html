@@ -8,8 +8,9 @@ h1{
   border-bottom:1px solid #eee;
 }
 </style>
-
-      <h1>Python, Data, Web and Machine Learning</h1>
+      <h1 class="homepage-name">I'm Ravi Raja Merugu</h1>
+      <h2 class="homepage-title">{{ site.tagline }}</h2>
+      <p class="homepage-description">{{site.description}}</p>
 
       {% for post in site.posts %}
         {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
