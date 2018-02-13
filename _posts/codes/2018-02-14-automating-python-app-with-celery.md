@@ -5,6 +5,7 @@ category: Post
 skills: ["Celery", 'Python',]
 ---
 
+The example will use redis as broker, mongodb as results backend  
 
 ```python
 """
@@ -33,15 +34,7 @@ from celery.task import periodic_task
 from datetime import timedelta
 from random import randint
 
-app = Celery('tasks', broker='redis://localhost:6379')
-
-app.conf.beat_schedule = {
-    # Executes every Monday morning at 1:00 a.m.
-    'add-every-monday-morning': {
-        'task': 'tasks.add',
-        'schedule': crontab(hour=1, minute=00, day_of_week=1),
-    },
-}
+app = Celery('tasks', broker='redis://localhost:6379', backend='mongodb://127.0.0.1:27017')
 
 
 @app.task
