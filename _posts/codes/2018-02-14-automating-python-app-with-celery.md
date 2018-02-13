@@ -34,8 +34,7 @@ from celery.task import periodic_task
 from datetime import timedelta
 from random import randint
 
-app = Celery('tasks', broker='redis://localhost:6379', backend='mongodb://127.0.0.1:27017')
-#app = Celery('tasks', broker='mongodb://127.0.0.1:27017', backend='mongodb://127.0.0.1:27017') # works this way too
+app = Celery('tasks', broker='mongodb://127.0.0.1:27017/tasksdb', backend='mongodb://127.0.0.1:27017/tasksdb')
 
 
 @app.task
