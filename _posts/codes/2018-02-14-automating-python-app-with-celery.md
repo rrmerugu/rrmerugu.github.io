@@ -5,7 +5,7 @@ category: Post
 skills: ["Celery", 'Python',]
 ---
 
-The example will use redis as broker, mongodb as results backend  
+The example will use mongodb as broker and  results backend  
 
 ```python
 """
