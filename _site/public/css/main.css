@@ -11,6 +11,10 @@ h1{
 nav.homepage-nav a {
     text-transform: uppercase;
 }
+.navbar{
+  border: none !important;
+  margin:0 !important;
+}
 .heading-sub{
   text-transform: uppercase;
     font-size: 2rem;
@@ -20,7 +24,6 @@ nav.homepage-nav a {
   font-size: 2rem;
       margin-top: 20px;
       border-bottom: transparent;
-      margin-bottom: 0;
       padding-bottom: 0;
 }
 .homepage-hr{
@@ -31,10 +34,16 @@ nav.homepage-nav a {
 }
 .homepage-title{
   font-weight: bold;
-      color: #266eaf;
-      padding-bottom: 0;
-      margin-top: 10px;
-      margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 5rem;
+  font-size: 4rem;
+  margin-top: 25rem;
+}
+.blue-color{
+  color: #266eaf;
+
 }
 .homepage-description{
   font-size: 1.6rem;

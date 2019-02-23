@@ -9,3 +9,5 @@ Im writing this doc, because i keep forgetting how to write this blog :P.
 ## In dev
 
 `bundle exec jekyll serve`
+
+`/Users/rrmerugu/.rbenv/shims/bundle exec jekyll serve`
