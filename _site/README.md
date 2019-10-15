@@ -1,4 +1,4 @@
-# rsquarelabs.com
+# rrmerugu.github.io
 
 
 Im writing this doc, because i keep forgetting how to write this blog :P.
