@@ -22,6 +22,12 @@ $nav-link-size: 20px;
 $nav-footer-size: 12px;
 $post-title-size: 30px;
 $post-subtitle-size: 14px;
+
+
+$post-title-size: 30px;
+
+$post-list-title-size: 18px;
+  
 $post-summary-size: 16px;
 $post-body-size: 16px;
 $post-meta-size: 16px;
@@ -437,7 +443,7 @@ a {
   $nav-item-active-background-alpha: 0.03;
   $nav-item-active-color-darken: 20%;
   .nav-head {
-    padding: 30px 28px 30px 20px;
+    padding: 30px 28px 0px 20px;
     cursor: hand;
     cursor: pointer;
     margin-bottom: 10px;
@@ -621,7 +627,7 @@ a {
         cursor: pointer;
         .post-item {
           margin: 0 28px 0 35px;
-          padding: 30px 0;
+          padding: 10px 0;
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -641,7 +647,7 @@ a {
               padding: 15px 20px;
             }
             .post-item-title {
-              font-size: $post-title-size;
+              font-size: $post-list-title-size;
               font-weight: 500;
               font-style: normal;
               margin-bottom: 10px;
