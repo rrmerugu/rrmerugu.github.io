@@ -9,7 +9,20 @@ Built with modified version of {{ i18n "hugo_theme" }} <a href="https://github.c
 	{{.Site.Home.Date.Year}} {{.Site.Title}}
 	{{ end }}
 
-
+<!-- 
 <script>
 	loadCSS("https://fonts.googleapis.com/css?family=Montserrat|Material+Icons");
-</script>
+</script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<style>
+	.side-container{
+		text-align: left;
+	}
+	@media screen{
+		.side-container .nav-link-list .nav-link-item{
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+</style>

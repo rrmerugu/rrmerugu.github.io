@@ -8,5 +8,9 @@ tags:
   - continuous-deployment
   - github-actions
   - devops
+categories:
+  - knowledge-graphs
+  - github
 draft: false
+type: "posts"
 ---

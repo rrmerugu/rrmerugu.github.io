@@ -15,6 +15,11 @@ googleAnalytics = "UA-123-45"
 
 ## menu 
 [[menu.main]]
+url = "/"
+name = "Home"
+weight = 1
+
+[[menu.main]]
 url = "/categories"
 name = "Categories"
 weight = 3
@@ -26,7 +31,7 @@ weight = 2
 
 [[menu.main]]
 url = "/posts"
-name = "Archive"
+name = "Posts"
 weight = 1
 
 [taxonomies]
@@ -47,30 +52,30 @@ weight = 1
 
 ## Social links
 # use 'fab' when brand icons, use 'fas' when standard solid icons.
-#[[params.socialIcons]]
-#icon = "fab fa-github"
-#title = "GitHub"
-#url = "https://github.com/rrmerugu"
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/rrmerugu"
 
-#[[params.socialIcons]]
-#icon = "fab fa-twitter"
-#title = "Twitter"
-#url = "https://twitter.com/rrmerugu"
+[[params.socialIcons]]
+icon = "fab fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/rrmerugu"
 
-#[[params.socialIcons]]
-#icon = "fas fa-envelope"
-#title = "e-mail"
-#url = "mailto:rrmerugu@gmail.com"
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:rrmerugu@gmail.com"
 
 #[[params.socialIcons]]
 #icon = "fab fa-orcid"
 #title = "ORCID"
 #url = "https://orcid.org/0000-0003-0356-2765"
 
-#[[params.socialIcons]]
-#icon = "fab fa-linkedin"
-#title = "LinkedIn"
-#url = "https://www.linkedin.com/in/rrmerugu/"
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "LinkedIn"
+url = "https://www.linkedin.com/in/rrmerugu/"
 
 # [[params.socialIcons]]
 # icon = "fas fa-calendar"
