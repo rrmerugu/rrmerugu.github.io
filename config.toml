@@ -1,0 +1,78 @@
+baseURL = 'https://rrmerugu.github.io/'
+languageCode = 'en-us'
+theme= 'diary'
+enableEmoji= true
+title = "Ravi Raja Merugu"
+
+[params]
+subtitle = "So much to learn about organising and using data."
+enableReadingTime=true
+profilePicture = "https://github.com/rrmerugu.png"
+googleAnalytics = "UA-123-45"
+# googleSiteVerification = "xxxx-xxxx"
+#favicon = "Your Favicon Address"
+
+
+## menu 
+[[menu.main]]
+url = "/categories"
+name = "Categories"
+weight = 3
+
+[[menu.main]]
+url = "/tags"
+name = "Tags"
+weight = 2
+
+[[menu.main]]
+url = "/posts"
+name = "Archive"
+weight = 1
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+
+## Social links
+# use 'fab' when brand icons, use 'fas' when standard solid icons.
+#[[params.socialIcons]]
+#icon = "fab fa-github"
+#title = "GitHub"
+#url = "https://github.com/rrmerugu"
+
+#[[params.socialIcons]]
+#icon = "fab fa-twitter"
+#title = "Twitter"
+#url = "https://twitter.com/rrmerugu"
+
+#[[params.socialIcons]]
+#icon = "fas fa-envelope"
+#title = "e-mail"
+#url = "mailto:rrmerugu@gmail.com"
+
+#[[params.socialIcons]]
+#icon = "fab fa-orcid"
+#title = "ORCID"
+#url = "https://orcid.org/0000-0003-0356-2765"
+
+#[[params.socialIcons]]
+#icon = "fab fa-linkedin"
+#title = "LinkedIn"
+#url = "https://www.linkedin.com/in/rrmerugu/"
+
+# [[params.socialIcons]]
+# icon = "fas fa-calendar"
+# title = "Calendar"
+# url = "https://calendly.com/sgibson91"

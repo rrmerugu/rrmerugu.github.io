@@ -1,0 +1,15 @@
+<!-- Please don't remove the information of theme makers. -->
+Built with modified version of {{ i18n "hugo_theme" }} <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> 
+<br>
+<!-- Because this project is under MIT licence. -->
+&copy;
+	{{ if .Site.Copyright }}
+	{{ .Site.Copyright }}
+	{{ else }}
+	{{.Site.Home.Date.Year}} {{.Site.Title}}
+	{{ end }}
+
+
+<script>
+	loadCSS("https://fonts.googleapis.com/css?family=Montserrat|Material+Icons");
+</script>
