@@ -20,12 +20,8 @@ $nav-title-size: 30px;
 $nav-subtitle-size: 18px;
 $nav-link-size: 20px;
 $nav-footer-size: 12px;
-$post-title-size: 30px;
+$post-title-size: 36px;
 $post-subtitle-size: 14px;
-
-
-$post-title-size: 30px;
-
 $post-list-title-size: 18px;
   
 $post-summary-size: 16px;
@@ -73,6 +69,7 @@ body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: $color-text;
+  font-size: 16px;
 }
 
 * {

@@ -29,23 +29,47 @@ name = "Home"
 weight = 1
 
 [[menu.main]]
-url = "/categories"
-name = "Categories"
+url = "/posts"
+name = "Posts"
+weight = 2
+
+[[menu.main]]
+url = "/projects"
+name = "Projects"
 weight = 3
+
+
+[[menu.main]]
+url = "/talks"
+name = "Talks"
+weight = 4
+
+
+[[menu.main]]
+url = "/papers"
+name = "Research Papers"
+weight = 5
 
 [[menu.main]]
 url = "/tags"
 name = "Tags"
-weight = 2
+weight = 6
 
 [[menu.main]]
-url = "/posts"
-name = "Posts"
-weight = 1
+url = "/categories"
+name = "Categories"
+weight = 7
+
+
+
+
 
 [taxonomies]
    tag = "tags"
    category = "categories"
+   project = "projects"
+   talk = "talks"
+   paper = "papers"
 
 [markup]
   [markup.highlight]
