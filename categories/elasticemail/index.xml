@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>elasticemail on Ravi Raja Merugu</title><link>https://rrmerugu.github.io/categories/elasticemail/</link><description>Recent content in elasticemail on Ravi Raja Merugu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 23 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://rrmerugu.github.io/categories/elasticemail/index.xml" rel="self" type="application/rss+xml"/><item><title>Integrating elasticemail.com into django project for transactional emails.</title><link>https://rrmerugu.github.io/posts/intergrating-elasticemail-into-django-for-transactional-emails/</link><pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/intergrating-elasticemail-into-django-for-transactional-emails/</guid><description>Elastiemail as the website says is a email delivery tools provider, you can send transactional as well as promotional emails.
+I&amp;rsquo;ve written a EMAILBACKEND class that allows you to send emails in django project using elasticemail.com
+Here is how to use it.
+Install the package via git git install -e git+https://github.com/rrmerugu/django_elasticemail
+Add django_elasticemail to INSTALLED_APPS
+In settings.py add EMAIL_BACKEND = &amp;quot;django_elasticemail.mail.ElasticEmailBackend&amp;quot;
+Usage 1 2 3 4 5 6 7 8 9 10 from django.</description></item></channel></rss>

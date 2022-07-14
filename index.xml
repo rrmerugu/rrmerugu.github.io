@@ -1,0 +1,214 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ravi Raja Merugu</title><link>https://rrmerugu.github.io/</link><description>Recent content on Ravi Raja Merugu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://rrmerugu.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Elasticsearch Notes on Queries</title><link>https://rrmerugu.github.io/projects/elasticsearch-notes/</link><pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/projects/elasticsearch-notes/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/projects/elasticsearch-notes/ -&lt;h1 id="to-find-records-with-no-field-product_count">To find records with no field &lt;code>product_count&lt;/code>.&lt;/h1>
+&lt;pre tabindex="0">&lt;code>GET /shop_data/_count
+{
+&amp;#34;query&amp;#34;: {
+&amp;#34;bool&amp;#34;: {
+&amp;#34;must_not&amp;#34;: [
+{
+&amp;#34;exists&amp;#34;: {
+&amp;#34;field&amp;#34;: &amp;#34;product_count&amp;#34;
+}
+}
+]
+}
+}
+}
+&lt;/code>&lt;/pre>&lt;h4 id="to-add-a-field-with-default-value-if-the-field-doesnt-exist">To add a field with default value if the field doesnt exist&lt;/h4>
+&lt;pre tabindex="0">&lt;code>POST /shop_data/_update_by_query
+{
+&amp;#34;query&amp;#34;: {
+&amp;#34;bool&amp;#34;: {
+&amp;#34;must_not&amp;#34;: [
+{
+&amp;#34;exists&amp;#34;: {
+&amp;#34;field&amp;#34;: &amp;#34;product_count&amp;#34;
+}
+}
+]
+}
+},
+&amp;#34;script&amp;#34; : {
+&amp;#34;inline&amp;#34; : &amp;#34;ctx._source.product_count= 0;&amp;#34;
+}
+}
+&lt;/code>&lt;/pre>- https://rrmerugu.github.io/projects/elasticsearch-notes/ -</description></item><item><title>Automating python tasks with Celery</title><link>https://rrmerugu.github.io/projects/automating-python-app-with-celery/</link><pubDate>Wed, 14 Feb 2018 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/projects/automating-python-app-with-celery/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/projects/automating-python-app-with-celery/ -&lt;p>The example will use mongodb as broker and results backend&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"># tasks.py
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">http://docs.celeryproject.org/en/latest/getting-started/next-steps.html#project-layout
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html?highlight=add_periodic_task
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">celery -A tasks worker --loglevel=info
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;amp;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">python tasks.py # executes the add.delay() things
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74"># runs the periodic tasks
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">celery worker -l info -A tasks --beat
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> celery &lt;span style="color:#f92672">import&lt;/span> Celery
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> celery.schedules &lt;span style="color:#f92672">import&lt;/span> crontab
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> celery.task &lt;span style="color:#f92672">import&lt;/span> periodic_task
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> datetime &lt;span style="color:#f92672">import&lt;/span> timedelta
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> random &lt;span style="color:#f92672">import&lt;/span> randint
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>app &lt;span style="color:#f92672">=&lt;/span> Celery(&lt;span style="color:#e6db74">&amp;#39;tasks&amp;#39;&lt;/span>, broker&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;mongodb://127.0.0.1:27017/tasksdb&amp;#39;&lt;/span>, backend&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;mongodb://127.0.0.1:27017/tasksdb&amp;#39;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">@app&lt;/span>&lt;span style="color:#f92672">.&lt;/span>task
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">add&lt;/span>(x, y):
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> z &lt;span style="color:#f92672">=&lt;/span> x &lt;span style="color:#f92672">+&lt;/span> y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">&amp;#34;z is &lt;/span>&lt;span style="color:#e6db74">{}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#f92672">.&lt;/span>format(z))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> x &lt;span style="color:#f92672">+&lt;/span> y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a6e22e">@periodic_task&lt;/span>(run_every&lt;span style="color:#f92672">=&lt;/span>timedelta(seconds&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">2&lt;/span>))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">periodic_task_example&lt;/span>():
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> add&lt;span style="color:#f92672">.&lt;/span>delay(randint(&lt;span style="color:#ae81ff">22&lt;/span>, &lt;span style="color:#ae81ff">55&lt;/span>), randint(&lt;span style="color:#ae81ff">445&lt;/span>, &lt;span style="color:#ae81ff">56666&lt;/span>))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> __name__ &lt;span style="color:#f92672">==&lt;/span> &lt;span style="color:#e6db74">&amp;#34;__main__&amp;#34;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> add&lt;span style="color:#f92672">.&lt;/span>delay(&lt;span style="color:#ae81ff">4&lt;/span>, &lt;span style="color:#ae81ff">4&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> add&lt;span style="color:#f92672">.&lt;/span>delay(&lt;span style="color:#ae81ff">2&lt;/span>, &lt;span style="color:#ae81ff">5&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> add&lt;span style="color:#f92672">.&lt;/span>delay(&lt;span style="color:#ae81ff">1000&lt;/span>, &lt;span style="color:#ae81ff">7&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> add&lt;span style="color:#f92672">.&lt;/span>delay(&lt;span style="color:#ae81ff">4123&lt;/span>, &lt;span style="color:#ae81ff">41231&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>- https://rrmerugu.github.io/projects/automating-python-app-with-celery/ -</description></item><item><title>Async tasks with Django + RabbitMQ + Celery</title><link>https://rrmerugu.github.io/posts/django-celery-rabbitmq/</link><pubDate>Mon, 04 Sep 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/django-celery-rabbitmq/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/django-celery-rabbitmq/ -&lt;p>This is awesome, Im typing this content from the github editor just to prove myself that, i dont need to clone , edit and push to write a blog&lt;/p>
+- https://rrmerugu.github.io/posts/django-celery-rabbitmq/ -</description></item><item><title>Hashtag decomposition to extract more information about tweet during Twitter Topic Classification</title><link>https://rrmerugu.github.io/snippets/hashtag-decomposition-twitter-data/</link><pubDate>Fri, 23 Jun 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/snippets/hashtag-decomposition-twitter-data/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/snippets/hashtag-decomposition-twitter-data/ -&lt;p>The following script will decompose the hashtag into the words based on the CamelCase notation
+used in the Hashtagging style.&lt;/p>
+&lt;!-- raw HTML omitted -->
+- https://rrmerugu.github.io/snippets/hashtag-decomposition-twitter-data/ -</description></item><item><title>Trawler</title><link>https://rrmerugu.github.io/projects/trawler-a-data-gathering-micro-framework/</link><pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/projects/trawler-a-data-gathering-micro-framework/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/projects/trawler-a-data-gathering-micro-framework/ -&lt;p>Web based graphical Interface for a molecular dynamics tool &lt;a href="http://www.gromacs.org">gromacs&lt;/a>{:target=&amp;quot;_blank&amp;quot;}, used
+prominently in the field of Computational Drug Discovery and Computational Chemistry.&lt;/p>
+- https://rrmerugu.github.io/projects/trawler-a-data-gathering-micro-framework/ -</description></item><item><title>Ask yourself: is what I'm about to do going to make people smile? If the answer is yes, then do it</title><link>https://rrmerugu.github.io/posts/ask-your-self/</link><pubDate>Mon, 22 May 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/ask-your-self/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/ask-your-self/ -&lt;p>On a good Monday start, I was browsing through the Linkedin posts and found a
+blog by Richard Brandson of Virgin Group. It says&lt;/p>
+&lt;blockquote>
+&lt;p>Don&amp;rsquo;t take yourself too seriously. Instead, ask yourself: is what I&amp;rsquo;m about to do going to make people smile? If the answer is yes, then do it! - Richard Brandson, Virgin Group.&lt;/p>
+&lt;/blockquote>
+&lt;p>He talks more about the lovely attitude and passion you should have to start something.
+if it makes someone smile, then do it. As much as people want to build
+something for Money or Fame, it&amp;rsquo;s equally important for the the value you give
+for the people.&lt;/p>
+&lt;p>the blog by Richard: [Don&amp;rsquo;t take yourself too seriously. Instead, ask yourself: is what I&amp;rsquo;m about to do going to make people smile? If the answer is yes, then do it!](Don&amp;rsquo;t take yourself too seriously. Instead, ask yourself: is what I&amp;rsquo;m about to do going to make people smile? If the answer is yes, then do it!)&lt;/p>
+- https://rrmerugu.github.io/posts/ask-your-self/ -</description></item><item><title>Mentoring Django as a part of Free Code Camp Hyderabad Month of Code Program</title><link>https://rrmerugu.github.io/posts/mentoring-django-free-code-camp-hyderabad-month-of-code/</link><pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/mentoring-django-free-code-camp-hyderabad-month-of-code/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/mentoring-django-free-code-camp-hyderabad-month-of-code/ -&lt;p>&lt;strong>Month of Code&lt;/strong> is a program initiated by &lt;a href="https://github.com/duttakapil">Kapil Datta&lt;/a> of
+Free Code Camp, Hyderabad. The program aims at mentoring a single/group of student on a
+programming stack that is considered useful by the industry and lands them into
+some job opportunity. The underlying sentiment is &lt;code>to improve to the state of development in Hyderabad&lt;/code> as Kapil always says.&lt;/p>
+&lt;p>The program is &lt;a href="https://fcc-hyd.github.io/month-of-code/">Month of Code&lt;/a> contains few programs
+that ranges from Data structures + Algorithms to HTML + CSS + Javascript.&lt;/p>
+&lt;p>&lt;strong>I will be mentoring the Python + Django Program&lt;/strong> in Month of Code. More details of the program and
+requirements can be found on &lt;a href="https://github.com/rrmerugu/FCC-Month-of-Code-Program">github/rrmerugu/FCC-Month-of-Code-Program&lt;/a>&lt;/p>
+&lt;p>To apply for the program, submit your application from here &lt;a href="https://fcc-hyd.github.io/month-of-code/#form">https://fcc-hyd.github.io/month-of-code/#form&lt;/a>&lt;/p>
+&lt;!-- raw HTML omitted -->
+- https://rrmerugu.github.io/posts/mentoring-django-free-code-camp-hyderabad-month-of-code/ -</description></item><item><title>Getting started with Django</title><link>https://rrmerugu.github.io/talks/django-101/</link><pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/talks/django-101/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/talks/django-101/ -&lt;p>Here is the link of the talk &lt;a href="https://docs.google.com/presentation/d/1TMfEbBNFWy1Uo0bubO5Uxk19lNbRnB2W0NSVLjGd8Gc/edit?usp=sharing">https://docs.google.com/presentation/d/1TMfEbBNFWy1Uo0bubO5Uxk19lNbRnB2W0NSVLjGd8Gc/edit?usp=sharing&lt;/a>&lt;/p>
+- https://rrmerugu.github.io/talks/django-101/ -</description></item><item><title>Compute Client</title><link>https://rrmerugu.github.io/projects/compute-client/</link><pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/projects/compute-client/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/projects/compute-client/ -&lt;p>This is the local installable web client to view and analyse the data created by R2 Client.&lt;/p>
+- https://rrmerugu.github.io/projects/compute-client/ -</description></item><item><title>Setting up Continuous testing and Continuous Integration(CI) with Jenkins in localhost</title><link>https://rrmerugu.github.io/posts/setting-up-jenkins-localhost/</link><pubDate>Fri, 24 Mar 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/setting-up-jenkins-localhost/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/setting-up-jenkins-localhost/ -&lt;p>Jenkins is one of the coolest open-source tool. As a developer I write many codes
+in a day and performs many commits, pulling the code a day. I like
+&lt;a href="https://travis-ci.org/">Travis CI&lt;/a> for opensource projects, but when it comes to
+private projects they charge me. So I was exploring Jenkins and realised that&amp;rsquo;s what
+I want for my localhost.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>&lt;strong>Continuous testing&lt;/strong> is the process of executing automated tests as part of the software delivery pipeline to obtain immediate feedback on the business risks associated with a software release candidate. (Source: Wiki)&lt;/p>
+&lt;p>&lt;strong>continuous integration (CI)&lt;/strong> is the practice of merging all developer working copies to a shared mainline several times a day. (Source: Wiki)&lt;/p>
+&lt;h3 id="step1-create-a-free-style-project">Step1: Create a free style project&lt;/h3>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/jenkins/1.png" alt="Create a free style project">&lt;/p>
+&lt;h3 id="step2-configure-settings">Step2: Configure settings&lt;/h3>
+&lt;p>In this step, we will tell Jenkins, which &lt;code>git&lt;/code> repository it should worry about.
+In our case, .git project is in our machine. So &lt;code>select&lt;/code> git as &lt;code>Source Code Management&lt;/code> and
+give the absolute path of the git repository.&lt;/p>
+&lt;p>Specify the branch it should monitor, by default it will be &lt;code>master&lt;/code>, but in continuous testing,
+you might be worried about &lt;code>develop&lt;/code> branch also, in that case give &lt;code>*&lt;/code> in Branch Specifier.&lt;/p>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/jenkins/2.png" alt="Configure settings">&lt;/p>
+&lt;h3 id="step3-setup-build-triggers">Step3: Setup Build Triggers&lt;/h3>
+&lt;p>You can trigger a build by sending &lt;code>Authentication Token&lt;/code> in a GET request of the url
+&lt;code>http://localhost:8080/job/challengeX/build?token=1234567890&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/jenkins/3.png" alt="Setup Build Triggers">&lt;/p>
+&lt;p>Doing simple &lt;code>curl http://localhost:8080/job/challengeX/build?token=1234567890&lt;/code> in the terminal
+should trigger a build :D. But it&amp;rsquo;s not over yet, so still need to tell jenkins how
+to create a build.&lt;/p>
+&lt;h3 id="step4-configuring-build-process">Step4: Configuring Build Process&lt;/h3>
+&lt;p>In this step we will tell Jenkins, how to create a build and post build scripts.&lt;/p>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/jenkins/4.png" alt="Configuring Build Process">
+&lt;img src="https://rrmerugu.github.io/public/img/jenkins/5.png" alt="Configuring Build Process 2">&lt;/p>
+&lt;p>If you want to run a script &lt;code>npm run tests&lt;/code> in the shell, update the settings as mentioned above.&lt;/p>
+&lt;h3 id="step5-configure-post-commit-hook-for-git-project">Step5: Configure post-commit hook for git project&lt;/h3>
+&lt;p>Now we need to tell when this test should trigger. Lets say, we want to trigger the
+build creation process on &lt;code>post-commit&lt;/code>. You should add a &lt;code>hook&lt;/code> to git project,
+something &lt;code>&amp;lt;project_path&amp;gt;/.git/hooks/post-commit&lt;/code>. Copy the following lined into
+post-commit hook.&lt;/p>
+&lt;pre tabindex="0">&lt;code>#!/bin/sh
+echo &amp;#34;trigerring the post commit &amp;#34;
+curl http://localhost:8080/job/challengeX/build?token=1234567890
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/jenkins/6.png" alt="Configure post-commit hook for git project">&lt;/p>
+&lt;p>Where &lt;code>challengeX&lt;/code> is your project name.&lt;/p>
+&lt;h3 id="step6-tweak-you-security-settings">Step6: Tweak you Security Settings&lt;/h3>
+&lt;p>This is need for making the http://localhost:8080/job/challengeX/build?token=1234567890 as
+anonymous user. Go to http://localhost:8080/configureSecurity/ and check the &lt;code>Allow anonymous read access&lt;/code> option.&lt;/p>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/jenkins/7.png" alt="Tweak you Security Settings">&lt;/p>
+&lt;p>All set for continuous testing, When you perform a new commit, a new build will be triggered
+and all the reports of the build generation, both success and failures can be found
+from &lt;a href="http://localhost:8080/job/challengeX/">http://localhost:8080/job/challengeX/&lt;/a>, where
+&lt;code>challengeX&lt;/code> is your project name.&lt;/p>
+&lt;h2 id="jenkins-ui">Jenkins UI&lt;/h2>
+&lt;p>I&amp;rsquo;m not a fan of Jenkins UI, but there are plugins out there
+that will change the skin of Jenkins :). &lt;a href="http://arji.me/jenkins-neo-theme/">http://arji.me/jenkins-neo-theme/&lt;/a> is
+one the themes I found cool, but Im sure you can find much better themes. &lt;code>jenkins-neo-theme&lt;/code> will give
+you UI like this, and how cool is that.&lt;/p>
+&lt;p>&lt;img src="http://arji.me/jenkins-neo-theme/images/screen1.png" alt="Jenkins neo theme">&lt;/p>
+- https://rrmerugu.github.io/posts/setting-up-jenkins-localhost/ -</description></item></channel></rss>

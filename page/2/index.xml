@@ -1,0 +1,246 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ravi Raja Merugu</title><link>https://rrmerugu.github.io/</link><description>Recent content on Ravi Raja Merugu</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://rrmerugu.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Django Fake data</title><link>https://rrmerugu.github.io/posts/django-fake-data/</link><pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/django-fake-data/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/django-fake-data/ -&lt;p>&lt;code>django-autofixture&lt;/code>(&lt;a href="https://github.com/gregmuellegger/django-autofixture">https://github.com/gregmuellegger/django-autofixture&lt;/a>) inserts the fake data into the
+models with no scripting . It gets the data up and running in single command &lt;code>python manage.py loadtestdata blog.BlogPost:100&lt;/code>.&lt;/p>
+&lt;p>I wish the fake data is in good english, but it&amp;rsquo;s a good start.&lt;/p>
+&lt;!-- raw HTML omitted -->
+- https://rrmerugu.github.io/posts/django-fake-data/ -</description></item><item><title>Django - why ajax for pages ? we have Pjax</title><link>https://rrmerugu.github.io/posts/django-why-ajax-we-have-pjax/</link><pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/django-why-ajax-we-have-pjax/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/django-why-ajax-we-have-pjax/ -&lt;p>Pjax(&lt;a href="https://github.com/defunkt/jquery-pjax">https://github.com/defunkt/jquery-pjax&lt;/a>) is a jQuery plugin a standalone JavaScript module
+that uses ajax (XmlHttpRequest) and pushState() to deliver a fast browsing experience.&lt;/p>
+&lt;p>Typically django serves each page with a entire page reload, costing performance. Using Pjax, its we convert our
+django application into a light weight server rendered SPA :) , Lets know how awesome is that..&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Here is how to use it and code is hosted at &lt;a href="https://github.com/rrmerugu/django-pjaxified">https://github.com/rrmerugu/django-pjaxified&lt;/a>.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Step1: Fork and Clone the repo &lt;code>git clone https://github.com/rrmerugu/django-pjaxified&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Step2: Create virtualenv &lt;code>virtualenv venv&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Step3: Activate the &lt;code>venv&lt;/code> and install the necessary packages
+using &lt;code>source venv/bin/activate &amp;amp;&amp;amp; pip install -r requirements.txt&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Step4: start the server :D, all the configs are already added into the &lt;code>settings&lt;/code>. Just start the server with
+&lt;code>python manage.py runserver&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Check the &lt;code>djangoajax/settings.py&lt;/code> for the &lt;code>pjax&lt;/code> settings. there are only 3 settings needed . Check
+&lt;a href="https://github.com/nigma/django-easy-pjax">https://github.com/nigma/django-easy-pjax&lt;/a> for settings and implementation
+doc.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>website/templates/base.html&lt;/code> contains the &lt;code>js&lt;/code> libraries and code needed to activate the pjax on page :) .&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>In the &lt;code>url/route of django view&lt;/code> while extending the &lt;code>base.html&lt;/code> instead of &lt;code>{ % extend s &amp;quot;base.html&amp;quot; % }&lt;/code> use
+&lt;code>{ % extend s &amp;quot;base.html&amp;quot;|pjax:request % }&lt;/code> and place the &lt;code>{ % block content % }&lt;/code> of &lt;code>base.html&lt;/code> in a div container with
+id specified in &lt;code>base.html&lt;/code> which is &lt;code>pjax-container&lt;/code> in our case.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>Try it out, and let me know :)&lt;/p>
+- https://rrmerugu.github.io/posts/django-why-ajax-we-have-pjax/ -</description></item><item><title>Hello Ionic framework - a sample hydrib mobile application.</title><link>https://rrmerugu.github.io/posts/hello-ionic-cordova/</link><pubDate>Fri, 03 Feb 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/hello-ionic-cordova/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/hello-ionic-cordova/ -&lt;p>&lt;a href="https://ionicframework.com/">Ionic Framework&lt;/a> as the website says is
+the top open source framework for building amazing mobile apps..&lt;/p>
+&lt;p>I&amp;rsquo;ve written a sample 3 page mobile app that can be deployed into &lt;code>iOS&lt;/code> and &lt;code>android&lt;/code>.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Here is how to use it and code is hosted at &lt;a href="https://github.com/rrmerugu/hello-ionic">https://github.com/rrmerugu/hello-ionic&lt;/a>.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Step1: Create ionic app &lt;code>ionic start hello_app --v2 sidemenu&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Step2: Create new page &lt;code>ionic g page home&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Step3: Configuring the pages in the app&lt;/p>
+&lt;ul>
+&lt;li>Add new page &lt;code>home&lt;/code> in &lt;code>src/app/app.module.ts&lt;/code>&lt;/li>
+&lt;li>Import and add &lt;code>home&lt;/code> in &lt;code>src/app/app.components.ts&lt;/code>&lt;/li>
+&lt;li>Pages of the app is located in &lt;code>src/app/app.components.ts&lt;/code> with variable
+in &lt;code>this.pages&lt;/code>&lt;/li>
+&lt;li>Change the index/root page of the app in &lt;code>src/app/app.components.ts&lt;/code> with the variable
+&lt;code>rootPage&lt;/code>. Change the &lt;code>rootPage&lt;/code> variable accordingly.&lt;/li>
+&lt;li>SideMenu template can be found at &lt;code>src/app/app.html&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Generating a build for &lt;code>iOS&lt;/code> &lt;code>ionic build ios&lt;/code>. App is generated in
+&lt;code>hello-ionic/hello_app/platforms/ios/build/emulator/hello_app.app&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Simulating the generating build using &lt;code>ionic emulate ios&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="other-commands">Other commands&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>ionic platforms&lt;/code> to check the available platforms&lt;/li>
+&lt;li>&lt;code>ionic platform add android&lt;/code> to add android platform&lt;/li>
+&lt;/ul>
+&lt;h3 id="publishing">Publishing&lt;/h3>
+&lt;ul>
+&lt;li>Remove any &lt;code>plugins&lt;/code> that you used for development but not needed for production.
+Example: &lt;code>cordova plugin rm cordova-plugin-console&lt;/code>&lt;/li>
+&lt;li>Creating a production build - &lt;code>ionic build ios --release&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References:&lt;/h2>
+&lt;ul>
+&lt;li>Anatomy of Code : &lt;a href="https://ionicframework.com/docs/v2/setup/tutorial/project-structure/">https://ionicframework.com/docs/v2/setup/tutorial/project-structure/&lt;/a>&lt;/li>
+&lt;li>Generate page : &lt;a href="https://ionicframework.com/docs/v2/cli/generate/">https://ionicframework.com/docs/v2/cli/generate/&lt;/a>&lt;/li>
+&lt;li>Create to Deployment Guide : &lt;a href="https://ionicframework.com/docs/guide/">https://ionicframework.com/docs/guide/&lt;/a>&lt;/li>
+&lt;li>Publishing in android and iOS: &lt;a href="https://ionicframework.com/docs/guide/publishing.html">https://ionicframework.com/docs/guide/publishing.html&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Try it out. All the very best :)&lt;/p>
+- https://rrmerugu.github.io/posts/hello-ionic-cordova/ -</description></item><item><title>Integrating elasticemail.com into django project for transactional emails.</title><link>https://rrmerugu.github.io/posts/intergrating-elasticemail-into-django-for-transactional-emails/</link><pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/intergrating-elasticemail-into-django-for-transactional-emails/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/intergrating-elasticemail-into-django-for-transactional-emails/ -&lt;p>&lt;a href="https://www.elasticemail.com">Elastiemail&lt;/a> as the website says is a email delivery tools provider,
+you can send transactional as well as promotional emails.&lt;/p>
+&lt;p>I&amp;rsquo;ve written a &lt;code>EMAILBACKEND&lt;/code> class that allows you to send emails in django project using elasticemail.com&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Here is how to use it.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Install the package via git &lt;code>git install -e git+https://github.com/rrmerugu/django_elasticemail&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add &lt;code>django_elasticemail&lt;/code> to &lt;code>INSTALLED_APPS&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>In &lt;code>settings.py&lt;/code> add &lt;code>EMAIL_BACKEND = &amp;quot;django_elasticemail.mail.ElasticEmailBackend&amp;quot;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="usage">Usage&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">from&lt;/span> django.core.mail &lt;span style="color:#f92672">import&lt;/span> EmailMultiAlternatives
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>email_message &lt;span style="color:#f92672">=&lt;/span> EmailMultiAlternatives(subject&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#66d9ef">None&lt;/span>, body&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#66d9ef">None&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> from_email&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#e6db74">&amp;#39;xxx@gmail.com&amp;#39;&lt;/span>, to&lt;span style="color:#f92672">=&lt;/span>[&lt;span style="color:#e6db74">&amp;#39;yy@gmail.com&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;zz@outlook.com&amp;#39;&lt;/span>])
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>email_message&lt;span style="color:#f92672">.&lt;/span>template &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#39;template-name&amp;#39;&lt;/span> &lt;span style="color:#75715e"># template with this name should be created in your elasticemail.com account&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>email_message&lt;span style="color:#f92672">.&lt;/span>merge_vars &lt;span style="color:#f92672">=&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#39;text&amp;#39;&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;Hello World&amp;#39;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>email_message&lt;span style="color:#f92672">.&lt;/span>send()
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Try it out. All the very best :)&lt;/p>
+- https://rrmerugu.github.io/posts/intergrating-elasticemail-into-django-for-transactional-emails/ -</description></item><item><title>Django Elasticemail</title><link>https://rrmerugu.github.io/projects/django-elasticemail/</link><pubDate>Fri, 20 Jan 2017 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/projects/django-elasticemail/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/projects/django-elasticemail/ -&lt;p>This will enable sending emails in django project via elasticemail.com&lt;/p>
+- https://rrmerugu.github.io/projects/django-elasticemail/ -</description></item><item><title>Hello Docker - my docker notes</title><link>https://rrmerugu.github.io/posts/hello-docker/</link><pubDate>Sun, 25 Dec 2016 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/hello-docker/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/hello-docker/ -&lt;p>&lt;a href="https://www.docker.com">Docker&lt;/a> as the website homepage says
+&lt;code>is the world’s leading software containerization platform&lt;/code>.
+Dockers and container tech has become a common practise in the software development.
+I tried it and fell in love with this for many reasons. The prime reason
+is it is an open-source project. Long hail opensource developers.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>So I&amp;rsquo;ve experimenting on the scenrios in which i might need to use docker containers.
+I mostly work with Django, but the technical stack varies from simple
+&lt;code>Django + sqlite&lt;/code> to &lt;code>Django + postgres + redis + celery&lt;/code> and more.&lt;/p>
+&lt;p>Let me share my reasons of falling in love with Docker.&lt;/p>
+&lt;h3 id="1maintaining-the-consistency-in-the-version-of-the-tools-used-by-every-developer">1.Maintaining the consistency in the version of the tools used by every developer&lt;/h3>
+&lt;p>Although installation is a one time affair. Maintaining the consistency in the version of the tools used by every developer
+of the project is a challenge. Dockers solve that easily.&lt;/p>
+&lt;h3 id="2no-re-installation-and-reconfigure-headaches">2.No re-installation and reconfigure headaches&lt;/h3>
+&lt;p>Docker comes with &lt;code>docker-compose.yml&lt;/code> file which will do all your dirty configuration headaches.&lt;/p>
+&lt;h3 id="3integrating-multiple-tools-is-not-hard">3.Integrating multiple tools is not hard&lt;/h3>
+&lt;p>Docker&amp;rsquo;s &lt;code>docker-compose.yml&lt;/code> makes it easy to install the required tech stack images.&lt;/p>
+&lt;p>Example: If you want to build a &lt;code>Django + Postgres&lt;/code> container. All you do is&lt;/p>
+&lt;pre tabindex="0">&lt;code># docker-compose.yml
+version: &amp;#34;2&amp;#34;
+services:
+db:
+image: postgres
+web:
+build: .
+container_name: django_postgres
+command: python manage.py runserver 0.0.0.0:8000
+volumes:
+- ./hello_django:/hello_django
+ports:
+- &amp;#34;8000:8000&amp;#34;
+depends_on:
+- db
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code># Dockerfile
+FROM python:2.7
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /hello_django
+WORKDIR /hello_django
+ADD ./hello_django/ /hello_django/
+RUN pip install -r requirements.txt
+&lt;/code>&lt;/pre>&lt;p>Execute &lt;code>docker-compose build&lt;/code> to build the container or &lt;code>docker-compose up -d&lt;/code> to
+run the application. You should be able to access the django server running and available
+on the url &lt;code>http://{your-docker-ip}:8000&lt;/code> in my case it&amp;rsquo;s &lt;code>http://192.168.99.100:8000&lt;/code>&lt;/p>
+&lt;h2 id="4above-all-its-open-source">4.Above all, it&amp;rsquo;s open-source&lt;/h2>
+&lt;p>It&amp;rsquo;s an opensource project and that makes it more awesome - the developers,
+tutorials and active community makes it more powerfull than other container
+technology.&lt;/p>
+&lt;p>All the docker scenarios i&amp;rsquo;ve experimented were published in &lt;code>https://github.com/rrmerugu/hello-docker&lt;/code>&lt;/p>
+&lt;p>Try it out. All the very best :)&lt;/p>
+- https://rrmerugu.github.io/posts/hello-docker/ -</description></item><item><title>Rsquare Molecular Viewer</title><link>https://rrmerugu.github.io/projects/rmv/</link><pubDate>Tue, 29 Nov 2016 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/projects/rmv/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/projects/rmv/ -&lt;p>Web based molecular viewer for &lt;code>viewing bio molecules&lt;/code> in 3D. This is a library that makes setting up &lt;code>molecular viewer widgets&lt;/code> on the webpages much simpler.&lt;/p>
+- https://rrmerugu.github.io/projects/rmv/ -</description></item><item><title>Being a Business Analyst for one day #startuponedayrole</title><link>https://rrmerugu.github.io/posts/a-day-as-business-analyst/</link><pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/a-day-as-business-analyst/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/a-day-as-business-analyst/ -&lt;blockquote>
+&lt;p>Product Feature Documentation keeps everyone in the team on the same page, so I decided to write product documentation the way a BA would do it !&lt;/p>
+&lt;/blockquote>
+&lt;!-- raw HTML omitted -->
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/ba-0.png" alt="Business Analyst">&lt;/p>
+&lt;p>This is part of my personal startup-challenge to wear the hats of individual roles of a company in a day &lt;code>#onedaystartuprole&lt;/code> . I founded my first company and launching a product Invaana with the all passion and dreams like any other entrepreneur. Then I was thinking about what if I hire people, and when they join the company, how would I make sure the new bees know what exactly I mean by product and what all it should do. So I decided the document the product, which I’ve never done before. So decided to behave like a Business Analyst(BA) for a day and write the product documentation ie., I should not Code(which I love so much) or do other marketing related stuff apart from being business analyst.&lt;/p>
+&lt;p>So, like any other internet enthusiast, I’ve started googling and reading few blogs. The best thing about being BA he should know everything to the minute fundamentals levels. The image below shows the precision level a BA tries to understand the scenarios. &lt;strong>The more the questions BA ask himself or the Founders/team, the more he can create a good product use cases and stories&lt;/strong>.&lt;/p>
+&lt;h2 id="so-what-is-user-story-and-a-use-case-">So what is user story and a use case ?&lt;/h2>
+&lt;p>&lt;strong>User story&lt;/strong> is a small description of something a user/actor wants to do to accomplish something. For Example: I want to login to change my password . User Stories are written from a single actor perspective with an action and a purpose. Let’s see the above example: I(Actor) want to login(action) to change my password(purpose).&lt;/p>
+&lt;p>&lt;strong>Use case&lt;/strong> is a description of a set of interactions between a system and one or more actors. They are usually created as documents, and generally include this kind of information like use case title, rationale/description/ goal, actor/user, preconditions, standard paths or extensions, post conditions. Use case focusses more on the path of the interaction.&lt;/p>
+&lt;blockquote>
+&lt;p>To conclude, according to me, user stories focus on the action and result, but use cases focus more on the path of achieving an action and how system responds to the actor(ie., interaction between actor and system).&lt;/p>
+&lt;/blockquote>
+&lt;p>Honestly, I’m not sure If I’m on write track in writing this documentation, but this is much better than having nothing in my hand to show to future employees&lt;/p>
+&lt;blockquote>
+&lt;p>Being a Django developer, I strongly advocate KISS principle — Keep It Simple Stupid&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/ba-1.png" alt="Business-Analyst">&lt;/p>
+&lt;p>So, I tried to make the documentation as light as possible so that future developers need not spends hours of time on reading to understand the product. The documentation simply shoes the basic info — actor, the action and the final result.&lt;/p>
+- https://rrmerugu.github.io/posts/a-day-as-business-analyst/ -</description></item><item><title>#startuponedayrole challenge</title><link>https://rrmerugu.github.io/posts/startup-one-day-a-role-challenge/</link><pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/startup-one-day-a-role-challenge/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/startup-one-day-a-role-challenge/ -&lt;p>Being the founder. I started to work on everything by self, while my hunt for cofounder and employees is still going on. It&amp;rsquo;s tough to do Multi-tasking, you will end up doing
+lot things with &lt;code>less&lt;/code> or &lt;code>sometimes poor&lt;/code> quality. So I decided to take one role a day.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>Like any other early stage startup, I started to work on everything that range from thinking the product future, coding the product, taking feedbacks and many more, that range from talking to people as marketing strategy etc. Then I realized I’m not sure If I really can work on everything on a single. Multi-tasking is not really my thing. So then I made a decision to work on different things in different days, But being a startup i don’t have that luxury :( .&lt;/p>
+&lt;p>So, planned to take some challenges &lt;code>#startuponedayrole&lt;/code>, According to this challenge, in a day, my primary role is be something ie., Developer, Business Analyst, Testing Automation Developer, Tester. Primary role as in most of my day involves this role and I cannot make any excuses in finishing this role task.&lt;/p>
+&lt;p>As a part of the challenge, I need take the following challenges :&lt;/p>
+&lt;ol>
+&lt;li>Business Analyst day&lt;/li>
+&lt;li>Developer day&lt;/li>
+&lt;li>Tester &amp;amp; QA Day&lt;/li>
+&lt;li>Business Development &amp;amp; Marketing Day&lt;/li>
+&lt;/ol>
+&lt;p>I’m not quite suite if I take all roles in a week, but I certainly take most of them in a week.&lt;/p>
+- https://rrmerugu.github.io/posts/startup-one-day-a-role-challenge/ -</description></item><item><title>The Story</title><link>https://rrmerugu.github.io/posts/the-story/</link><pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate><guid>https://rrmerugu.github.io/posts/the-story/</guid><description>Ravi Raja Merugu https://rrmerugu.github.io/posts/the-story/ -&lt;blockquote>
+&lt;p>If you are a theist, you think its the beauty of God, But If you are a Scientist, you think, let’s explore why its beautiful. I prefer to be the second type.&lt;/p>
+&lt;/blockquote>
+&lt;p>I’m a stupidly curious guy with crazy imaginations. But I’m not into everything!, I don’t care about most of the things. Honestly as bad as it sounds, I don’t even know the current President of my country. The last one I knew was Dr. APJ Abdul Kalam. The only reason I knew of him was because he is a Scientist and my academics back then had a subject General Knowledge in curriculum.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;blockquote>
+&lt;p>I’m not crazy my reality is just different from yours. — Lewis Carroll, Alice in Wonderland&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>Let’s start with what kind of Guy I am (from my perspective)&lt;/strong>&lt;/p>
+&lt;p>Mostly, I live in my own world of Coding, Exploring the stuff that interests me. I’m too emotional about what I love, but I don’t essentially show that every time. I love Nature — Forests, Mountains and Water bodies. I love meeting new people, but unfortunately once they are out of sight, they are out of my mind.&lt;/p>
+&lt;p>&lt;strong>Lets start from the beginning, the very beginning — My Dreams as a Child&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/my-story/baby.jpeg" alt="MegaMing baby picture">&lt;/p>
+&lt;p>I always wanted to become a Scientist. I love the look of the Scientists in long white Aprons, with gloves, test tubes, glasses on they nose. I always wanted to become a Scientist with a thought that I can create whatever I want to If I become a scientist. Example: I was always curious about how we live, whats wrong with Oxygen, Carbondioxide, Why humans live on O2 but Trees live on CO2. What makes humans move and why trees can’t move.&lt;/p>
+&lt;h3 id="school-and-college-confused-me-a-lot">School and College Confused me a lot&lt;/h3>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/my-story/schoolboy.png" alt="School kid picture">&lt;/p>
+&lt;p>&lt;em>School in fact, confused me a lot with the little things I was taught&lt;/em>. I thought If I could become a Scientist I could solve the mysteries in my head. In college, I studied Genetics just for this, then I did a course on Chemoinformatics, which completely changed my way from genetics. &lt;em>I took Masters in Bioinformatics, because of the love for both computers and biology&lt;/em>. I almost spent 2 years in doing academic research on Computational Drug Designing.&lt;/p>
+&lt;h3 id="computational-drug-discovery-was-fascinating">Computational Drug Discovery was fascinating&lt;/h3>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/my-story/cadd.png" alt="CADD Image">&lt;/p>
+&lt;p>All the years of my research career in Computational Drug Discovery, I’m so attached to the computers, because all the simulations need to be done on Linux machines sometimes HPCs :) .&lt;/p>
+&lt;p>Then worked as technical associate, later moved into programming and finally settled as a Developer as profession. But I still feel the thirst for scientific knowledge, reasoning and discovery. I wish I could restart my scientific research career soon or later. I’m actually planning something on this.&lt;/p>
+&lt;h3 id="being-developer-is-awesome">Being Developer is awesome&lt;/h3>
+&lt;p>&lt;img src="https://rrmerugu.github.io/public/img/my-story/editor.png" alt="Code Editor">&lt;/p>
+&lt;p>Being developer and being scientists are almost same, but if you are a scientist, you create something for the world, and if you are a developer, you create something for the fun ;) But, honestly both improve the life of Human Race in their own perspectives ways.&lt;/p>
+&lt;blockquote>
+&lt;p>The best part being a Coder is you can create anything you want to. PS: Atleast that’s what you feel ;)&lt;/p>
+&lt;/blockquote>
+&lt;p>Currently I’m working on my first startup &lt;a href="https://invaana.com">Invaana&lt;/a>. Let’s see what life has planned for me or what I’ll make out of my life ;)&lt;/p>
+- https://rrmerugu.github.io/posts/the-story/ -</description></item></channel></rss>
