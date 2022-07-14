@@ -1,0 +1,132 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+
+            {{if .Site.Params.officeLocation}}
+            <ul class="nav mb-2">
+               <li class="nav-item pl-4">
+                    <span class="fas fa-building "></span> 
+                    {{.Site.Params.officeLocation}}
+                </li> 
+            </ul>
+            {{end}}
+
+            {{if .Site.Params.organisations}}
+            <ul class="nav mb-4">
+                <li class="nav-item pl-4">
+                    <span class="fas fa-briefcase"></span> 
+                 </li>
+                {{ range $item := .Site.Params.organisations }}
+                <li class="nav-item">
+                  <a
+                    href="{{ $item.url }}"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="{{ $item.title }}"
+                    title="{{ $item.title }}"
+                    class="nav-link p-0 ml-2"
+                  >
+                   @{{$item.title}}
+                  </a>
+                </li>
+                {{ end }}
+            </ul>
+
+            {{end}}
+            {{ if and (isset .Site.Params "googlesearchcode") (.IsHome) }}
+            <script async src="https://cse.google.com/cse.js?cx={{.Site.Params.googleSearchCode}}"></script>
+            <div class="gcse-searchbox-only" mobileLayout="true"></div>
+            {{ end }}
+            {{ $current := .Permalink | absLangURL }}
+            {{ range .Site.Menus.main }}
+                {{$actived := "false"}}
+                <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->
+                {{if (eq ($current|relURL) "/")}}
+                    {{if and  (eq  (.URL|relURL)  "/")  (eq ($current|relURL) "/")   }}
+                        {{ $actived = "active" }}
+                    {{end}}
+                {{else if  hasPrefix  $current (.URL|absLangURL)  }}
+                    {{if  eq (.URL|relURL) "/" }}
+                    {{else}}
+                        {{$actived = "active"}}
+                    {{end}} 
+            {{end}} 
+                {{ if .HasChildren }}
+                <div class="a-block" class="drawer-menu-item {{$actived}}" v-on:click="isHidden = !isHidden">
+                    {{ .Name }}
+                    <div class="nav-link-subitem" v-if="!isHidden">
+                        {{ range .Children }}
+                        <li><a href="{{ .URL }}"> {{ .Name }}</a></li>
+                    {{ end }}
+                    </div>
+                </div>
+                {{ else }}
+                <!--<a class="a-block nav-link-item {{$actived}}" href="{{ .URL }}">-->
+                <a class="a-block drawer-menu-item {{ $actived }}" href="{{ .URL }}">
+                    {{ .Name }}
+                </a>
+                {{ end }}
+            {{ end }}
+            {{ if and (not (.Site.Params.disableToC) ) (.IsPage) }}
+            <div class="toc">
+                {{- partial "toc.html" . -}}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="{{ "" | absLangURL }}">
+            {{.Site.Title}}
+        </a>
+        {{ if not .Site.Params.disableDarkMode }}
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        {{ end }}
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="{{ "" | absLangURL }}">
+        <div class="single-column-header-title">{{.Site.Title}}</div>
+        {{ with .Site.Params.subtitle }}
+        <div class="single-column-header-subtitle">{{.}}</div>
+        {{ end }}
+
+    </a>
+
+  
+    <ul class="nav justify-content-center mt-2">
+        {{ range $item := .Site.Params.socialIcons }}
+          <li class="nav-item">
+            <a
+              href="{{ $item.url }}"
+              target="_blank"
+              rel="noopener"
+              aria-label="{{ $item.title }}"
+              title="{{ $item.title }}"
+              class="nav-link"
+            >
+              <span class="{{ $item.icon }}" aria-hidden="true"></span>
+            </a>
+          </li>
+          {{ end }}
+      </ul>
+</div>

@@ -1,0 +1,101 @@
+<div id="sideContainer" class="side-container">
+    <img src="{{ .Site.Params.profilePicture }}" width="200"
+     class="img-fluid rounded-circle ml-3" alt="{{.Site.Title}}">
+
+ 
+    <div class=" nav-head">
+        <div class="nav-title">
+            {{.Site.Title}}
+        </div>
+        {{ with .Site.Params.subtitle }}
+        <div class="nav-subtitle">
+            {{.}}
+        </div>
+        {{ end }}
+    </div>
+ 
+    <ul class="nav">
+        {{if .Site.Params.officeLocation}}
+       <li class="nav-item pl-4">
+            <span class="fas fa-building "></span> 
+            {{.Site.Params.officeLocation}}
+        </li> 
+        {{end}}
+ 
+        <li class="nav-item pl-4">
+            <span class="fas fa-briefcase"></span> 
+         </li>
+        {{ range $item := .Site.Params.organisations }}
+        <li class="nav-item">
+          <a
+            href="{{ $item.url }}"
+            target="_blank"
+            rel="noopener"
+            aria-label="{{ $item.title }}"
+            title="{{ $item.title }}"
+            class="nav-link p-0 ml-2"
+          >
+           @{{$item.title}}
+          </a>
+        </li>
+        {{ end }}
+    </ul>
+  
+    <ul class="nav mt-2 ml-1">
+        {{ range $item := .Site.Params.socialIcons }}
+          <li class="nav-item">
+            <a
+              href="{{ $item.url }}"
+              target="_blank"
+              rel="noopener"
+              aria-label="{{ $item.title }}"
+              title="{{ $item.title }}"
+              class="nav-link"
+            >
+              <span class="{{ $item.icon }} fa-2x" aria-hidden="true"></span>
+            </a>
+          </li>
+          {{ end }}
+      </ul>
+  
+      <div class="nav-link-list">
+        {{ $current := .Permalink | absLangURL }}
+        {{ range .Site.Menus.main }}
+            {{$actived := "false"}}
+            <!-- A problem caused by slash: if you use "eq" directly, you will get a result of "/tags/" and "/tags" -->
+            {{if (eq ($current|relURL) "/")}}
+                {{if and  (eq  (.URL|relURL)  "/")  (eq ($current|relURL) "/")   }}
+                    {{ $actived = "active" }}
+                {{end}}
+            {{else if  hasPrefix  $current (.URL|absLangURL)  }}
+                {{if  eq (.URL|relURL) "/" }}
+                {{else}}
+                    {{$actived = "active"}}
+                {{end}} 
+            {{end}} 
+
+            {{ if .HasChildren }}
+            <div class="a-block" class="nav-link-item {{$actived}}" v-on:click="isHidden = !isHidden">
+                {{ .Name }}
+                <div class="nav-link-subitem" v-if="!isHidden">
+                    {{ range .Children }}
+                    <li><a href="{{ .URL }}"> {{ .Name }}</a></li>
+                    {{ end }}
+                </div>
+            </div>
+            {{ else }}
+            <!--<a class="a-block nav-link-item {{$actived}}" href="{{ .URL }}">-->
+            <a class="a-block nav-link-item {{ $actived }}" href="{{ .URL }}">
+                {{ .Name }}
+            </a>
+            {{ end }}
+        {{ end }}
+    </div>
+
+    
+
+    <div class="nav-footer">
+        {{partial "copyright.html" .}}
+    </div>
+    
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+    	<div id="app">
+            {{- partial "sidebar.html" . -}}
+            {{- partial "extrabar.html" . -}}
+            <!-- PC view -->
+
+            {{- partial "mobile-header.html" . -}}
+            <!-- mobile header -->
+            <div id="content">
+                <div id="streamContainer" class="stream-container stream-container-homepage">
+                    {{- block "homepage" . }}{{- end }}
+                </div>
+            </div>
+        
+            {{- partial "mobile-footer.html" . -}}
+            <!-- mobile footer -->
+            </div>
+    {{ partial "journal.html" .}}
+    <script src="{{"/js/journal.js" | relURL}}"></script>
+    </body>
+</html>

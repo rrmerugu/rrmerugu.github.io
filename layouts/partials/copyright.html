@@ -1,0 +1,53 @@
+<!-- Please don't remove the information of theme makers. -->
+Built with modified version of {{ i18n "hugo_theme" }} <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> 
+<br>
+<!-- Because this project is under MIT licence. -->
+&copy;
+	{{ if .Site.Copyright }}
+	{{ .Site.Copyright }}
+	{{ else }}
+	{{.Site.Home.Date.Year}} {{.Site.Title}}
+	{{ end }}
+
+<!-- 
+<script>
+	loadCSS("https://fonts.googleapis.com/css?family=Montserrat|Material+Icons");
+</script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<style>
+	.side-container{
+		text-align: left;
+	}
+	@media screen{
+		.side-container .nav-link-list .nav-link-item{
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+
+		/* .stream-container-homepage{
+			padding-right: 0 !important;
+		}
+		.extra-container .pagination{
+			right: 0;
+		} */
+
+		
+	}
+	@media screen and (max-width: 1020px){
+		.single-column-header-container {
+			padding: 10px 20px 10px;
+		}
+		.single-column-header-subtitle{
+			/* font-size: 1rem; */
+		}
+ 
+		.stream-container .post .post-head-wrapper-text-only .post-title {
+			font-size: 24px;
+		}
+	}
+
+	.extra-container .pagination{
+		display: unset !important;
+	}
+</style>
