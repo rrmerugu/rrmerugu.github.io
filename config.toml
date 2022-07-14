@@ -10,7 +10,7 @@ enableReadingTime=true
 profilePicture = "https://github.com/rrmerugu.png"
 googleAnalytics = "UA-123-45"
 # googleSiteVerification = "xxxx-xxxx"
-#favicon = "Your Favicon Address"
+favicon = "images/favicon/favicon.ico"
 
 officeLocation = "Hyderabad, IN"
 
